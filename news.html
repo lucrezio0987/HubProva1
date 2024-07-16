@@ -26,36 +26,13 @@
     <script src='https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js'></script>
     <script src='https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js'></script>
 
-    <!-- Highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-    <script src="https://code.highcharts.com/modules/funnel.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
-    <script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
-    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/highstock.src.js"></script>
-    <script src="https://code.highcharts.com/stock/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/stock/highcharts-more.src.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/exporting.src.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/drilldown.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/drilldown.src.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/solid-gauge.src.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
 
     <!-- Local Stylesheets -->
     <link rel='stylesheet' href='public/stylesheets/css-progress-wizard-master/css/progress-wizard.min.css'/>
     <link rel='stylesheet' href='public/stylesheets/layout.css'/>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
-    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
-    <link rel='stylesheet' href='public/stylesheets/home.css'/>
+    <link rel='stylesheet' href='public/stylesheets/news.css'/>
 </head>
 
 <body>
@@ -97,6 +74,251 @@
 </div>
 
 <main role="main">
+    <!-- PAGE -->
+    <div class="info-page">
+        <div class="row">
+            <div class="right-block">
+                <div class="mainNews-block" id="mainNews">
+                    <div class="card-mainNews">
+                        <div class="row">
+                            <div class="col-md-4 body">
+                                <h1>Euro 2024</h1>
+                                <small>Zaccagni allo scadere</small>
+                                <p>In una partita sofferta, l\'Italia riesce a strappare il pass per gli ottavi solamente al 98° minuto
+                                    <br> Basta il pareggio di Zaccagni che risponde a Modric, Italia agli ottavi contro la Svizzera e Croazia eliminata</p>
+                                <i>(3 ore)</i>
+                            </div>
+                            <div class="col-md-8 image-container">
+                                <img src="public/images/varie/newsAzzurri.jpg" alt="Euro 2024 - news">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="breakingNews-block" id="breakingNews-block">
+                    <div class="header">
+                        <h3>Notizie dell'ultimo minuto</h3>
+                    </div>
+                    <div class="body">
+                        <div class="row data" id="breakingNews">
+                            <div class="card-breakingNews">
+                                <div class="card">
+                                    <img src="public/images/varie/newsZaccagni.jpg" alt="Euro 2024 - news">
+                                    <div class="body">
+                                        <h5>Euro 2024</h5>
+                                        <small>L'Italia vola agli ottavi</small>
+                                        <p>Agli ottavi per gli azzuri ci sarà la Svizzera</p>
+                                        <i>(4 ore)</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-breakingNews">
+                                <div class="card">
+                                    <img src="public/images/varie/newsRitiri.webp" alt="Serie A - news">
+                                    <div class="body">
+                                        <h5>Serie A</h5>
+                                        <small>Verso il campionato 2024-2025</small>
+                                        <p>Definite le date dei raduni delle squadre'</p>
+                                        <i>(2 giorni)</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-breakingNews">
+                                <div class="card">
+                                    <img src="public/images/varie/newsDouglasLuiz.jpg" alt="Serie A - news">
+                                    <div class="body">
+                                        <h5>Serie A</h5>
+                                        <small>Mercato</small>
+                                        <p>Juventus, è fatta per Douglas Luiz</p>
+                                        <i>(4 giorni)</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-breakingNews">
+                                <div class="card">
+                                    <img src="public/images/varie/newsBellanova.jpg" alt="Serie A - news">
+                                    <div class="body">
+                                        <h5>Serie A</h5>
+                                        <small>Mercato</small>
+                                        <p>Bellanova verso la Roma</p>
+                                        <i>(1 settimana)</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-breakingNews">
+                                <div class="card">
+                                    <img src="public/images/varie/newsChampions.jpeg" alt="Champions League - news">
+                                    <div class="body">
+                                        <h5>Champions League</h5>
+                                        <small>Format</small>
+                                        <p>Tutto quello che cerchi sulla nuova Champions</p>
+                                        <i>(1 settimana)</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="recentNews-block">
+                    <div class="header">
+                        <h3>Notizie recenti</h3>
+                    </div>
+                    <div class="body" id="recentNews">
+                        <div class="card-recentNews">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="public/images/varie/newsitaliaspagna.jpg" alt="Gironi - news">
+                                </div>
+                                <div class="col-md-8 body">
+                                    <h5>Euro 2024</h5>
+                                    <small>Gironi</small>
+                                    <p>Spagna troppo forte, l\'Italia si arrende 1-0 con un autogol di Calafiori
+                                        <br> Sarà decisiva la sfida con la Croazia per la qualificazione agli ottavi</p>
+                                    <i>(1 settimana)</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recentNews">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="public/images/varie/newsEuro2024.png" alt="Euro 2024 - news">
+                                </div>
+                                <div class="col-md-8 body">
+                                    <h5>Euro 2024</h5>
+                                    <small>I convocati dell'Italia</small>
+                                    <p>Ufficiali i 26 convocati che prenderanno parte alla spedizione in Germania per l'europeo</p>
+                                    <i>(1 settimana)</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recentNews">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="public/images/varie/newsThiagoMotta.jpg" alt="Mercato - news">
+                                </div>
+                                <div class="col-md-8 body">
+                                    <h5>Mercato</h5>
+                                    <small>JUVENTUS FC</small>
+                                    <p>Thiago Motta è il nuovo allenatore della Juventus, ora è ufficiale</p>
+                                    <i>(2 settimane)</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recentNews">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="public/images/varie/newsInter.jpg" alt="Serie A - news">
+                                </div>
+                                <div class="col-md-8 body">
+                                    <h5>Serie A</h5>
+                                    <small>Campionato</small>
+                                    <p>L'Inter di Simone Inzaghi è campione d\'Italia per la 20° volta
+                                        <br> Titolo più che meritato dopo un campionato dominato dall'inizio alla fine</p>
+                                    <i>(3 settimane)</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-recentNews">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="public/images/varie/newsAtalanta.jpg" alt="Europa League - news">
+                                </div>
+                                <div class="col-md-8 body">
+                                    <h5>Europa League</h5>
+                                    <small>Atalanta</small>
+                                    <p>Dopo una finale dominata l'Atalanta vince l'Europa League
+                                        <br> Bayer Leverkusen battuto nettamente dai ragazzi di Gasperini</p>
+                                    <i>(1 mese)</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="left-block info-block">
+                <div id="newsData" class="info-data">
+                    <div class="internationalNews-block" id="internationalNews-block">
+                        <div class="header">
+                            <h3>Estero</h3>
+                        </div>
+                        <div class="body">
+                            <div class="row data" id="internationalNews">
+                                <div class="card-breakingNews">
+                                    <div class="card">
+                                        <img src="public/images/varie/inghilterraNews.jpg" alt="Euro 2024 - news">
+                                        <div class="body">
+                                            <h5>Euro 2024</h5>
+                                            <small>Gironi</small>
+                                            <p>L'Inghilterra vince ma non convince
+                                                <br> Basta il gol di Bellingham per battere la Serbia</p>
+                                            <i>(1 giorno)</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-breakingNews">
+                                    <div class="card">
+                                        <img src="public/images/varie/morataNews.jpg" alt="Mercato - news">
+                                        <div class="body">
+                                            <h5>Mercato</h5>
+                                            <small>Spagna</small>
+                                            <p>L'Atletico blinda Morata
+                                                <br> Juventus, Milan e Roma restano alla finestra</p>
+                                            <i>(3 giorni)</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-breakingNews">
+                                    <div class="card">
+                                        <img src="public/images/varie/americaNews.jpg" alt="Copa America - news">
+                                        <div class="body">
+                                            <h5>Copa America</h5>
+                                            <small>Gironi</small>
+                                            <p>Argentina - Canada
+                                                <br> Orario, pronostico e le news dell'ultimo minuto</p>
+                                            <i>(6 giorni)</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-breakingNews">
+                                    <div class="card">
+                                        <img src="public/images/varie/newsReal.jpeg" alt="Champions league - news">
+                                        <div class="body">
+                                            <h5>Champions League</h5>
+                                            <small>Finale</small>
+                                            <p>Il real vince la sua 15° Champions League
+                                                <br> Basta il secondo tempo ai blancos per segnare le due reti che consegnano la vittoria</p>
+                                            <i>(1 settimana)</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-breakingNews">
+                                    <div class="card">
+                                        <img src="public/images/varie/mondialeNews.jpg" alt="Mondiale per club - news">
+                                        <div class="body">
+                                            <h5>Mondiale per club</h5>
+                                            <small>info</small>
+                                            <p>Dubbi sul nuovo mondiale per club
+                                                <br> Ancelotti: "Il Real non parteciperà</p>
+                                            <i>(2 settimane)</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </main>
 
+<footer class="footer" role="contentinfo">
+    <h4>Statistic website (Progetto IUM-TWeb)</h4>
+    <p>&copy; 2024 - Bergesio Simone & Del Ponte Lucrezio</p>
+</footer>
 </body>

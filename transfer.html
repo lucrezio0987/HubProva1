@@ -49,15 +49,13 @@
     <script src="https://code.highcharts.com/stock/modules/solid-gauge.src.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
+
     <!-- Local Stylesheets -->
     <link rel='stylesheet' href='public/stylesheets/css-progress-wizard-master/css/progress-wizard.min.css'/>
     <link rel='stylesheet' href='public/stylesheets/layout.css'/>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
-    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
-    <link rel='stylesheet' href='public/stylesheets/home.css'/>
-</head>
-
+    <link rel='stylesheet' href='public/stylesheets/transfer.css' />
 <body>
 <div class="main-navbar fixed-top" role="navigation">
     <nav class="navbar" aria-label="Main navigation">
@@ -97,6 +95,677 @@
 </div>
 
 <main role="main">
+    <div class="main-block">
+        <div class="row page-header" id="block-data-competition">
+            <div class="col-md-1">
+                <div class="img-comp"><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A"></div>
+            </div>
+            <div class="col-md-6">
+                <h1 id="name_league" aria-label="Nome del campionato">Serie A</h1>
+                <h3 id="id_league" aria-label="ID del campionato">IT1</h3>
+            </div>
+            <div class="col-md-1">
+                <div class="img-flag"><img src="https://flagcdn.com/h120/it.png" alt="Italia"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="button-block">
+                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-label="Apri il menu laterale per la selezione del campionato" tabindex="0" onkeydown="if(event.key === 'Enter') this.click();">
+                        <i class="fas fa-exchange-alt pe-3"></i>Campionato
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <h1 aria-label="Giocatori"> GIOCATORI </h1>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="ranking-table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="col-1" aria-label="Posizione"> Pos</th>
+                            <th class="col-3" aria-label="Valore"> Value</th>
+                            <th class="col-1" aria-label="Immagine giocatore"> </th>
+                            <th class="col-6" aria-label="Giocatore"> Player</th>
+                            <th class="col-1" aria-label="Club"> Club</th>
+                        </tr>
+                        </thead>
+                        <tbody id="player_table" aria-live="polite">
+
+                        </tbody>
+                    </table>
+                    <div class="footer-table">
+                        <button class="button_2" type="button" data-bs-toggle="modal" data-bs-target="#player_table_modal" aria-label="Scopri di più sui giocatori" tabindex="0" onkeydown="if(event.key === 'Enter') this.click();">
+                            Scopri di più <i class="fas fa-arrow-circle-down ps-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="podio-block align-end">
+                    <div class="podio" id="podium_player" aria-label="Podio dei giocatori">
+                        <!-- Players -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <h1 aria-label="Club"> CLUB </h1>
+
+        <div class="row">
+            <div class="col-md-7">
+                <div class="ranking-table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="col-1" aria-label="Posizione"> Pos</th>
+                            <th class="col-3" aria-label="Valore"> Value</th>
+                            <th class="col-1" aria-label="Immagine club"> </th>
+                            <th class="col-7" aria-label="Club"> Club</th>
+                        </tr>
+                        </thead>
+                        <tbody id="club_table" aria-live="polite">
+
+                        </tbody>
+                    </table>
+                    <div class="footer-table">
+                        <button class="button_2" type="button" data-bs-toggle="modal" data-bs-target="#club_table_modal" aria-label="Scopri di più sui club" tabindex="0" onkeydown="if(event.key === 'Enter') this.click();">
+                            Scopri di più <i class="fas fa-arrow-circle-down ps-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="podio-block align-end">
+                    <div class="podio" id="podium_club" aria-label="Podio dei club">
+                        <!-- Clubs -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sidebar offcanvas" tabindex="-1" id="sidebar" aria-labelledby="Seleziona il campionato" aria-hidden="true">
+        <div class="header">
+            <h3 id="sidebarLabel" aria-label="Calcio europeo">Calcio europeo</h3>
+            <button type="button" data-bs-dismiss="offcanvas" aria-label="Chiudi"></button>
+        </div>
+        <div id="block-competitions" class="body" style="position: relative;">
+            <h5 aria-label="Campionati">Campionati</h5>
+            <div class="row" id="domestic_league">
+                <a href="" data-bs-toggle="tooltip" title="Laliga" tabindex="0" aria-label="Visualizza Laliga" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/es1.png" alt="Logo Laliga">
+                        </div>
+                        <div class="col-7">Laliga</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/es.png" alt="SPA">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Premier League" tabindex="0" aria-label="Visualizza Premier League" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/gb1.png" alt="Logo Premier League">
+                        </div>
+                        <div class="col-7">Premier League</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/gb-eng.png" alt="ENG">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Serie A" tabindex="0" aria-label="Visualizza Serie A" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Logo Serie A">
+                        </div>
+                        <div class="col-7">Serie A</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/it.png" alt="ITA">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Bundesliga" tabindex="0" aria-label="Visualizza Bundesliga" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/l1.png" alt="Logo Bundesliga">
+                        </div>
+                        <div class="col-7">Bundesliga</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/de.png" alt="GER">
+                        </div>
+                    </div>
+                </a>
+                <hr>
+                <a href="" data-bs-toggle="tooltip" title="Eredivisie" tabindex="0" aria-label="Visualizza Eredivisie" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/nl1.png" alt="Logo Eredivisie">
+                        </div>
+                        <div class="col-7">Eredivisie</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/nl.png" alt="NET">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Jupiler Pro League" tabindex="0" aria-label="Visualizza Jupiler Pro League" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/be1.png" alt="Logo Jupiler Pro League">
+                        </div>
+                        <div class="col-7">Jupiler Pro League</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/be.png" alt="BEL">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Liga Portugal Bwin" tabindex="0" aria-label="Visualizza Liga Portugal Bwin" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/po1.png" alt="Logo Liga Portugal Bwin">
+                        </div>
+                        <div class="col-7">Liga Portugal Bwin</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/pt.png" alt="POR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Ligue 1" tabindex="0" aria-label="Visualizza Ligue 1" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/fr1.png" alt="Logo Ligue 1">
+                        </div>
+                        <div class="col-7">Ligue 1</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/fr.png" alt="FRA">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Premier Liga" tabindex="0" aria-label="Visualizza Premier Liga" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/ukr1.png" alt="Logo Premier Liga">
+                        </div>
+                        <div class="col-7">Premier Liga</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/ua.png" alt="UKR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Premier Liga" tabindex="0" aria-label="Visualizza Premier Liga" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/ru1.png" alt="Logo Premier Liga">
+                        </div>
+                        <div class="col-7">Premier Liga</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/ru.png" alt="RUS">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Scottish Premiership" tabindex="0" aria-label="Visualizza Scottish Premiership" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/sc1.png" alt="Logo Scottish Premiership">
+                        </div>
+                        <div class="col-7">Scottish Premiership</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/gb-sct.png" alt="SCO">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Super League 1" tabindex="0" aria-label="Visualizza Super League 1" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/gr1.png" alt="Logo Super League 1">
+                        </div>
+                        <div class="col-7">Super League 1</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/gr.png" alt="GRE">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Super Lig" tabindex="0" aria-label="Visualizza Super Lig" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/tr1.png" alt="Logo Super Lig">
+                        </div>
+                        <div class="col-7">Super Lig</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/tr.png" alt="TUR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Superligaen" tabindex="0" aria-label="Visualizza Superligaen" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/dk1.png" alt="Logo Superligaen">
+                        </div>
+                        <div class="col-7">Superligaen</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/dk.png" alt="DEN">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <h5 aria-label="Competizioni internazionali">Competizioni internazionali</h5>
+            <div class="row" id="international_league">
+                <a href="" data-bs-toggle="tooltip" title="Europa League" tabindex="0" aria-label="Visualizza Europa League" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/el.png" alt="Logo Europa League">
+                        </div>
+                        <div class="col-7">Europa League</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/eu.png" alt="EUR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="UEFA Champions League" tabindex="0" aria-label="Visualizza UEFA Champions League" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Logo UEFA Champions League">
+                        </div>
+                        <div class="col-7">UEFA Champions League</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/eu.png" alt="EUR">
+                        </div>
+                    </div>
+                </a>
+                <hr>
+                <a href="" data-bs-toggle="tooltip" title="Europa League Qualifikation" tabindex="0" aria-label="Visualizza Europa League Qualifikation" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/elq.png" alt="Logo Europa League Qualifikation">
+                        </div>
+                        <div class="col-7">Europa League Qualifikation</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/eu.png" alt="EUR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="FIFA Klub Wm" tabindex="0" aria-label="Visualizza FIFA Klub Wm" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/klub.png" alt="Logo FIFA Klub Wm">
+                        </div>
+                        <div class="col-7">FIFA Klub Wm</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/eu.png" alt="EUR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="UEFA Champions League Qualifikation" tabindex="0" aria-label="Visualizza UEFA Champions League Qualifikation" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/clq.png" alt="Logo UEFA Champions League Qualifikation">
+                        </div>
+                        <div class="col-7">UEFA Champions League Qualifikation</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/eu.png" alt="EUR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="UEFA Europa Conference League Qualifikation" tabindex="0" aria-label="Visualizza UEFA Europa Conference League Qualifikation" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/eclq.png" alt="Logo UEFA Europa Conference League Qualifikation">
+                        </div>
+                        <div class="col-7">UEFA Europa Conference League Qualifikation</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/eu.png" alt="EUR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="UEFA Super Cup" tabindex="0" aria-label="Visualizza UEFA Super Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/usc.png" alt="Logo UEFA Super Cup">
+                        </div>
+                        <div class="col-7">UEFA Super Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/eu.png" alt="EUR">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <h5 aria-label="Altro">Altro</h5>
+            <div class="row" id="other">
+                <a href="" data-bs-toggle="tooltip" title="Allianz Cup" tabindex="0" aria-label="Visualizza Allianz Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/pocp.png" alt="Logo Allianz Cup">
+                        </div>
+                        <div class="col-7">Allianz Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/pt.png" alt="POR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Belgian Supercup" tabindex="0" aria-label="Visualizza Belgian Supercup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/besc.png" alt="Logo Belgian Supercup">
+                        </div>
+                        <div class="col-7">Belgian Supercup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/be.png" alt="BEL">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Community Shield" tabindex="0" aria-label="Visualizza Community Shield" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/gbcs.png" alt="Logo Community Shield">
+                        </div>
+                        <div class="col-7">Community Shield</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/gb-eng.png" alt="ENG">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Copa Del Rey" tabindex="0" aria-label="Visualizza Copa Del Rey" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/cdr.png" alt="Logo Copa Del Rey">
+                        </div>
+                        <div class="col-7">Copa Del Rey</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/es.png" alt="SPA">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="DFB Pokal" tabindex="0" aria-label="Visualizza DFB Pokal" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/dfb.png" alt="Logo DFB Pokal">
+                        </div>
+                        <div class="col-7">DFB Pokal</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/de.png" alt="GER">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="DFL Supercup" tabindex="0" aria-label="Visualizza DFL Supercup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/dfl.png" alt="Logo DFL Supercup">
+                        </div>
+                        <div class="col-7">DFL Supercup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/de.png" alt="GER">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="EFL Cup" tabindex="0" aria-label="Visualizza EFL Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/cgb.png" alt="Logo EFL Cup">
+                        </div>
+                        <div class="col-7">EFL Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/gb-eng.png" alt="ENG">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="FA Cup" tabindex="0" aria-label="Visualizza FA Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/fac.png" alt="Logo FA Cup">
+                        </div>
+                        <div class="col-7">FA Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/gb-eng.png" alt="ENG">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Italy Cup" tabindex="0" aria-label="Visualizza Italy Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/cit.png" alt="Logo Italy Cup">
+                        </div>
+                        <div class="col-7">Italy Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/it.png" alt="ITA">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Johan Cruijff Schaal" tabindex="0" aria-label="Visualizza Johan Cruijff Schaal" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/nlsc.png" alt="Logo Johan Cruijff Schaal">
+                        </div>
+                        <div class="col-7">Johan Cruijff Schaal</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/nl.png" alt="NET">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Kypello Elladas" tabindex="0" aria-label="Visualizza Kypello Elladas" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/grp.png" alt="Logo Kypello Elladas">
+                        </div>
+                        <div class="col-7">Kypello Elladas</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/gr.png" alt="GRE">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Russian Cup" tabindex="0" aria-label="Visualizza Russian Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/rup.png" alt="Logo Russian Cup">
+                        </div>
+                        <div class="col-7">Russian Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/ru.png" alt="RUS">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Russian Super Cup" tabindex="0" aria-label="Visualizza Russian Super Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/russ.png" alt="Logo Russian Super Cup">
+                        </div>
+                        <div class="col-7">Russian Super Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/ru.png" alt="RUS">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="SFA Cup" tabindex="0" aria-label="Visualizza SFA Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/sfa.png" alt="Logo SFA Cup">
+                        </div>
+                        <div class="col-7">SFA Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/gb-sct.png" alt="SCO">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Supercopa" tabindex="0" aria-label="Visualizza Supercopa" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/suc.png" alt="Logo Supercopa">
+                        </div>
+                        <div class="col-7">Supercopa</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/es.png" alt="SPA">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Supercoppa Italiana" tabindex="0" aria-label="Visualizza Supercoppa Italiana" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/sci.png" alt="Logo Supercoppa Italiana">
+                        </div>
+                        <div class="col-7">Supercoppa Italiana</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/it.png" alt="ITA">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Supertaca Candido De Oliveira" tabindex="0" aria-label="Visualizza Supertaca Candido De Oliveira" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/posu.png" alt="Logo Supertaca Candido De Oliveira">
+                        </div>
+                        <div class="col-7">Supertaca Candido De Oliveira</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/pt.png" alt="POR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Sydbank Pokalen" tabindex="0" aria-label="Visualizza Sydbank Pokalen" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/dkp.png" alt="Logo Sydbank Pokalen">
+                        </div>
+                        <div class="col-7">Sydbank Pokalen</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/dk.png" alt="DEN">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Toto Knvb Beker" tabindex="0" aria-label="Visualizza Toto Knvb Beker" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/nlp.png" alt="Logo Toto Knvb Beker">
+                        </div>
+                        <div class="col-7">Toto Knvb Beker</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/nl.png" alt="NET">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Trophee Des Champions" tabindex="0" aria-label="Visualizza Trophee Des Champions" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/frch.png" alt="Logo Trophee Des Champions">
+                        </div>
+                        <div class="col-7">Trophee Des Champions</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/fr.png" alt="FRA">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Ukrainian Cup" tabindex="0" aria-label="Visualizza Ukrainian Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/ukrp.png" alt="Logo Ukrainian Cup">
+                        </div>
+                        <div class="col-7">Ukrainian Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/ua.png" alt="UKR">
+                        </div>
+                    </div>
+                </a>
+                <a href="" data-bs-toggle="tooltip" title="Ukrainian Super Cup" tabindex="0" aria-label="Visualizza Ukrainian Super Cup" onclick="location.href='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://tmssl.akamaized.net/images/logo/header/ukrs.png" alt="Logo Ukrainian Super Cup">
+                        </div>
+                        <div class="col-7">Ukrainian Super Cup</div>
+                        <div class="col-2">
+                            <img src="https://flagcdn.com/h120/ua.png" alt="UKR">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="row">
+                <p aria-label="Lista continua con altre competizioni...">...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- START Player Modal -->
+    <div class="modal card-modal" id="player_table_modal" tabindex="-1" aria-labelledby="player_table_modal_label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="player_table_modal_label">Ranking</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi" tabindex="0" onkeydown="if(event.key === 'Enter') this.click();"></button>
+                </div>
+
+                <div class="ranking-table-modal">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="col-1" aria-label="Posizione"> Pos</th>
+                            <th class="col-3" aria-label="Valore"> Value</th>
+                            <th class="col-1" aria-label="Immagine giocatore"> </th>
+                            <th class="col-6" aria-label="Giocatore"> Player</th>
+                            <th class="col-1" aria-label="Club"> Club</th>
+                        </tr>
+                        </thead>
+                        <tbody id="player_table_modal_body" aria-live="polite">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Player Modal -->
+
+    <!-- START Club Modal -->
+    <div class="modal card-modal" id="club_table_modal" tabindex="-1" aria-labelledby="club_table_modal_label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="club_table_modal_label">Ranking</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi" tabindex="0" onkeydown="if(event.key === 'Enter') this.click();"></button>
+                </div>
+
+                <div class="ranking-table-modal">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="col-2" aria-label="Posizione"> Pos</th>
+                            <th class="col-1" aria-label="Immagine club"> </th>
+                            <th class="col-6 text-start" aria-label="Team"> Team</th>
+                            <th class="col-1" aria-label="Punti"> PT</th>
+                            <th class="col-1" aria-label="Partite giocate"> MP</th>
+                            <th class="" aria-label="Vittorie"> W</th>
+                            <th class="" aria-label="Pareggi"> D</th>
+                            <th class="" aria-label="Sconfitte"> L</th>
+                            <th class="" aria-label="Differenza reti"> GD</th>
+                        </tr>
+                        </thead>
+                        <tbody id="club_table_modal_body" aria-live="polite">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Club Modal -->
+
+    <!-- START Valuation Modal -->
+    <div class="modal card-modal" id="valuation_modal" tabindex="-1" aria-labelledby="valuation_modal_label" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body chart-box lg" id="chart_Market_Value" aria-label="Grafico valutazione di mercato"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi" tabindex="0" onkeydown="if(event.key === 'Enter') this.click();"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Valuation Modal -->
 </main>
+
+<footer class="footer" role="contentinfo">
+    <h4>Statistic website (Progetto IUM-TWeb)</h4>
+    <p>&copy; 2024 - Bergesio Simone & Del Ponte Lucrezio</p>
+</footer>
 
 </body>
