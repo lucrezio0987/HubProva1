@@ -1,0 +1,284 @@
+@import "generico.scss";
+
+// ------------ REFACTOR -------------------
+
+// ------------ BLOCK -------------------
+
+// header
+.big-image-news-wrapper {
+	@extend .w-auto, .h-auto, .pt-3;
+	
+	position: relative;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	width: 120px;
+	height: 120px;
+	padding: 10px;
+	
+	img {
+		@extend .img-300;
+	}
+	
+	span {
+		position: absolute;
+		bottom: 10px;
+		right: 0;
+		color: $light-color;
+		font-size: 30px;
+		font-style: italic;
+		line-height: 1;
+		font-weight: bold;
+	}
+}
+
+.archive-block {
+	a { color: $secondary-color; }
+}
+
+// recentNews
+.breakingNews-block {
+	@extend .p-3;
+	.header {
+		@extend .mx-5, .d-flex, .justify-content-between;
+		button {
+			@extend .button_2;
+		}
+	}
+	.data {
+		flex-wrap: nowrap;
+	}
+	> .body {
+		mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+		padding-left: 3rem;
+		padding-right: 3rem;
+		overflow: auto;
+	}
+}
+.card-breakingNews {
+	@extend .my-1, .d-inline-flex;
+	min-width: 300px;
+	max-width: 400px;
+	min-height: 250px;
+	max-height: 250px;
+	
+	.card {
+		@extend .w-100, .py-1;
+		border: 1px solid $primary-color;
+		border-radius: 10px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: 0;
+		}
+		
+		&:hover .body {
+			background: $secondary-color;
+			color: $primary-color;
+			mask-image: none;
+			h5, small, p, i {
+				color: $primary-color;
+			}
+		}
+		
+		.body {
+			mask-image: linear-gradient(to bottom, transparent, black 10%);			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background: $primary-low-opacity-color;
+			padding: 1rem;
+			box-sizing: border-box;
+
+			
+			h5 {
+				@extend .w-100;
+				font-weight: bold;
+				font-style: italic;
+				color: $light-color;
+			}
+			
+			small {
+				color: $light-color;
+			}
+			
+			p {
+				color: $third-color
+			}
+			
+			i {
+				color: $secondary-color;
+			}
+		}
+	}
+}
+
+
+// recentNews
+.recentNews-block{
+	@extend .p-3;
+	> .body, > .header{
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+.card-recentNews {
+	@extend .container-fluid, .py-1;
+	
+	.row {
+		@extend .justify-content-center, .hover-class, .align-items-center;
+		border: 1px solid $primary-color;
+		border-radius: 10px;
+		background-color: $light-color;
+	}
+	
+	.body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+	}
+	
+	h5 {
+		@extend .w-100, .h4;
+		font-weight: bold;
+		font-style: unset;
+		color: $primary-color;
+	}
+	
+	img {
+		@extend .w-100, .my-2;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+	
+	small {
+		@extend .h5;
+		font-weight: unset;
+		font-style: italic;
+	}
+	
+	p {
+		@extend .text-muted;
+	}
+	
+	i {
+		color: $secondary-color;
+		@extend .text-muted;
+	}
+	
+	button {
+		@extend .button_2;
+	}
+}
+
+
+
+// internationalNews
+
+.internationalNews-block {
+ 	@extend .breakingNews-block;
+	
+	background-color: $light-color;
+	color: $primary-color;
+	.data {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	
+	> .body {
+		@media (max-width: 1200px) {
+			.data {
+				flex-direction: row;
+				overflow-x: auto;
+				overflow-y: hidden;
+			}
+		}
+		mask-image: none;
+		padding : 0;
+	}
+}
+
+
+// mainNews
+.mainNews-block {
+	@extend .p-3;
+	> .body, > .header {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+.card-mainNews {
+	@extend .container-fluid;
+	background-color: transparent;
+	border: 2px solid $light-color;
+	border-radius: 5px;
+	.row {
+		display: flex;
+	}
+	
+	.body {
+		@extend .py-2;
+		background: $primary-opacity-color;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	h1 {
+		font-size: 4rem;
+		font-weight: bold;
+		font-style: italic;
+		color: $light-color;
+	}
+	
+	small {
+			color: $light-color;
+		font-size: 2rem;
+	}
+	
+	p {
+		color: $third-color;
+	}
+	
+	i {
+		color: $secondary-color;
+		align-self: flex-end;
+	}
+	
+	.image-container {
+		padding: 0;
+		position: relative;
+		overflow: hidden;
+		height: 500px;
+		
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 70%;
+			background: linear-gradient(to right, $primary-opacity-color, transparent);
+			filter: blur(0px);
+		}
+	}
+}
+

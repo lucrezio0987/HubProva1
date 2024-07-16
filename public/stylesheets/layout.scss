@@ -1,0 +1,78 @@
+@import "generico.scss";
+
+// ------------ NAVBAR -------------------
+
+
+.main-navbar {
+    .navbar {
+        @extend .navbar, .navbar-expand-lg, .px-3;
+        background-color: $primary-color;
+		.navbar-toggler {
+            @extend .navbar-toggler;
+            color: $secondary-color;
+            background-color: $light-color;
+
+            span {
+                @extend .navbar-toggler-icon;
+                color: $primary-color;
+            }
+        }
+
+        .navbar-collapse {
+            @extend .collapse, .navbar-collapse;
+
+            ul {
+                @extend .navbar-nav, .col-12, .justify-content-center, .align-items-center;
+            }
+
+            li {
+                @extend .nav-item, .mx-3;
+
+                .nav-link {
+                    color: $secondary-color;
+                    font-size: 20px;
+
+                    &:hover {
+                        border-radius: 10px;
+                        background-color: $secondary-color;
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            a {
+                @extend .nav-link;
+            }
+
+            .active > a {
+                text-decoration: underline;
+            }
+        }
+
+        .navbar-brand {
+            @extend .navbar-brand, .col-1, .me-0;
+        }
+
+        .navbar-chat-btn {
+            @extend .d-flex, .col-lg-2, .justify-content-end;
+
+            button {
+                @extend .button_2;
+            }
+        }
+    }
+}
+
+main {
+    padding-top: 5rem;
+	background-color: $primary-opacity-color;
+}
+
+.footer {
+    @extend .text-center, .py-1;
+	h4 { font-size: 12px; }
+	p { font-size: 10px; }
+    background-color: $primary-color;
+    * { color: $light-color; }
+	height   : 3rem;
+}

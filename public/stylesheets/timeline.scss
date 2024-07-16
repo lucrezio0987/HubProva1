@@ -1,0 +1,160 @@
+@import 'palette.scss';
+
+.main-timeline {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: $color-1;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+  }
+
+  .timeline {
+    margin-bottom: 40px;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin: auto;
+    position: absolute;
+    background-color: $color-2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 6px;
+
+    &:before, &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.33s ease-out 0s;
+    }
+
+    &:before {
+      left: -3px;
+    }
+
+    &:after {
+      border: 2px solid $color-1;
+      left: 3px;
+    }
+  }
+
+  .date-content {
+    width: 50%;
+    float: left;
+    margin-top: 22px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 36.5%;
+      height: 2px;
+      background: $color-1;
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 20px;
+    }
+  }
+
+  .date-outer {
+    width: 125px;
+    height: 125px;
+    font-size: 13px;
+    text-align: center;
+    margin: auto;
+    z-index: 1;
+	  
+	  border-radius: 50%;
+	  border: 2px solid $color-1;
+	  background-color: $color-5;
+  }
+
+  .date {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 27%;
+    left: 0;
+  }
+
+  .month {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .year {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    color: $color-3;
+    line-height: 36px;
+  }
+
+  .timeline-content {
+    width: 50%;
+    padding: 20px 0 20px 50px;
+    float: right;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 15px 0;
+  }
+
+  .description {
+    margin-bottom: 0;
+  }
+}
+
+
+@media only screen and (max-width: 991px) {
+  .main-timeline {
+    .date-content {
+      margin-top: 35px;
+
+      &:before {
+        width: 22.5%;
+      }
+    }
+
+    .timeline-content {
+      padding: 10px 0 10px 30px;
+    }
+
+    .title {
+      font-size: 17px;
+    }
+
+    .reverse {
+      .timeline-content {
+        padding: 10px 30px 10px 0;
+      }
+    }
+  }
+}

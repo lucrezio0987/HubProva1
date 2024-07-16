@@ -1,0 +1,106 @@
+@import "generico.scss";
+
+.main-block {
+	@extend .container;
+	> h1, > hr {
+		font-size: 3rem;
+		color: $light-color;
+	}
+	> .row {
+		@extend .align-items-center;
+	}
+}
+
+.podio-block {
+	@extend .p-4;
+	.podio {
+		@extend .position-relative;
+		border-radius: 10px;
+		width: 500px;
+		height: 399px;
+		background-image: url("../images/varie/podio.png");
+	}
+	.item {
+		@extend .position-absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		cursor: pointer;
+		
+		.market-value {
+			margin-bottom: 10px;
+			font-size: 20px;
+			color: $light-color;
+			font-weight: bold;
+		}
+		.name {
+			margin: 10px;
+			font-size: 15px;
+			color: $third-color;
+			max-width: 100px;
+			text-align: center;
+		}
+		
+		img {
+			width: 100px;
+			height: auto;
+			&.player {
+				border-radius: 50%;
+				border : 3px solid $light-color;
+			}
+			&.club {
+				//margin: 5px;
+			}
+		}
+		
+		&.first-place {
+			top: 0%;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+		&.second-place {
+			top: 10%;
+			left: 10%;
+		}
+		&.third-place {
+			top: 15%;
+			right: 10%;
+		}
+	}
+}
+
+
+
+
+.ranking-table {
+	@extend .table-2, .py-2, .table-rank-color-3;
+	overflow : auto;
+	table th, table td  {
+		background-color : $primary-opacity-color;
+		color            : $light-color;
+	}
+	//	table tr  { @extend .py-2;}
+	.value {
+		i {
+			font-weight : unset;
+			color : $secondary-color;
+			margin : 0 3px;
+		}
+		&:hover {
+			text-decoration : underline;
+			i {
+				color : $primary-color;
+			}
+		}
+	}
+}
+.ranking-table-modal {
+	@extend .table-2, .pt-3, .h-auto, .table-rank-color-3;
+	overflow         : auto;
+	
+}
+.modal {
+	.modal-body {
+		@extend .align-items-center, .text-center, .justify-content-center;
+	}
+}

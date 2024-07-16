@@ -1,0 +1,352 @@
+@import "generico.scss";
+
+@import "timeline.scss";
+
+// ------------ Personalizzazione Timeline -------------------
+
+.timeline {
+	.date-content {
+		.date-outer {
+			@extend .justify-content-center, .d-flex, .flex-column;
+			div {
+				@extend .text-center;
+				color : $color-4;
+				
+			}
+			&::after {
+				border-radius    : 100%;
+				background-color : $color-5;
+			}
+		}
+	}
+	.timeline-content {
+		h4 { color: $color-1;}
+		p { color: $color-6;}
+		.row {
+			
+			.img-player {
+				@extend .d-flex;
+				justify-content : flex-start;
+				img {
+					width         : 100px;
+					height        : 100px;
+					border-radius : 5px;
+					border        : solid 2px $color-1;
+				}
+			}
+			
+			> div {
+				p {
+					text-align : left;
+					@extend .mt-2, .px-2;
+				}
+				> div {
+					@extend .d-flex, .align-items-center, .px-2;
+					h4 {
+						@extend .me-2, .pt-2;
+					}
+					
+					img {
+						@extend .mini_logs_scores;
+					}
+				}
+			}
+		}
+		
+		.description {
+			font-size: 20px;
+		}
+	}
+}
+
+.reverse {
+	.date-content {
+		float : right;
+		&:before {
+			left : 10px;
+		}
+	}
+	.timeline-content {
+		padding : 20px 50px 20px 0px;
+		.row {
+			.img-player {
+				justify-content : flex-end;
+			}
+			@extend .flex-row-reverse, .justify-content-end;
+			> div {
+				> div { @extend .justify-content-end; }
+				p {
+					text-align : right;
+				}
+			}
+		}
+	}
+	> div {
+		> .title {
+			text-align : right;
+		}
+		> .description {
+			text-align : right;
+		}
+	}
+}
+
+// ------------ PAGE -------------------
+
+.main-timeline {
+	width: 100%;
+	@extend .justify-content-center, .h-100;
+	&::before {
+	}
+	.title {
+		color     : $light-color	;
+	}
+	
+}
+
+.game-info {
+//	position         : fixed;
+//	top              : 4rem;
+	width            : 100%;
+	background-color : #F8F9FA; /* Colore di sfondo simile a quello di Bootstrap */
+	z-index          : 1020;
+	
+	.navbar {
+//		@extend .fixed-bottom;
+		background-color : $primary-opacity-color;
+	}
+	.navbar-toggler {
+		@extend .m-2, .container-fluid;
+		border-radius    : 10px;
+		background-color : $light-color;
+		border           : 1px solid $primary-opacity-color;
+		.body {
+			@extend .w-100;
+			img { @extend .img-100;}
+		}
+	}
+	* {color : $primary-color;}
+	
+	p { @extend .h3, .p-2;}
+	
+	.result-block {
+		@extend .text-center;
+		p { @extend .h2}
+	}
+	
+	.collapse {
+		width: 100%;
+		max-height : 70vh; /* 75% dell'altezza dello schermo */
+		overflow-y : auto;
+	}
+}
+
+.game-body {
+	//padding-top      : 6rem;
+	background-color : $primary-opacity-color;
+	height           : calc(100% - 120px);
+	//overflow-y       : auto;
+	.body {
+		@extend .w-100, .justify-content-center
+	}
+	.row {
+		@extend .d-flex, .flex-wrap, .justify-content-around, .m-0;
+	}
+}
+
+.info-data {
+	color : $light-color;
+}
+
+.separator {
+	height: 100%;
+	max-width: 2px;
+	background-color: $light-color;
+}
+.formation-block {
+	@extend .mx-5, .info-block;
+	>.header {
+		@extend .d-flex, .justify-content-center;
+		h1, i {
+			color: $light-color;
+		}
+	}
+	.body {
+		@extend .py-4;
+		h3, h4, h5{color: $light-color;}
+		.header {
+			@extend .stadium;
+		}
+	}
+	.lineup-row {
+		i, span, h5, span {color: $light-color;}
+		i {
+			@extend .px-3, .w-100;
+			border: 1px solid $light-color;
+			border-radius: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-style: normal;
+		}
+		span {
+			background-color: $primary-color;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		h5 {
+			@extend .hand-cursor;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	.home-block {
+		border-right: 2px solid $light-color;
+	}
+
+	.title {
+		@extend .my-4, .text-center;
+		max-width: 30vh;
+	}
+	.palyer-row {
+		i {
+			font-weight : bold;
+			font-size :20px;
+		}
+		h5 {
+			font-size : 30px;
+		}
+	}
+	.substitution-row {
+		i {
+			font-size : 13px;
+		}
+		h5 {
+			font-size : 15px;
+		}
+	}
+	
+	.event-icon { @extend .img-20; }
+	.items {
+		display : flex;
+		.item { @extend .mx-1;}
+	}
+	
+	.away-block {
+		.lineup-row {
+			.items {
+				@extend .justify-content-end;
+			}
+			.item {
+				&:nth-last-child(1) { order: 1; }
+				&:nth-last-child(2) { order: 2; }
+				&:nth-last-child(3) { order: 3; }
+				&:nth-last-child(4) { order: 4; }
+				&:nth-last-child(5) { order: 5; }
+				&:nth-last-child(6) { order: 6; }
+				&:nth-last-child(7) { order: 7; }
+				&:nth-last-child(8) { order: 8; }
+				&:nth-last-child(9) { order: 9; }
+				&:nth-last-child(10) { order: 10; }
+			}
+		}
+		
+		.title {@extend .d-flex, .justify-content-end;}
+	}
+	
+	.home-block, .away-block {
+		> .row {@extend .my-5;}
+	}
+}
+
+.ranking-block {
+	@extend .text-center, .h-auto;
+	
+	.ranking-header {
+		@extend .w-100, .mt-4, .mx-1;
+		background-color : $primary-opacity-color;
+		color            : $light-color;
+		
+		nav {
+			@extend .navbar-expand, .navbar-light, .text-center, .justify-content-center, .d-flex;
+			
+			> div {
+				@extend .border-bottom, .navbar-nav;
+			}
+			
+			a {
+				@extend .p-3, .nav-link, .hover-class;
+				
+				&:not(:last-child) {
+					@extend .border-end;
+				}
+				
+				font-size   : 18px;
+				font-weight : bold;
+			}
+			
+		}
+	}
+}
+
+.headToHead-table {
+	@extend .table-1-no-collapse, .d-flex, .justify-content-center;
+	table {
+		width            : 100%;
+		@extend .p-3, .m-2;
+		.winner {
+			font-weight : bold;
+		}
+	}
+	background-color : $light-color;
+	border: 3px solid $primary-color;
+	border-radius: 10px;
+	overflow-y: auto;
+	max-height: 600px;
+}
+
+h1 {
+	color: $light-color;
+	font-weight: bold;
+	text-align: center;
+}
+
+.info-box{
+	h1 {color: $primary-color;}
+}
+.vs-box {
+	@extend .text-center, .p-3, .pb-4;
+	.info-progress-block{
+		h3 { color: $primary-color; }
+		p { @extend .h4; }
+		margin-bottom: 30px;
+		.rank-val {
+			p {
+				@extend .h2;
+				font-weight: bold;
+			}
+		}
+		.row {
+			@extend .align-items-center;
+			img {
+				@extend .img-70;
+			}
+			.home-club-img { @extend .d-flex, .justify-content-end; }
+			.away-club-img { @extend .d-flex, .justify-content-start; }
+			.progress {
+				background-color: $secondary-color;
+				.progress-bar { background-color: $primary-color; }
+				border: 1px solid $primary-opacity-color;
+			}
+			> div {
+				@extend .align-items-center, .text-center;
+			}
+		}
+		i { color: $primary-color}
+	}
+	background-color: $light-color;
+	border: 3px solid $primary-color;
+	border-radius: 10px;
+}

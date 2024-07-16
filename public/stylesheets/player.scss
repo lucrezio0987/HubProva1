@@ -1,0 +1,93 @@
+@import "generico.scss";
+
+
+
+// ------------ BLOCKS -------------------
+
+//@media (min-width: 992px) {
+//	.image-block img {
+//		width: 75%;
+//	}
+//}
+
+.head-block {
+	div { @extend .d-flex, .align-items-center;}
+	> div { @extend .justify-content-between, .mx-5, .mt-2;}
+	.competition {
+		h3 {@extend .mb-0;}
+		img {@extend .mini_logs, .mx-4}
+	}
+	.club {
+		@extend .hand-cursor;
+		img {@extend .img-60, .mx-4}
+	}
+}
+
+.palmares-block {
+	.header {
+		@extend .mx-5, .d-flex, .justify-content-between;
+		button {@extend .button_2;}
+	}
+	.body {
+		@extend .scroller-container, .justify-content-center, .d-flex;
+		@extend .mask, .px-5;
+	}
+	.cursor {
+		@extend .scroll-arrow, .hand-cursor;
+		position: absolute;
+	}
+	.left {left: 0;}
+	.right {right: 0;}
+	.data {
+		@extend .flex-nowrap;
+		overflow-x: auto;
+		width: 100%;
+	}
+}
+
+.palmares-block {
+	@extend .p-3;
+	.header {
+		@extend .mx-5, .d-flex, .justify-content-between;
+		button {@extend .button_2;}
+	}
+	.data {
+		flex-wrap: nowrap;
+	}
+	.body {
+		mask-image : linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+		padding-left: 3rem;
+		padding-right: 3rem;
+		overflow: auto;
+	}
+}
+
+.career-block {
+	.header {
+		@extend .w-100, .text-center, .my-3;
+		p { @extend .h3, .text-center;}
+	}
+	.body {
+		@extend .w-100, .d-flex, .flex-wrap, .justify-content-center;
+	}
+	.club-table, .comp-table {
+		@extend .m-4;
+		width: 45%;
+		min-width: 500px;
+		//max-width: 600px;
+		background-color: $light-color;
+		border:1px solid $primary-color;
+		color: $primary-color;
+		border-radius: 10px;
+
+		> div {
+			@extend .table-1, .p-4;
+			max-height: 460px;
+			overflow-y: auto;
+		}
+	}
+}
+
+.footer {
+	@extend .fixed-bottom;
+}

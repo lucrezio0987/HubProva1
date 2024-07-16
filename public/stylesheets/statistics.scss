@@ -1,0 +1,178 @@
+@import "generico.scss";
+
+// ------------ MODALS -------------------
+
+.card-modal {
+    @extend .fade;
+
+    .modal-dialog {
+        @extend .modal-dialog-centered, .modal-lg, .modal-dialog-scrollable;
+    }
+
+    .modal-body {
+        @extend .table-2, .table-rank-color-3;
+
+        table td {
+            color: $primary-color;
+        }
+		
+		tbody tr {
+			&:nth-child(n+4) h4 {
+				font-size: 1.1rem;
+			}
+		}
+    }
+
+}
+
+.filter-modal {
+    @extend .fade;
+
+    .modal-dialog {
+        @extend .h-auto, .modal-dialog-centered, .modal-dialog-scrollable;
+		max-width: 1400px;
+    }
+
+    //h3 { @extend .title, .text-center; }
+    .modal-header {
+		button {
+			@extend .button-close;
+		}
+    }
+
+    .group {
+        @extend .my-2, .py-3;
+        background-color: $light-color;
+        border-radius: 10px;
+        border: 1px solid $primary-color;
+    }
+
+    .header {
+        @extend .d-flex, .justify-content-between, .px-4;
+
+        label {
+			font-size: 30px;
+			font-weight: bold;
+            //@extend .justify-content-left;
+        }
+
+        button {
+            @extend .button_2;
+        }
+    }
+
+    .body {
+        @extend .form-check, .d-flex, .flex-wrap, .justify-content-around, .my-1, .mt-3;
+		padding-left: 0px;
+        input {
+			@extend .hover-class;
+            display: none;
+        }
+
+        img {
+            @extend .me-3;
+            width: 22px;
+            height: 28px;
+        }
+
+        label {
+            @extend .card-filter, .hover-class, .fs-6, .fs-md-5, .fs-lg-4, .fs-xl-3 !optional;
+        }
+    }
+
+    #filter_roles label {
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    .modal-footer {
+        @extend .w-100, .justify-content-end, .d-flex, .px-5;
+
+        button {
+            @extend .button_1;
+            text-transform: uppercase;
+            width: 250px;
+            height: 60px;
+            font-size: 28px;
+        }
+    }
+}
+
+// ------------ PAGE -------------------
+
+.main-statistics {
+    background-color: $primary-opacity-color;
+
+    .left-block {
+
+        h1 {
+            color: $secondary-color;
+            @extend .mx-2, .pt-2;
+        }
+
+        @extend .mt-3, .text-center;
+
+        .big-image {
+            @extend .m-lg-5, .p-lg-5, .d-none, .d-lg-block;
+            img {
+                @extend .img-fluid;
+                // margin-top: 20px;
+                max-height: 700px  ;
+				width:auto;
+            }
+        }
+    }
+
+    .right-block {
+		@extend .pt-2;
+    }
+}
+
+.cards {
+	.row {
+		@extend .justify-content-center;
+	}
+	> .row {
+		@extend .my-1;
+	}
+}
+.complete-statistics {
+    @extend .container-fluid, .mt-4;
+	background-color: $light-color;
+	.buttons {
+		@extend .d-flex, .justify-content-center;
+	}
+	.complete-statistics-toolbar {
+        @extend .d-flex, .justify-content-between;
+		.img-comp {
+			@extend .text-end, .ms-5;
+		}
+    }
+	.complete-statistics-header {
+		@extend .d-flex, .justify-content-center;
+		h1 {
+			@extend .p-2;
+		}
+	}
+}
+
+.statistics-table {
+    @extend .table-2, .w-100, .table-responsive, .mt-3;
+    //  @extend .table-responsive;
+    //position: relative;
+    max-height: unset;
+    overflow-y: unset;q
+
+    th {
+        @extend .hover-class;
+    }
+
+    tbody tr {
+        @extend .hover-class;
+    }
+
+    td {
+        @extend .text-center;
+    }
+}

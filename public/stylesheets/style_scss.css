@@ -1,0 +1,227 @@
+.selectedStanding {
+  border-bottom: solid 2px #241f31;
+  font-weight: bold;
+}
+
+.logo {
+  max-width: 50px;
+  margin: 0 2px;
+}
+
+/*sfondo immagine homepage*/
+.homepage_background {
+  background-image: url("../images/varie/sfondo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/*usato solamente per il bottone della home page */
+.homepage_btn {
+  background-color: #aad0fd;
+  color: #241f31;
+}
+
+/*colore testo azzurrino*/
+.lightblu-text {
+  color: #aad0fd;
+}
+
+/*sfondo biando, es. statistics table*/
+.white_background {
+  background-color: #ffffff;
+}
+
+/*sfondo blu scuro*/
+.blu_background {
+  background-color: #241f31;
+}
+
+/*opacita, su blu scuro esempio*/
+.background_opacity {
+  opacity: 0.9;
+}
+
+.index_2 {
+  background-color: #241f31;
+}
+
+.filter {
+  background-color: lightslategray;
+  border-radius: 15px;
+}
+
+.max_w_filter {
+  max-width: 200px;
+}
+
+.card_statistics {
+  border-radius: 15px;
+  max-height: 250px;
+  border: solid 1px #241f31;
+  cursor: pointer;
+}
+
+.card_statistics a {
+  text-decoration: none;
+  color: #241f31;
+}
+
+.card_statistics i {
+  font-size: 24px;
+}
+
+.border-radius {
+  border-radius: 15px;
+}
+
+.row_index {
+  border-radius: 15px;
+  max-height: 250px;
+}
+
+.scrollable-container {
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.card_statistic_title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.card_statistic_name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card_statistic_score {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.border-right {
+  border-right: darkgray 2px solid;
+  border-radius: 5px;
+}
+
+.filter_icon {
+  margin-top: 75px;
+}
+
+.card_filter_img {
+  background: #ffffff;
+}
+
+.index_3_left {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: #eeeeee;
+}
+
+.index_3_right {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #eeeeee;
+}
+
+.index_3_right a, .index_3_right h2,
+.index_3_left a, .index_3_left h2 {
+  text-decoration: none;
+}
+
+.collapse_style {
+  background-color: #d5e7ff;
+  border-radius: 0 0 10px 10px;
+  margin: -1px auto 10px;
+  width: 100%;
+}
+
+.card_news {
+  border-radius: 15px;
+  background-color: #eeeeee;
+  width: 20rem;
+}
+
+.card_news :hover {
+  background-color: #a9c1c8;
+}
+
+.club_roles {
+  width: 95%;
+}
+
+.img_roles {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.scrollable {
+  max-height: 450px;
+  overflow: auto;
+}
+
+.id_player {
+  display: none;
+}
+
+.footer_css p, .footer_css h4 {
+  color: #aad0fd;
+}
+
+.icon-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: 3px;
+}
+
+.numbers-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100px;
+  width: 100%;
+}
+
+.scroller-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+body *::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+body *::-webkit-scrollbar-thumb {
+  background-color: #241f31;
+  border-radius: 15px;
+}
+
+body *::-webkit-scrollbar-track {
+  background-color: #e1e6e8;
+  border-radius: 10px;
+}
+
+.overlay-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000;
+}
+
+/*--Classi Lu------------------------*/
+
+/*# sourceMappingURL=style_scss.css.map */

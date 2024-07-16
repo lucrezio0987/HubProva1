@@ -1,0 +1,1027 @@
+@import "palette.scss";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$position-values : map-merge(
+				$position-values, (
+				0: 0.0%,
+				5: 4.3%,
+				10: 8.6%,
+				15: 12.9%,
+				20: 17.2%,
+				25: 21.5%,
+				30: 25.8%,
+				35: 30.1%,
+				40: 34.4%,
+				45: 38.7%,
+				50: 43.0%
+		)
+);
+$dim-values      : (
+		0: 0,
+		10: 10,
+		15: 15,
+		20: 20,
+		25: 25,
+		30: 30,
+		40: 40,
+		50: 50,
+		60: 60,
+		70: 70,
+		80: 80,
+		90: 90,
+		100: 100,
+		150: 150,
+		200: 200,
+		250: 250,
+		300: 300,
+		350: 350,
+		400: 400,
+		450: 450,
+		500: 500,
+		550: 550
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "style_scss.scss";
+@import "datatables.net-bs5/css/dataTables.bootstrap5.scss";
+
+.block {
+	&, & * {
+		border           : 1px solid purple;
+		background-color : $normal-color;
+		color            : pur;
+	}
+}
+
+// ------------ CLASSI RIDIMENSIONABILI -------------------
+
+$sm              : 576px;
+$md              : 768px;
+$lg              : 992px;
+$xl              : 1200px;
+
+@each $key, $value in $dim-values {
+	.img-#{$key} {
+		max-height : #{$value}px;
+		max-width  : #{$value}px;
+	}
+	
+}
+
+.border-right {
+	border-radius : 0px;
+}
+
+@media (min-width : #{$md}) {
+	.border-md-end {
+		border-right : 1px solid #DEE2E6;
+	}
+	.w-md-100 {
+		width : 100%;
+	}
+}
+
+// ------------ GENERIC -------------------
+
+.dark-background {
+	background-color : $primary-opacity-color;
+	color            : $light-color;
+}
+
+.light-background {
+	color : $primary-color;
+}
+
+.text-style {
+	color     : $primary-color;
+	font-size : 20px;
+}
+
+.mask-right {
+	mask-image : linear-gradient(to right, black 99%, transparent 100%);
+}
+
+.mask {
+	mask-image : linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+}
+
+.mask-left {
+	mask-image : linear-gradient(to left, black 99%, transparent 100%);
+}
+
+.hand-cursor {
+	cursor : pointer;
+}
+
+.hover-class {
+	@extend .hand-cursor;
+	
+	&:hover, &:hover td {
+		background-color : $secondary-color;
+		color            : $primary-color;
+	}
+	
+	&:hover button {
+		border : 1px solid $light-color;
+	}
+	
+	&.active {
+		background-color : $third-color;
+		color            : $primary-color;
+	}
+	&.selected {
+		background-color : $third-color;
+		color            : $primary-color;
+		&:hover {
+			background-color : $primary-color;
+			color            : $light-color;
+		}
+	}
+	&.show {
+		background-color : $light-color !important;
+		color            : $primary-color !important;
+	}
+	&:focus, &:focus td {
+		background-color : $secondary-color;
+		color            : $primary-color;
+		outline          : none;
+	}
+	
+	&:focus button {
+		border : 1px solid $light-color;
+	}
+}
+
+.form-check-input {
+	&:checked {
+		+ .form-check-label {
+			background-color : $secondary-color;
+			color            : $primary-color;
+			font-weight      : bold;
+			&:hover {
+				background-color : $primary-color;
+				color            : $light-color;
+				font-weight      : bold;
+			}
+		}
+	}
+}
+
+.scroll-arrow {
+	font-size       : 24px;
+	width           : 50px;
+	height          : 40px;
+	display         : flex;
+	justify-content : center;
+	align-items     : center;
+}
+
+.left-arrow {
+	left     : 0;
+	position : absolute;
+}
+
+.right-arrow {
+	right    : 0;
+	position : absolute;
+}
+
+// ------------ IMAGE -------------------
+.img-logo {
+	max-width : 50px;
+	margin    : 0 2px;
+}
+
+.img-logs {
+	height      : 150px;
+	align-items : center;
+}
+
+.mini_logs {
+	background-color : $light-color;
+	max-height       : 60px;
+	max-width        : 60px;
+	border-radius    : 10%;
+}
+
+.mini_logs_scores {
+	max-height : 20px;
+	max-width  : 20px;
+}
+
+.mini_logs_teams {
+	max-height : 30px;
+	max-width  : 30px;
+}
+
+.img-flag {
+	@extend .p-2;
+	img {
+		@extend .img-50;
+	}
+}
+
+.img-comp {
+	@extend .p-2;
+	img {
+		@extend .img-50;
+	}
+}
+
+.icon-wrapper {
+	position        : relative;
+	display         : inline-block;
+	justify-content : center;
+	align-items     : center;
+	width           : 120px;
+	height          : 120px;
+	padding         : 10px;
+	
+	@extend .w-auto, .h-auto, .pt-3;
+	
+	img {
+		@extend .img-logs;
+	}
+	span {
+		position         : absolute;
+		bottom           : 10px;
+		left             : 0;
+		background-color : $primary-color;
+		color            : $light-color;
+		border-radius    : 50%;
+		padding          : 2px 6px;
+		font-size        : 20px;
+		line-height      : 1;
+	}
+}
+
+.icon-wrapper-middle {
+	@extend .icon-wrapper;
+	img {
+		@extend .img-50;
+	}
+	span {
+		font-size : 20px;
+		top       : 50%;
+		left      : 50%;
+		transform : translate(-50%, -50%);
+	}
+}
+
+@each $key, $value in $dim-values {
+	.img-#{$key} {
+		max-height : #{$value}px;
+		max-width  : #{$value}px;
+	}
+}
+
+// ------------ BUTTON -------------------
+.button_0 {
+	@extend .btn, .hover-class;
+	height         : 40px;
+	
+	span {
+		display : none;
+		
+		&:hover {
+			display : inline;
+		}
+	}
+	
+	padding-top    : 0;
+	padding-bottom : 0;
+	margin         : 0 10px;
+}
+
+.button_1 {
+	@extend .button_0;
+	background-color : $primary-opacity-color;
+	color            : $secondary-color;
+	border           : solid 1px $secondary-color;
+	width            : 100px;
+	&:hover {
+		border : 1px solid $primary-color;
+	}
+}
+
+.button_2 {
+	@extend .button_0, .button_transition, .hover-class;
+	
+	color            : $primary-color;
+	border           : solid 1px $primary-color;
+	font-weight      : bold;
+	background-color : $light-color;
+	i {color : $primary-color;}
+}
+
+.button_transition {
+	transition : transform 0.3s;
+	&:hover {transform : scale(1.05);}
+}
+
+.button_2-small {
+	@extend .button_0;
+	color            : $primary-color;
+	border           : solid 1px $primary-color;
+	font-weight      : bold;
+	background-color : $light-color;
+	display          : inline-block;
+	height           : 90%;
+	i {color : $primary-color;}
+}
+
+.button_3 {
+	@extend .button_2;
+	background-color : $secondary-color;
+}
+
+.button_4 {
+	@extend .button_0;
+	background-color : $primary-color;
+	border           : solid 1px $light-color;
+	font-weight      : bold;
+	color            : $light-color;
+	i {
+		color : $light-color;
+	}
+}
+
+.dropdown {
+	.dropdown-toggle {
+		@extend .button_2;
+	}
+	
+	.dropdown-menu {
+		@extend .text-center;
+		background-color : $light-color;
+	}
+	.dropdown-item {
+		@extend .hover-class;
+		color       : $primary-color;
+		font-weight : bold;
+	}
+}
+
+.button-close {
+	@extend .text-reset, .btn-close;
+}
+
+// ------------ CARDS e PALMARES-------------------
+
+.card-statistic {
+	@extend .hover-class, .p-0, .m-2, .button_transition;
+	max-height       : 350px;
+	max-width        : 550px;
+	min-height       : 180px;
+	min-width        : 350px;
+	
+	color            : $primary-color;
+	border           : solid 1px $primary-color;
+	background-color : $light-color;
+	border-radius    : 15px;
+	
+	font-weight      : bold;
+	
+	* {
+		text-align  : center;
+		font-weight : bold;
+	}
+	
+	i {
+		font-size : 24px
+	}
+	
+	a {
+		text-decoration : none;
+		color           : $primary-color;
+	}
+	
+	h4 {
+		@extend .py-3;
+		font-weight : bold;
+		font-size   : 24px;
+	}
+	
+	.score {
+		p {@extend .text-center; font-size : 24px;}
+	}
+	
+	&:hover .border-right {
+		border-right : 1px solid $primary-color;
+	}
+	
+	.image {
+		@extend .border-right, .px-5;
+		
+		img {
+			@extend .img-fluid, .img-100;
+		}
+	}
+	
+	.player {
+		@extend .px-4, .py-1;
+		h5 {
+			@extend .hand-cursor;
+			font-size : clamp(16px, 2vw, 30px);
+			&:hover { text-decoration: underline; }
+		}
+	}
+	
+	.row {
+		@extend .align-items-center;
+	}
+	
+}
+
+.card-filter {
+	@extend .form-check-label, .badge, .my-1, .mx-2;
+	@extend .button_2, .d-flex, .align-items-center, .justify-content-center;
+	border-radius : 15px;
+	border        : solid 1px $primary-color;
+	width         : 300px;
+	margin        : 1rex;
+}
+
+.card-palmares {
+	@extend .my-1, .d-inline-flex, .light-background;
+	min-width  : 300px;
+	max-width  : 400px;
+	
+	min-height : 170px;
+	max-height : 300px;
+	> .row {
+		@extend .w-100, .py-1, .px-1; //.hover-class   in realta non serve mai
+		border           : 1px solid $primary-color;
+		border-radius    : 10px;
+		background-color : $light-color;
+	}
+	
+	.scrollable {
+		max-height : 160px;
+	}
+	
+	.season {
+		@extend .pt-2;
+		
+		img {
+			@extend .hand-cursor, .img-30;
+		}
+	}
+	h5 {
+		@extend .w-100;
+		font-weight : bold;
+		font-style  : italic;
+	}
+}
+
+// ------------ TABLE -------------------
+
+.table-1 {
+	@extend .text-center;
+	// max-height: 260px;
+	// overflow-y: auto;
+	
+	> table {
+		th {
+			@extend .text-center;
+			color     : $primary-color;
+			font-size : 20px;
+		}
+		> tbody > tr:nth-child(odd) { // riga table-row
+			@extend .hover-class;
+			// border-top: 1px solid $primary-color;
+			text-align : center;
+			img {
+				@extend .my-2;
+			}
+		}
+		> tbody > tr:nth-child(even) { // colapse
+			table {width : 95% !important;}
+			> td > div {
+				padding-bottom             : 10px;
+				margin-bottom              : 10px;
+				margin-left                : 10px;
+				margin-right               : 10px;
+				background-color           : $fourth-color;
+				border-bottom-left-radius  : 10px;
+				border-bottom-right-radius : 10px;
+			}
+			> td {padding : 0;}
+			img { @extend .img-25;}
+		}
+		> tbody > tr:nth-child(4n+1) {
+			background-color : $fifth-color;
+		}
+		
+	}
+	
+	button {
+		@extend .button_2-small;
+	}
+	
+	.footer-table {
+		button { @extend .button_2; }
+	}
+	
+	.text-hover {
+		&:hover { text-decoration: underline; }
+		*:hover { text-decoration: underline; }
+	}
+	
+	img {
+		@extend .img-30;
+	}
+}
+
+.table-1-no-collapse {
+	@extend .text-center;
+	// max-height: 260px;
+	// overflow-y: auto;
+	
+	> table {
+		th {
+			@extend .text-center;
+			color     : $primary-color;
+			font-size : 20px;
+		}
+		> tbody > tr:nth-child(odd) {
+			background-color : $fifth-color;
+		}
+		> tbody > tr:nth-child(even) {
+			background-color : $light-color;
+		}
+		
+		> tbody > tr { // riga table-row
+			@extend .hover-class;
+			text-align : center;
+			img {
+				@extend .my-2;
+			}
+		}
+	}
+	
+	button {
+		@extend .button_2-small;
+	}
+	
+	.footer-table {
+		button { @extend .button_2; }
+	}
+	
+	img {
+		@extend .img-30;
+	}
+	
+}
+
+.table-2 {
+	@extend .justify-content-center, .text-center;
+	
+	table {
+		@extend .table, .table-striped;
+	}
+	
+	tbody tr {
+		@extend .hover-class;
+	}
+	
+	td {
+		@extend .text-center, .hand-cursor;
+		
+		img {
+			@extend .img-30, .hand-cursor;
+		}
+	}
+	
+	.footer-table {
+		button { @extend .button_2; }
+	}
+	
+	td:first-child, th:first-child {
+		@extend .text-center;
+		font-weight : bold;
+	}
+}
+
+.table-rank-color-10 {
+	tbody tr {
+		td:first-child {
+			background : $normal-color;
+		}
+		
+		&:nth-child(-n+4) {
+			// border-left: 10px solid $green-color;
+			td:first-child {
+				background : $green-color;
+			}
+		}
+		
+		&:nth-child(5), &:nth-child(6) {
+			// border-left: 10px solid $yellow-color;
+			td:first-child {
+				background : $yellow-color;
+			}
+		}
+		
+		&:nth-child(7) {
+			// border-left: 10px solid $cyan-color;
+			td:first-child {
+				background : $cyan-color;
+			}
+		}
+		
+		&:nth-last-child(-n+3) {
+			// border-left: 10px solid $red-color;
+			td:first-child {
+				background : $red-color;
+			}
+		}
+	}
+}
+
+.table-rank-color-3 {
+	tbody tr {
+		td:first-child {
+			background : $normal-color;
+		}
+		
+		&:nth-child(1) {
+			// border-left: 10px solid $green-color;
+			td {
+				font-weight : bold;
+				
+				&:first-child {
+					background : $gold-color;
+				}
+			}
+		}
+		
+		&:nth-child(2) {
+			// border-left: 10px solid $yellow-color;
+			td {
+				font-weight : bold;
+				
+				&:first-child {
+					background : $silver-color;
+				}
+			}
+		}
+		
+		&:nth-child(3) {
+			// border-left: 10px solid $cyan-color;
+			td {
+				font-weight : bold;
+				
+				&:first-child {
+					background : $bronze-color;
+				}
+			}
+		}
+	}
+}
+
+.table-responsive {
+	@extend .p-3, .mb-3;
+	background-color : $light-color;
+	border-radius    : 10px;
+	border           : 2px solid $primary-color;
+	.sorting {
+		color       : $primary-color;
+		font-weight : bold;
+		&::after, &::before {
+			color : $primary-color;
+		}
+	}
+	.dataTables_length {
+		label {color : $primary-color;}
+		select {@extend .button_2; }
+		option {
+			@extend .hover-class;
+			color       : $primary-color;
+			font-weight : bold;
+		}
+	}
+	.dataTables_filter {
+		label {color : $primary-color;}
+		input {
+			@extend .px-1;
+			color            : $primary-color;
+			background-color : $light-color;
+			border           : 2px solid $primary-color;
+			border-radius    : 5px;
+		}
+	}
+	.dataTables_info {
+		color       : $primary-color;
+		font-weight : bold;
+	}
+	.dataTables_paginate {
+		.pagination {background-color : red;}
+		
+		li {background-color : blue;}
+		
+	}
+	
+}
+
+.results-table-coloration-winners {
+	.win td:nth-child(4) {
+		background-color : $win;
+	}
+	.lose td:nth-child(4) {
+		background-color : $lose;
+	}
+	.draw td:nth-child(4) {
+		background-color : $draw;
+	}
+}
+
+.mini-match-table {
+	@extend .table-1-no-collapse, .d-flex, .justify-content-center;
+	table {
+		width : 100%;
+		@extend .p-3, .m-2;
+		.winner {
+			font-weight : bold;
+		}
+	}
+	background-color : $light-color;
+	border           : 3px solid $primary-color;
+	border-radius    : 10px;
+	overflow-y       : auto;
+	max-height       : 600px;
+}
+
+// ------------ ITEMS -------------------
+
+.button-block {
+	@extend .d-flex, .justify-content-center;
+	i {
+		color : $primary-color;
+	}
+	> button[type="button"] {
+		@extend .button_2;
+	}
+	> button[type="submit"] {
+		@extend .button_4;
+	}
+	
+	> div {
+		@extend .dropdown;
+	}
+}
+
+.page-header {
+	@extend .mt-lg-2, .text-center, .align-items-center;
+	
+	@extend .py-3, .m-2;
+	background-color : $primary-color;
+	border-radius    : 10px;
+	
+	* {
+		@extend .text-center;
+		color : $light-color;
+	}
+	.img-comp {
+		@extend .mx-4;
+		img {
+			@extend .img-100;
+		}
+		* {
+			background-color : $light-color;
+			border-radius    : 10px;
+		}
+	}
+	.img-flag {
+		img {
+			@extend .img-70;
+		}
+	}
+	#block-data-competition {
+		position : relative;
+	}
+	
+	h3 {
+		display : none;
+	}
+}
+
+// ------------ MODALS -------------------
+
+.modal-header {
+	@extend .align-items-center;
+	
+	h3 {
+		@extend .modal-title;
+		color : $primary-color;
+	}
+	
+	> button {
+		@extend .button-close;
+	}
+}
+
+.sidebar {
+	@extend .offcanvas-start, .w-25;
+	min-width : 400px;
+	
+	.header {
+		@extend .offcanvas-header;
+		
+		h3 {
+			@extend .offcanvas-title;
+		}
+		
+		button {
+			@extend .button-close;
+		}
+	}
+	
+	.body {
+		@extend .offcanvas-body;
+		// position: relative;
+		> div {
+			@extend .my-3;
+		}
+		
+		// section
+		h5 {
+			@extend .h4;
+			text-decoration : underline;
+			
+		}
+		
+		a { // row
+			@extend .w-100, .align-items-center, .hover-class;
+			color           : $primary-color;
+			text-decoration : none;
+			font-weight     : bold;
+			div {
+				@extend .my-1;
+			}
+		}
+		
+		img {
+			@extend .img-fluid, .img-30;
+		}
+	}
+	hr {
+		@extend .mx-2;
+		color : $primary-color;
+	}
+}
+
+// ------------ PAGES -------------------
+
+.info-page {
+	@extend .dark-background, .container-fluid;
+	.left-block {
+		@extend .border-right, .col-xxl-3, .col-xl-4;
+	}
+	.right-block {
+		@extend .col-xxl-9, .col-xl-8, .pb-5;
+	}
+	
+	.head-block {
+		@extend .w-100, .text-center;
+		p {
+			@extend .mx-5, .mt-4;
+			font-size   : 48px;
+			font-weight : bold;
+			
+		}
+	}
+	
+}
+
+.info-block {
+	.big-image {
+		@extend .w-100, .text-center;
+		padding-top : 8px;
+		img {
+			max-height : 300px;
+		}
+		.player-big-image {
+			background-color : $light-color;
+			border           : 2px solid $light-color;
+			border-radius    : 10%;
+		}
+	}
+	.info-data {
+		hr {margin : 10px}
+		.row {
+			@extend .w-100, .align-items-center, .justify-content-center;
+			.col {
+				@extend .text-center, .mx-1, .mt-3, .col-md-5, .col-sm-2, .col-lg-2;
+				min-width : 200px;
+				:nth-child(even) {
+					//@extend .d-flex, .align-items-center, .justify-content-center;
+				}
+			}
+		}
+		h5 {
+			font-weight   : bold;
+			&.neg { color : $red-color;}
+			&.pos { color : $green-color;}
+			margin-bottom : 2px;
+		}
+		p {
+			font-weight : unset;
+			font-size   : 13px;
+		}
+		.stadium {
+			@extend .w-100, .d-flex, .text-center, .align-items-center, .justify-content-center;
+			//h5 {@extend .text-start}
+			img { @extend .img-50, .mx-2;}
+		}
+		.flag-club {
+			@extend .img-30;
+		}
+		.flag-country {
+			@extend .img-30;
+		}
+		.flag-competition {
+			@extend .img-40;
+			background-color : $light-color;
+			padding          : 3px;
+			border-radius    : 10px;
+		}
+	}
+}
+
+@media (min-width : 1200px) {
+	.info-page .right-block, .info-page .left-block {
+		overflow : auto;
+		height   : calc(100vh - 5rem - 3rem);
+	}
+}
+
+
+// ------------ CHART -------------------
+
+.chart-block {
+	.header {
+		@extend .mx-5, .d-flex, .justify-content-between;
+		button {@extend .button_2;}
+	}
+}
+
+.chart-container {
+	@extend .d-flex, .flex-wrap, .justify-content-center;
+	margin-bottom : 20px;
+}
+
+.chart-box {
+	
+	border           : 3px solid $primary-color;
+	background-color : $light-color;
+	margin           : 5px;
+	padding          : 5px;
+	border-radius    : 10px;
+	min-width        : 400px;
+	
+	.nav-link {
+		@extend .button_2;
+		max-width     : 60px;
+		padding       : 5px;
+		margin-bottom : 3px;
+		margin-left   : 3px;
+	}
+	
+	&.lg {
+		width     : 90%;
+		max-width : 1200px;}
+	&.md {
+		width     : 45%;
+		max-width : 800px;
+	}
+	&.sm {
+		width     : 30%;
+		max-width : 600px;
+	}
+	
+	.alt-buttons {
+		max-width : 60px;
+	}
+}
+
+.chart {
+	width     : 100%;
+	min-width : 350px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

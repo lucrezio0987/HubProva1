@@ -1,0 +1,153 @@
+@import "generico.scss";
+
+// ------------ BLOCK -------------------
+
+.palmares-block {
+	@extend .p-3;
+	.header {
+		@extend .mx-5, .d-flex, .justify-content-between;
+		button {@extend .button_2;}
+	}
+	.data {
+		flex-wrap: nowrap;
+	}
+	.body {
+		mask-image : linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+		padding-left: 3rem;
+		padding-right: 3rem;
+		overflow: auto;
+	}
+}
+
+.table-block {
+	@extend .w-100;
+	
+	.list-block {
+		@extend .my-2, .me-2;
+		background-color: $primary-opacity-color;
+		color: $light-color;
+		//border-radius: 10px;
+		//border: 2px solid $primary-color;
+		//width: 23%;
+		min-width: 360px;
+		h3 {
+			@extend .h4, .text-center, .mt-2;
+			text-transform: uppercase;
+		};
+	}
+	.header {
+		@extend .mx-5, .px-4;
+	}
+	
+	.list {
+		@extend .d-flex, .flex-wrap, .justify-content-center;
+		overflow-y: auto;
+		max-height: 600px;
+		border-radius: 0px 0px 10px 10px;
+		.player-row {
+			@extend .hover-class, .d-flex, .align-items-center, .m-2, .p-2;
+			min-width: 370px;
+			border: 2px solid $primary-color;
+			border-radius: 10px;
+			background-color: $light-color;
+			color: $primary-color;
+			h5 {
+				font-weight: bold;
+			}
+			img {
+				@extend .img-100, .mx-2, .my-1;
+				border: 2px solid $primary-color;
+			}
+			.data {
+				@extend .d-flex;
+				max-height: 28px;
+				img {
+					@extend .img-30, .mx-2;
+				}
+				p {
+					@extend .me-4;
+				}
+			}
+//			border-bottom: 1px solid $secondary-color;
+		}
+		//&>:nth-child(odd) {
+		//	background-color: $fifth-color;
+		//}
+	}
+}
+
+.result-header {
+	@extend .mx-5, .px-4;
+	button {@extend .button_2;}
+}
+.result-block {
+	@extend .justify-content-center, .p-3;
+	.results-table {
+		@extend .col-xxl-8;
+		background-color: $light-color;
+		border-radius: 10px;
+		border: 2px solid $primary-color;
+		color: $primary-color;
+		.footer-table {
+			@extend .pe-5, .me-4, .mt-2;
+		}
+	}
+	.ranking-table {
+		@extend .col-xxl-4;
+	}
+}
+
+.results-table {
+	@extend .table-1-no-collapse, .p-3, .results-table-coloration-winners;
+	overflow         : auto;
+	img { padding : 2px;}
+	.footer-table {
+		button {@extend .button_2;}
+	}
+}
+
+.results-table-modal {
+	@extend .table-1, .pt-3, .h-auto;
+	background-color : $no-color;
+	overflow         : auto;
+	img { padding : 2px;}
+	.win td:nth-child(5){ background-color: $win; }
+	.lose td:nth-child(5) { background-color: $lose;}
+	.draw td:nth-child(5) {background-color: $draw;}
+}
+
+.ranking-table {
+	@extend .table-2, .py-2;
+	overflow : auto;
+	table th, table td  {
+		background-color : $primary-opacity-color;
+		color            : $light-color;
+	}
+	.this {
+		@extend .hover-class;
+		border:1px solid $cyan-color;
+		> td {
+			background-color : rgba(red($cyan-color), green($cyan-color), blue($cyan-color), $op);
+			color            : $primary-color;
+		}
+	}
+//	table tr  { @extend .py-2;}
+}
+.ranking-table-modal {
+	@extend .table-2, .pt-3, .h-auto;
+	overflow         : auto;
+	.this {
+		@extend .hover-class;
+		border:1px solid $cyan-color;
+		> td {
+			background-color : rgba(red($cyan-color), green($cyan-color), blue($cyan-color), $op);
+			color            : $primary-color;
+		}
+	}
+}
+
+
+
+.footer {
+	@extend .fixed-bottom;
+}

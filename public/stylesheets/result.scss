@@ -1,0 +1,121 @@
+@import "generico.scss";
+
+// ------------ PAGE -------------------
+
+.result-page {
+	background-color : $primary-opacity-color;
+	margin           : 0;
+	@extend .text-center;
+	
+	.result-header {
+		@extend .d-flex, .align-items-center;
+		
+		img {
+			@extend .my-1, .mini_logs;
+		}
+	}
+	
+	.result-block {
+		
+		@extend .p-3, .h-auto, .mx-3;
+		background-color : $light-color;
+		border-radius    : 10px;
+		width            : 100%;
+		
+		.rounds-block {
+			@extend .px-3, .py-2, .d-flex, .align-items-center, .text-center;
+			
+			.rounds {
+				@extend .mask;
+				overflow-x                 : auto;
+				white-space                : nowrap;
+				-webkit-overflow-scrolling : touch;
+				background-color           : $light-color;
+				display                    : flex;
+				flex-direction             : row;
+				justify-content            : flex-start;
+				width                      : 100%;
+				padding                    : 10px;
+				border                     : 1px solid $primary-color;
+				
+				&::before, &::after {
+					content : '';
+					flex    : 0 0 50%;
+					height  : 1px;
+				}
+			}
+			
+			a {
+				@extend .hover-class, .button_0;
+				text-align    : center;
+				border-radius : 5px;
+				color         : $primary-color;
+				margin        : 0 2px;
+				font-size     : 25px;
+				flex          : 1 1 auto;
+			}
+			
+			.selectedRound {
+				background-color : $primary-color;
+				color            : $secondary-color;
+			}
+			
+			i {
+				@extend .hand-cursor, .px-3, .mx-3;
+			}
+		}
+		
+		.results-table {
+			@extend .table-1, .pt-3, .h-auto;
+			background-color : $no-color;
+			overflow         : auto;
+			
+			img { padding : 2px;}
+		}
+	}
+	
+	.ranking-block {
+		@extend .text-center, .h-auto;
+		padding : 0;
+		
+		.ranking-header {
+			@extend .w-100, .mt-4, .mx-1;
+			background-color : $primary-opacity-color;
+			color            : $light-color;
+			
+			nav {
+				@extend .navbar-expand, .navbar-light, .text-center, .justify-content-center, .d-flex;
+				
+				> div {
+					@extend .border-bottom, .navbar-nav;
+				}
+				
+				a {
+					@extend .p-3, .nav-link, .hover-class;
+					
+					&:not(:last-child) {
+						@extend .border-end;
+					}
+					
+					font-size   : 18px;
+					font-weight : bold;
+				}
+				
+			}
+		}
+		
+		.ranking-table {
+			@extend .table-2, .mx-5, .py-2, .h-100;
+			max-height : 80vh;
+			overflow-y : auto;
+			table {
+				width : 100%;
+				th, td {
+					background-color : $primary-opacity-color;
+					color            : $light-color;
+				}
+			}
+		}
+	}
+	
+}

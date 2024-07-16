@@ -1,0 +1,252 @@
+@import "generico.scss";
+
+h1 {
+	@extend .text-center, .m-2;
+	color: $light-color;
+	font-size: 3rem;
+}
+
+.cover-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	background-image: url('../images/varie/sfondo.jpg');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 1;
+	
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -1;
+	}
+	
+	> .body {
+		background-color: $light-color;
+		border: 3px solid $primary-color;
+		border-radius: 10px;
+		padding: 1rem;
+		position: relative;
+		width: 600px;
+		
+		.search-bar {
+			display: flex;
+			align-items: center;
+			border: 1px solid $primary-color;
+			border-radius: 5px;
+			padding: 0.5rem;
+			background-color: white;
+			
+			font-size: 1.2rem;
+			
+			i {
+				color: $primary-color;
+				margin-right: 0.5rem;
+			}
+			
+			input[type="text"] {
+				font-size: 1.2rem;
+				flex: 1;
+				border: none;
+				outline: none;
+				padding: 0.5rem;
+			}
+		}
+	}
+}
+.search-list {
+	position: absolute;
+	top: 100%;
+	margin-top: 10px;
+	width: 100%;
+	border-radius: 5px;
+	max-height: 300px;
+	max-width: 570px;
+	overflow-y: auto;
+	z-index: 1000;
+	
+	.list-group-item {
+		padding: 0.5rem;
+		cursor: pointer;
+		
+		&:hover, &:focus {
+			background-color: $primary-color;
+			color: white;
+		}
+	}
+}
+
+.results-table {
+	@extend .table-1-no-collapse, .p-3, .results-table-coloration-winners;
+	background-color: $light-color;
+	border-radius: 10px;
+	overflow: auto;
+	min-width: 50vw;
+	min-height: 60vh;
+	
+	.footer-table {
+		 @extend .mt-3;
+		button { @extend .button_2; }
+	}
+	table {
+		width: 100%;
+		height: 100%;
+	}
+}
+.results-table-modal {
+	@extend .table-1-no-collapse, .pt-3, .h-auto;
+	background-color: $no-color;
+	overflow: auto;
+	img {
+		padding: 2px;
+	}
+}
+
+.results-block {
+	@extend .p-3, .mt-3, .container, .pb-5;
+	background-color: $primary-color;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	h4 {
+		color: $secondary-color;
+	}
+}
+.competitions-block {
+	@extend .p-3, .mt-3, .container;
+	background-color: $primary-color;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	.main-competitions {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	.competition {
+		@extend .m-4, .align-items-center, .justify-content-center;
+		background-color: $light-color;
+		border: 3px solid $primary-color;
+		border-radius: 10px;
+		width: 200px;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		transition: transform 0.3s;
+		
+		&:hover {
+			transform: scale(1.05);
+		}
+		
+		img {
+			@extend .img-150;
+			margin-bottom: 10px;
+		}
+		
+		h1 {
+			text-align: center;
+			color: $primary-color;
+			
+		}
+	}
+	
+	button {
+		@extend .button_2;
+	}
+}
+.modal-body {
+	h2 {
+		text-align: center;
+		color: $primary-color;
+	}
+	.competition {
+		@extend .m-4, .align-items-center, .justify-content-center;
+		border: 3px solid $primary-color;
+		border-radius: 10px;
+		width: 200px;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		transition: transform 0.3s;
+		
+		&:hover {
+			transform: scale(1.05);
+		}
+		
+		img {
+			@extend .img-150;
+			margin-bottom: 10px;
+		}
+		
+	}
+}
+
+.pages-block{
+	@extend .container, .pb-3, .mt-5;
+	> .body, > .header{
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+}
+.card-page {
+	
+	@extend .container-fluid;
+	
+	.row {
+		@extend .justify-content-center, .hover-class, .align-items-center;
+		border: 1px solid $primary-color;
+		border-radius: 10px;
+		background-color: $light-color;
+	}
+	
+	.body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+	}
+	
+	h5 {
+		@extend .w-100, .h4;
+		font-weight: bold;
+		font-style: unset;
+		color: $primary-color;
+	}
+	
+	img {
+		@extend .w-100, .my-2;
+		height: 250px;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+	
+	p {
+		@extend .text-muted;
+	}
+	
+	i {
+		color: $secondary-color;
+		@extend .text-muted;
+	}
+	
+	button {
+		@extend .button_2;
+	}
+}
