@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title> Transfer </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" integrity="sha384-pzjw8+ct1MR8X8tVSEJ3mR5bG2JzweI3oHiFq3r6x5Bo+nmYTg7TtpZdK0N2aZ3" crossorigin="anonymous"></script>
+
+    <!-- FontAwesome -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel='stylesheet' href='public/stylesheets/fontawesome-free-6.4.2-web/css/all.css'/>
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <script src='https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js'></script>
+    <script src='https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js'></script>
+    <script src='https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js'></script>
+
+    <!-- Highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/funnel.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.src.js"></script>
+    <script src="https://code.highcharts.com/stock/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/stock/highcharts-more.src.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.src.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/drilldown.src.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/solid-gauge.src.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <!-- Local Stylesheets -->
+    <link rel='stylesheet' href='public/stylesheets/css-progress-wizard-master/css/progress-wizard.min.css'/>
+    <link rel='stylesheet' href='public/stylesheets/layout.css'/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
+    <link rel='stylesheet' href='public/stylesheets/home.css'/>
+</head>
+
+<body>
+<div class="main-navbar fixed-top" role="navigation">
+    <nav class="navbar" aria-label="Main navigation">
+        <div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-colapse" aria-controls="navbar-colapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <a class="navbar-brand" href="#" aria-label="Home">
+            <img src="https://upload.wikimedia.org/wikipedia/it/thumb/b/b5/UEFA_logo.svg/1200px-UEFA_logo.svg.png" class="logo" alt="Uefa logo">
+        </a>
+        <div class="collapse navbar-collapse" id="navbar-colapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="statistics.html">Statistiche</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="result.html" >Risultati</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="transfer.html" aria-current="page">Valori di mercato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">News</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-chat-btn">
+            <button onclick="window.location='/chat'" aria-label="Chat">
+                <i class="fas fa-comment px-1"></i> Chat
+            </button>
+        </div>
+    </nav>
+</div>
+
+<main role="main">
+</main>
+
+</body>
