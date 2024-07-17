@@ -49,13 +49,13 @@
     <script src="https://code.highcharts.com/stock/modules/solid-gauge.src.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
+
     <!-- Local Stylesheets -->
     <link rel='stylesheet' href='public/stylesheets/css-progress-wizard-master/css/progress-wizard.min.css'/>
     <link rel='stylesheet' href='public/stylesheets/layout.css'/>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
-    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
-    <link rel='stylesheet' href='public/stylesheets/home.css'/>
+    <link rel='stylesheet' href='public/stylesheets/game.css'/>
 </head>
 
 <body>
@@ -89,7 +89,7 @@
             </ul>
         </div>
         <div class="navbar-chat-btn">
-            <button onclick="window.location='/chat'" aria-label="Chat">
+            <button onclick="" aria-label="Chat">
                 <i class="fas fa-comment px-1"></i> Chat
             </button>
         </div>
@@ -97,6 +97,52 @@
 </div>
 
 <main role="main">
+    <div id='game-header' class="game-info">
+        <nav class="navbar-game navbar">
+            <div class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                 data-bs-target="#navbar-game" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                 aria-label="Toggle navigation">
+                <div class="body row">
+                    <div class="col-md-5">
+                        <div class="row d-flex align-items-center">
+                            <div id="home_club_img" class="col-md-2 d-flex align-items-center justify-content-xl-start justify-content-center">
+                                <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined" class="m-2 px-2"
+                                     style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                     aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                            </div>
+                            <div id="home_club_name" class="py-2 col-md-10 d-flex align-items-center justify-content-xl-start justify-content-center">
+                                <h2 class="mb-0" style="flex-shrink: 0;"><b>Atalanta Bergamasca</b></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="result" class="result-block col-md-2" tabindex="0">
+                        <p><b>1- 2</b></p>
+                        <h5><strong>Serie A</strong> - <i>Giornata: <strong>13</strong></i> </h5>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row d-flex align-items-center">
+                            <div id="away_club_name" class="py-2 col-md-10 d-flex align-items-center justify-content-xl-end justify-content-center">
+                                <h2 class="mb-0" style="flex-shrink: 0;"><b>SS Napoli</b></h2>
+                            </div>
+                            <div id="away_club_img" class="col-md-2 d-flex align-items-center justify-content-xl-start justify-content-center">
+                                <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined" class="m-2 px-2"
+                                     style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                     aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row w-100 text-center"><i class="fas fa-caret-down"></i></div>
+                <div class="collapse" id="navbar-game">
+                    <div class="row main-timeline">
+                        <div class="col-md-8">
+                            <div class="game-data" id="events"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
 </main>
 
 <footer class="footer" role="contentinfo">

@@ -60,7 +60,7 @@
       </ul>
     </div>
     <div class="navbar-chat-btn">
-      <button onclick="window.location='/chat'" aria-label="Chat">
+      <button onclick="" aria-label="Chat">
         <i class="fas fa-comment px-1"></i> Chat
       </button>
     </div>
@@ -623,6 +623,61 @@
   <h4>Statistic website (Progetto IUM-TWeb)</h4>
   <p>&copy; 2024 - Bergesio Simone & Del Ponte Lucrezio</p>
 </footer>
+
+<script type="text/javascript" src="public/javascripts/searchData.js"></script>
+<script>
+  const searchBar = document.getElementById('search-bar');
+  const searchResults = document.getElementById('search-results');
+
+  searchBar.addEventListener('input', function () {
+    const query = searchBar.value.toLowerCase();
+    searchResults.innerHTML = '';
+
+    if (query) {
+      const filteredResults = [];
+
+      Object.keys(searchData.players).forEach(key => {
+        if (searchData.players[key].toLowerCase().includes(query))
+          filteredResults.push({
+            title: searchData.players[key],
+            link: `player.html`
+          });
+      });
+
+      Object.keys(searchData.clubs).forEach(key => {
+        if (searchData.clubs[key].toLowerCase().includes(query))
+          filteredResults.push({
+            title: searchData.clubs[key],
+            link: `club.html`
+          });
+      });
+
+      Object.keys(searchData.competitions).forEach(key => {
+        if (searchData.competitions[key].toLowerCase().includes(query)) {
+          filteredResults.push({
+            title: searchData.competitions[key],
+            link: `statistics.html`
+          });
+        }
+      });
+
+      filteredResults.slice(0, 10).forEach(function (item) {
+        const listItem = document.createElement('div');
+        listItem.className = 'list-group-item';
+        listItem.textContent = item.title;
+        listItem.tabIndex = 0;
+        listItem.setAttribute('aria-label', item.title);
+        listItem.addEventListener('click', () => window.location.href = item.link);
+        listItem.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter')
+            window.location.href = item.link;
+        });
+
+        searchResults.appendChild(listItem);
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

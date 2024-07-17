@@ -75,7 +75,7 @@
             </ul>
         </div>
         <div class="navbar-chat-btn">
-            <button onclick="window.location='/chat'" aria-label="Chat">
+            <button onclick="" aria-label="Chat">
                 <i class="fas fa-comment px-1"></i> Chat
             </button>
         </div>
@@ -2436,23 +2436,120 @@
 
             <!-- Scores Table -->
             <div id="ranking-table-scores" class="ranking-table table-rank-color-3"
-                 style="display: none; position: relative;">
+                 style="display: none; position: relative; max-height: unset;">
                 <table id="table_scores">
                     <thead>
                     <tr>
                         <th class="col-2">Pos</th>
                         <th class="col-1"></th>
                         <th class="col-6 text-start">Giocatore</th>
-                        <th class="col-3">Totale</th>
+                        <th class="col-3 text-center">Goals</th>
                     </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                    <tr tabindex="0" aria-label="Classifica: 1, Lautaro Martínez, 13 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 1">1</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Club 46" tabindex="0" aria-label="Vai al club 46" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Lautaro Martínez" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Lautaro Martínez</b></td>
+                        <td class="col-3" tabindex="0" aria-label="13 goal"><h4>13</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 2, Olivier Giroud, 7 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 2">2</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/5.png" alt="Club 5" tabindex="0" aria-label="Vai al club 5" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Olivier Giroud" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Olivier Giroud</b></td>
+                        <td class="col-3" tabindex="0" aria-label="7 goal"><h4>7</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 3, Domenico Berardi, 7 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 3">3</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/6574.png" alt="Club 6574" tabindex="0" aria-label="Vai al club 6574" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Domenico Berardi" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Domenico Berardi</b></td>
+                        <td class="col-3" tabindex="0" aria-label="7 goal"><h4>7</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 4, Victor Osimhen, 6 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 4">4</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Club 6195" tabindex="0" aria-label="Vai al club 6195" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Victor Osimhen" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Victor Osimhen</b></td>
+                        <td class="col-3" tabindex="0" aria-label="6 goal"><h4>6</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 5, Nicolás González, 6 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 5">5</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/430.png" alt="Club 430" tabindex="0" aria-label="Vai al club 430" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Nicolás González" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Nicolás González</b></td>
+                        <td class="col-3" tabindex="0" aria-label="6 goal"><h4>6</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 6, Andrea Colpani, 6 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 6">6</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/2919.png" alt="Club 2919" tabindex="0" aria-label="Vai al club 2919" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Andrea Colpani" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Andrea Colpani</b></td>
+                        <td class="col-3" tabindex="0" aria-label="6 goal"><h4>6</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 7, Romelu Lukaku, 6 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 7">7</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/12.png" alt="Club 12" tabindex="0" aria-label="Vai al club 12" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Romelu Lukaku" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Romelu Lukaku</b></td>
+                        <td class="col-3" tabindex="0" aria-label="6 goal"><h4>6</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 8, Matías Soulé, 6 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 8">8</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/8970.png" alt="Club 8970" tabindex="0" aria-label="Vai al club 8970" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Matías Soulé" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Matías Soulé</b></td>
+                        <td class="col-3" tabindex="0" aria-label="6 goal"><h4>6</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 9, Matteo Politano, 5 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 9">9</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Club 6195" tabindex="0" aria-label="Vai al club 6195" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Matteo Politano" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Matteo Politano</b></td>
+                        <td class="col-3" tabindex="0" aria-label="5 goal"><h4>5</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 10, Albert Gudmundsson, 5 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 10">10</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/252.png" alt="Club 252" tabindex="0" aria-label="Vai al club 252" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Albert Gudmundsson" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Albert Gudmundsson</b></td>
+                        <td class="col-3" tabindex="0" aria-label="5 goal"><h4>5</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 11, Giacomo Bonaventura, 5 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 11">11</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/430.png" alt="Club 430" tabindex="0" aria-label="Vai al club 430" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Giacomo Bonaventura" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Giacomo Bonaventura</b></td>
+                        <td class="col-3" tabindex="0" aria-label="5 goal"><h4>5</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 12, Hakan Çalhanoğlu, 5 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 12">12</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Club 46" tabindex="0" aria-label="Vai al club 46" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Hakan Çalhanoğlu" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Hakan Çalhanoğlu</b></td>
+                        <td class="col-3" tabindex="0" aria-label="5 goal"><h4>5</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 13, Andrea Pinamonti, 5 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 13">13</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/6574.png" alt="Club 6574" tabindex="0" aria-label="Vai al club 6574" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Andrea Pinamonti" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Andrea Pinamonti</b></td>
+                        <td class="col-3" tabindex="0" aria-label="5 goal"><h4>5</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 14, Gianluca Scamacca, 5 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 14">14</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Club 800" tabindex="0" aria-label="Vai al club 800" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Gianluca Scamacca" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Gianluca Scamacca</b></td>
+                        <td class="col-3" tabindex="0" aria-label="5 goal"><h4>5</h4></td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 15, Dušan Vlahović, 5 goal" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}">
+                        <td tabindex="0" aria-label="Posizione 15">15</td>
+                        <td class="col-1"><img src="https://tmssl.akamaized.net/images/wappen/big/506.png" alt="Club 506" tabindex="0" aria-label="Vai al club 506" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="event.stopPropagation(); if(event.key==='Enter'){window.location='club.html'}"></td>
+                        <td class="col-6" tabindex="0" aria-label="Dušan Vlahović" onclick="window.location='player.html'" onkeydown="if(event.key==='Enter'){window.location='player.html'}"><b>Dušan Vlahović</b></td>
+                        <td class="col-3" tabindex="0" aria-label="5 goal"><h4>5</h4></td>
+                    </tr>
+                    <tr>
+                        <td class="col-2">...</td>
+                        <td class="col-1">...</td>
+                        <td class="col-6">...</td>
+                        <td class="col-3">...</td>
+                    </tr>
+                    </tbody>
                 </table>
             </div>
 
             <!-- Home Table -->
             <div id="ranking-table-home" class="ranking-table table-rank-color-10"
-                 style="display: none; position: relative;">
+                 style="display: none; position: relative; max-height: unset;">
                 <table id="table_home">
                     <thead>
                     <tr>
@@ -2467,13 +2564,234 @@
                         <th class="">DR</th>
                     </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                    <tr tabindex="0" aria-label="Classifica: 1, Juventus FC, 17 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 1">1</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/506.png" alt="Logo Juventus FC" tabindex="0" aria-label="Logo Juventus FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Juventus FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Juventus FC</b></td>
+                        <td tabindex="0" aria-label="17 punti"><b>17</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="5 vittorie">5</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="0 sconfitte">0</td>
+                        <td tabindex="0" aria-label="Differenza Reti 7">7</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 2, AS Roma, 16 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 2">2</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/12.png" alt="Logo AS Roma" tabindex="0" aria-label="Logo AS Roma" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AS Roma" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AS Roma</b></td>
+                        <td tabindex="0" aria-label="16 punti"><b>16</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="5 vittorie">5</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="1 sconfitta">1</td>
+                        <td tabindex="0" aria-label="Differenza Reti 12">12</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 3, FC Internazionale Milano, 16 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 3">3</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Logo FC Internazionale Milano" tabindex="0" aria-label="Logo FC Internazionale Milano" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="FC Internazionale Milano" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>FC Internazionale Milano</b></td>
+                        <td tabindex="0" aria-label="16 punti"><b>16</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="5 vittorie">5</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="1 sconfitta">1</td>
+                        <td tabindex="0" aria-label="Differenza Reti 12">12</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 4, Bologna FC 1909, 16 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 4">4</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1025.png" alt="Logo Bologna FC 1909" tabindex="0" aria-label="Logo Bologna FC 1909" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Bologna FC 1909" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Bologna FC 1909</b></td>
+                        <td tabindex="0" aria-label="16 punti"><b>16</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="5 vittorie">5</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="1 sconfitta">1</td>
+                        <td tabindex="0" aria-label="Differenza Reti 6">6</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 5, Frosinone, 16 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 5">5</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/8970.png" alt="Logo Frosinone" tabindex="0" aria-label="Logo Frosinone" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Frosinone" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Frosinone</b></td>
+                        <td tabindex="0" aria-label="16 punti"><b>16</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="5 vittorie">5</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="1 sconfitta">1</td>
+                        <td tabindex="0" aria-label="Differenza Reti 4">4</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 6, AC Milan, 12 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 6">6</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/5.png" alt="Logo AC Milan" tabindex="0" aria-label="Logo AC Milan" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Milan" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Milan</b></td>
+                        <td tabindex="0" aria-label="12 punti"><b>12</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="4 vittorie">4</td>
+                        <td tabindex="0" aria-label="0 pareggi">0</td>
+                        <td tabindex="0" aria-label="2 sconfitte">2</td>
+                        <td tabindex="0" aria-label="Differenza Reti 5">5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 7, SS Lazio, 11 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 7">7</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/398.png" alt="Logo SS Lazio" tabindex="0" aria-label="Logo SS Lazio" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="SS Lazio" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>SS Lazio</b></td>
+                        <td tabindex="0" aria-label="11 punti"><b>11</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="3 vittorie">3</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="1 sconfitta">1</td>
+                        <td tabindex="0" aria-label="Differenza Reti 3">3</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 8, US Lecce, 11 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 8">8</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1005.png" alt="Logo US Lecce" tabindex="0" aria-label="Logo US Lecce" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Lecce" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Lecce</b></td>
+                        <td tabindex="0" aria-label="11 punti"><b>11</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="3 vittorie">3</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="2 sconfitte">2</td>
+                        <td tabindex="0" aria-label="Differenza Reti -1">-1</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 9, Atalanta Bergamasca, 10 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 9">9</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo Atalanta Bergamasca" tabindex="0" aria-label="Logo Atalanta Bergamasca" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Atalanta Bergamasca" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Atalanta Bergamasca</b></td>
+                        <td tabindex="0" aria-label="10 punti"><b>10</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="3 vittorie">3</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="2 sconfitte">2</td>
+                        <td tabindex="0" aria-label="Differenza Reti 5">5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 10, AC Monza, 10 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 10">10</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/2919.png" alt="Logo AC Monza" tabindex="0" aria-label="Logo AC Monza" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Monza" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Monza</b></td>
+                        <td tabindex="0" aria-label="10 punti"><b>10</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="4 pareggi">4</td>
+                        <td tabindex="0" aria-label="0 sconfitte">0</td>
+                        <td tabindex="0" aria-label="Differenza Reti 5">5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 11, AC Fiorentina, 10 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 11">11</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/430.png" alt="Logo AC Fiorentina" tabindex="0" aria-label="Logo AC Fiorentina" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Fiorentina" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Fiorentina</b></td>
+                        <td tabindex="0" aria-label="10 punti"><b>10</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="3 vittorie">3</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="2 sconfitte">2</td>
+                        <td tabindex="0" aria-label="Differenza Reti 2">2</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 12, Genoa CFC, 10 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 12">12</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/252.png" alt="Logo Genoa CFC" tabindex="0" aria-label="Logo Genoa CFC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Genoa CFC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Genoa CFC</b></td>
+                        <td tabindex="0" aria-label="10 punti"><b>10</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="3 vittorie">3</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="2 sconfitte">2</td>
+                        <td tabindex="0" aria-label="Differenza Reti 1">1</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 13, Torino, 9 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 13">13</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/416.png" alt="Logo Torino" tabindex="0" aria-label="Logo Torino" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Torino" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Torino</b></td>
+                        <td tabindex="0" aria-label="9 punti"><b>9</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="3 pareggi">3</td>
+                        <td tabindex="0" aria-label="1 sconfitta">1</td>
+                        <td tabindex="0" aria-label="Differenza Reti -1">-1</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 14, US Sassuolo, 8 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 14">14</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/6574.png" alt="Logo US Sassuolo" tabindex="0" aria-label="Logo US Sassuolo" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Sassuolo" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Sassuolo</b></td>
+                        <td tabindex="0" aria-label="8 punti"><b>8</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti -1">-1</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 15, Cagliari, 8 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 15">15</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1390.png" alt="Logo Cagliari" tabindex="0" aria-label="Logo Cagliari" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Cagliari" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Cagliari</b></td>
+                        <td tabindex="0" aria-label="8 punti"><b>8</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti -5">-5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 16, SS Napoli, 7 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 16">16</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo SS Napoli" tabindex="0" aria-label="Logo SS Napoli" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="SS Napoli" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>SS Napoli</b></td>
+                        <td tabindex="0" aria-label="7 punti"><b>7</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti 1">1</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 17, US Salernitana 1919, 6 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 17">17</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/380.png" alt="Logo US Salernitana 1919" tabindex="0" aria-label="Logo US Salernitana 1919" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Salernitana 1919" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Salernitana 1919</b></td>
+                        <td tabindex="0" aria-label="6 punti"><b>6</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="1 vittoria">1</td>
+                        <td tabindex="0" aria-label="3 pareggi">3</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti -8">-8</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 18, Verona Hellas FC, 5 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 18">18</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/276.png" alt="Logo Verona Hellas FC" tabindex="0" aria-label="Logo Verona Hellas FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Verona Hellas FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Verona Hellas FC</b></td>
+                        <td tabindex="0" aria-label="5 punti"><b>5</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="1 vittoria">1</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti -4">-4</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 19, Udinese, 4 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 19">19</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/410.png" alt="Logo Udinese" tabindex="0" aria-label="Logo Udinese" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Udinese" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Udinese</b></td>
+                        <td tabindex="0" aria-label="4 punti"><b>4</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="0 vittorie">0</td>
+                        <td tabindex="0" aria-label="4 pareggi">4</td>
+                        <td tabindex="0" aria-label="2 sconfitte">2</td>
+                        <td tabindex="0" aria-label="Differenza Reti -5">-5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 20, Empoli FC, 4 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 20">20</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/749.png" alt="Logo Empoli FC" tabindex="0" aria-label="Logo Empoli FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Empoli FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Empoli FC</b></td>
+                        <td tabindex="0" aria-label="4 punti"><b>4</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="1 vittoria">1</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="5 sconfitte">5</td>
+                        <td tabindex="0" aria-label="Differenza Reti -7">-7</td>
+                    </tr>
+                    </tbody>
                 </table>
             </div>
 
             <!-- Away Table -->
             <div id="ranking-table-away" class="ranking-table table-rank-color-10"
-                 style="display: none; position: relative;">
+                 style="display: none; position: relative; max-height: unset;">
                 <table id="table_away">
                     <thead>
                     <tr>
@@ -2488,41 +2806,585 @@
                         <th class="">DR</th>
                     </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                    <tr tabindex="0" aria-label="Classifica: 1, SS Napoli, 17 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 1">1</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo SS Napoli" tabindex="0" aria-label="Logo SS Napoli" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="SS Napoli" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>SS Napoli</b></td>
+                        <td tabindex="0" aria-label="17 punti"><b>17</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="5 vittorie">5</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="0 sconfitte">0</td>
+                        <td tabindex="0" aria-label="Differenza Reti 11">11</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 2, FC Internazionale Milano, 16 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 2">2</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Logo FC Internazionale Milano" tabindex="0" aria-label="Logo FC Internazionale Milano" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="FC Internazionale Milano" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>FC Internazionale Milano</b></td>
+                        <td tabindex="0" aria-label="16 punti"><b>16</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="5 vittorie">5</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="0 sconfitte">0</td>
+                        <td tabindex="0" aria-label="Differenza Reti 11">11</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 3, AC Milan, 14 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 3">3</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/5.png" alt="Logo AC Milan" tabindex="0" aria-label="Logo AC Milan" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Milan" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Milan</b></td>
+                        <td tabindex="0" aria-label="14 punti"><b>14</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="4 vittorie">4</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="1 sconfitta">1</td>
+                        <td tabindex="0" aria-label="Differenza Reti 2">2</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 4, Juventus FC, 13 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 4">4</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/506.png" alt="Logo Juventus FC" tabindex="0" aria-label="Logo Juventus FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Juventus FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Juventus FC</b></td>
+                        <td tabindex="0" aria-label="13 punti"><b>13</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="4 vittorie">4</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="1 sconfitta">1</td>
+                        <td tabindex="0" aria-label="Differenza Reti 5">5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 5, Atalanta Bergamasca, 10 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 5">5</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo Atalanta Bergamasca" tabindex="0" aria-label="Logo Atalanta Bergamasca" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Atalanta Bergamasca" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Atalanta Bergamasca</b></td>
+                        <td tabindex="0" aria-label="10 punti"><b>10</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="3 vittorie">3</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti 3">3</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 6, AC Fiorentina, 10 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 6">6</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/430.png" alt="Logo AC Fiorentina" tabindex="0" aria-label="Logo AC Fiorentina" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Fiorentina" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Fiorentina</b></td>
+                        <td tabindex="0" aria-label="10 punti"><b>10</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="3 vittorie">3</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti 1">1</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 7, AC Monza, 8 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 7">7</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/2919.png" alt="Logo AC Monza" tabindex="0" aria-label="Logo AC Monza" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Monza" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Monza</b></td>
+                        <td tabindex="0" aria-label="8 punti"><b>8</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti -3">-3</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 8, US Sassuolo, 7 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 8">8</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/6574.png" alt="Logo US Sassuolo" tabindex="0" aria-label="Logo US Sassuolo" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Sassuolo" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Sassuolo</b></td>
+                        <td tabindex="0" aria-label="7 punti"><b>7</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti -3">-3</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 9, Udinese, 7 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 9">9</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/410.png" alt="Logo Udinese" tabindex="0" aria-label="Logo Udinese" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Udinese" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Udinese</b></td>
+                        <td tabindex="0" aria-label="7 punti"><b>7</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="1 vittoria">1</td>
+                        <td tabindex="0" aria-label="4 pareggi">4</td>
+                        <td tabindex="0" aria-label="2 sconfitte">2</td>
+                        <td tabindex="0" aria-label="Differenza Reti -4">-4</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 10, Torino, 7 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 10">10</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/416.png" alt="Logo Torino" tabindex="0" aria-label="Logo Torino" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Torino" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Torino</b></td>
+                        <td tabindex="0" aria-label="7 punti"><b>7</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="4 sconfitte">4</td>
+                        <td tabindex="0" aria-label="Differenza Reti -5">-5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 11, SS Lazio, 6 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 11">11</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/398.png" alt="Logo SS Lazio" tabindex="0" aria-label="Logo SS Lazio" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="SS Lazio" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>SS Lazio</b></td>
+                        <td tabindex="0" aria-label="6 punti"><b>6</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="0 pareggi">0</td>
+                        <td tabindex="0" aria-label="5 sconfitte">5</td>
+                        <td tabindex="0" aria-label="Differenza Reti -4">-4</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 12, Empoli FC, 6 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 12">12</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/749.png" alt="Logo Empoli FC" tabindex="0" aria-label="Logo Empoli FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Empoli FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Empoli FC</b></td>
+                        <td tabindex="0" aria-label="6 punti"><b>6</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="2 vittorie">2</td>
+                        <td tabindex="0" aria-label="0 pareggi">0</td>
+                        <td tabindex="0" aria-label="4 sconfitte">4</td>
+                        <td tabindex="0" aria-label="Differenza Reti -10">-10</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 13, Bologna FC 1909, 5 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 13">13</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1025.png" alt="Logo Bologna FC 1909" tabindex="0" aria-label="Logo Bologna FC 1909" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Bologna FC 1909" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Bologna FC 1909</b></td>
+                        <td tabindex="0" aria-label="5 punti"><b>5</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="0 vittorie">0</td>
+                        <td tabindex="0" aria-label="5 pareggi">5</td>
+                        <td tabindex="0" aria-label="1 sconfitta">1</td>
+                        <td tabindex="0" aria-label="Differenza Reti -1">-1</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 14, AS Roma, 5 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 14">14</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/12.png" alt="Logo AS Roma" tabindex="0" aria-label="Logo AS Roma" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AS Roma" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AS Roma</b></td>
+                        <td tabindex="0" aria-label="5 punti"><b>5</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="1 vittoria">1</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="3 sconfitte">3</td>
+                        <td tabindex="0" aria-label="Differenza Reti -2">-2</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 15, US Lecce, 4 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 15">15</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1005.png" alt="Logo US Lecce" tabindex="0" aria-label="Logo US Lecce" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Lecce" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Lecce</b></td>
+                        <td tabindex="0" aria-label="4 punti"><b>4</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="0 vittorie">0</td>
+                        <td tabindex="0" aria-label="4 pareggi">4</td>
+                        <td tabindex="0" aria-label="2 sconfitte">2</td>
+                        <td tabindex="0" aria-label="Differenza Reti -2">-2</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 16, Genoa CFC, 4 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 16">16</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/252.png" alt="Logo Genoa CFC" tabindex="0" aria-label="Logo Genoa CFC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Genoa CFC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Genoa CFC</b></td>
+                        <td tabindex="0" aria-label="4 punti"><b>4</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="1 vittoria">1</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="5 sconfitte">5</td>
+                        <td tabindex="0" aria-label="Differenza Reti -5">-5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 17, Verona Hellas FC, 4 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 17">17</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/276.png" alt="Logo Verona Hellas FC" tabindex="0" aria-label="Logo Verona Hellas FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Verona Hellas FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Verona Hellas FC</b></td>
+                        <td tabindex="0" aria-label="4 punti"><b>4</b></td>
+                        <td tabindex="0" aria-label="7 partite giocate">7</td>
+                        <td tabindex="0" aria-label="1 vittoria">1</td>
+                        <td tabindex="0" aria-label="1 pareggio">1</td>
+                        <td tabindex="0" aria-label="5 sconfitte">5</td>
+                        <td tabindex="0" aria-label="Differenza Reti -5">-5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 18, Frosinone, 2 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 18">18</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/8970.png" alt="Logo Frosinone" tabindex="0" aria-label="Logo Frosinone" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Frosinone" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Frosinone</b></td>
+                        <td tabindex="0" aria-label="2 punti"><b>2</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="0 vittorie">0</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="4 sconfitte">4</td>
+                        <td tabindex="0" aria-label="Differenza Reti -6">-6</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 19, US Salernitana 1919, 2 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 19">19</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/380.png" alt="Logo US Salernitana 1919" tabindex="0" aria-label="Logo US Salernitana 1919" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Salernitana 1919" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Salernitana 1919</b></td>
+                        <td tabindex="0" aria-label="2 punti"><b>2</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="0 vittorie">0</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="4 sconfitte">4</td>
+                        <td tabindex="0" aria-label="Differenza Reti -7">-7</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 20, Cagliari, 2 punti" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 20">20</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1390.png" alt="Logo Cagliari" tabindex="0" aria-label="Logo Cagliari" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Cagliari" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Cagliari</b></td>
+                        <td tabindex="0" aria-label="2 punti"><b>2</b></td>
+                        <td tabindex="0" aria-label="6 partite giocate">6</td>
+                        <td tabindex="0" aria-label="0 vittorie">0</td>
+                        <td tabindex="0" aria-label="2 pareggi">2</td>
+                        <td tabindex="0" aria-label="4 sconfitte">4</td>
+                        <td tabindex="0" aria-label="Differenza Reti -7">-7</td>
+                    </tr>
+                    </tbody>
                 </table>
             </div>
 
             <!-- Goal Scored Table -->
-            <div id="ranking-table-goalScored" class="ranking-table" style="display: none; position: relative;">
+            <div id="ranking-table-goalScored" class="ranking-table"
+                 style="display: none; position: relative; max-height: unset;">
                 <table id="table_goalScored">
                     <thead>
                     <tr>
                         <th class="col-2">Pos</th>
                         <th class="col-1"></th>
                         <th class="col-6 text-start">Club</th>
-                        <th class="col-1">Goal Scored</th>
-                        <th class="col-1">Goal Conceded</th>
-                        <th class="">DR</th>
+                        <th class="col-2"><b>segnati</b></th>
+                        <th class="col-2">concessi</th>
+                        <th class="col-2">DR</th>
                     </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                    <tr tabindex="0" aria-label="Classifica: 1, FC Internazionale Milano, 30 goal segnati, 7 concessi, DR 23" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 1">1</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Logo FC Internazionale Milano" tabindex="0" aria-label="Logo FC Internazionale Milano" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="FC Internazionale Milano" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>FC Internazionale Milano</b></td>
+                        <td tabindex="0" aria-label="30 goal segnati"><b>30</b></td>
+                        <td tabindex="0" aria-label="7 goal concessi">7</td>
+                        <td tabindex="0" aria-label="Differenza Reti 23">23</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 2, SS Napoli, 26 goal segnati, 14 concessi, DR 12" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 2">2</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo SS Napoli" tabindex="0" aria-label="Logo SS Napoli" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="SS Napoli" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>SS Napoli</b></td>
+                        <td tabindex="0" aria-label="26 goal segnati"><b>26</b></td>
+                        <td tabindex="0" aria-label="14 goal concessi">14</td>
+                        <td tabindex="0" aria-label="Differenza Reti 12">12</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 3, AS Roma, 25 goal segnati, 15 concessi, DR 10" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 3">3</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/12.png" alt="Logo AS Roma" tabindex="0" aria-label="Logo AS Roma" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AS Roma" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AS Roma</b></td>
+                        <td tabindex="0" aria-label="25 goal segnati"><b>25</b></td>
+                        <td tabindex="0" aria-label="15 goal concessi">15</td>
+                        <td tabindex="0" aria-label="Differenza Reti 10">10</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 4, AC Milan, 21 goal segnati, 14 concessi, DR 7" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 4">4</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/5.png" alt="Logo AC Milan" tabindex="0" aria-label="Logo AC Milan" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Milan" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Milan</b></td>
+                        <td tabindex="0" aria-label="21 goal segnati"><b>21</b></td>
+                        <td tabindex="0" aria-label="14 goal concessi">14</td>
+                        <td tabindex="0" aria-label="Differenza Reti 7">7</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 5, Atalanta Bergamasca, 21 goal segnati, 13 concessi, DR 8" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 5">5</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo Atalanta Bergamasca" tabindex="0" aria-label="Logo Atalanta Bergamasca" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Atalanta Bergamasca" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Atalanta Bergamasca</b></td>
+                        <td tabindex="0" aria-label="21 goal segnati"><b>21</b></td>
+                        <td tabindex="0" aria-label="13 goal concessi">13</td>
+                        <td tabindex="0" aria-label="Differenza Reti 8">8</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 6, AC Fiorentina, 20 goal segnati, 17 concessi, DR 3" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 6">6</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/430.png" alt="Logo AC Fiorentina" tabindex="0" aria-label="Logo AC Fiorentina" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Fiorentina" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Fiorentina</b></td>
+                        <td tabindex="0" aria-label="20 goal segnati"><b>20</b></td>
+                        <td tabindex="0" aria-label="17 goal concessi">17</td>
+                        <td tabindex="0" aria-label="Differenza Reti 3">3</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 7, Juventus FC, 20 goal segnati, 8 concessi, differenza reti 12" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 7">7</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/506.png" alt="Logo Juventus FC" tabindex="0" aria-label="Logo Juventus FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Juventus FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Juventus FC</b></td>
+                        <td tabindex="0" aria-label="20 goal segnati"><b>20</b></td>
+                        <td tabindex="0" aria-label="8 goal concessi">8</td>
+                        <td tabindex="0" aria-label="Differenza Reti 12">12</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 8, US Sassuolo, 20 goal segnati, 24 concessi, differenza reti -4" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 8">8</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/6574.png" alt="Logo US Sassuolo" tabindex="0" aria-label="Logo US Sassuolo" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Sassuolo" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Sassuolo</b></td>
+                        <td tabindex="0" aria-label="20 goal segnati"><b>20</b></td>
+                        <td tabindex="0" aria-label="24 goal concessi">24</td>
+                        <td tabindex="0" aria-label="Differenza Reti -4">-4</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 9, Frosinone, 19 goal segnati, 21 concessi, differenza reti -2" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 9">9</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/8970.png" alt="Logo Frosinone" tabindex="0" aria-label="Logo Frosinone" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Frosinone" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Frosinone</b></td>
+                        <td tabindex="0" aria-label="19 goal segnati"><b>19</b></td>
+                        <td tabindex="0" aria-label="21 goal concessi">21</td>
+                        <td tabindex="0" aria-label="Differenza Reti -2">-2</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 10, US Lecce, 15 goal segnati, 18 concessi, differenza reti -3" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 10">10</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1005.png" alt="Logo US Lecce" tabindex="0" aria-label="Logo US Lecce" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Lecce" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Lecce</b></td>
+                        <td tabindex="0" aria-label="15 goal segnati"><b>15</b></td>
+                        <td tabindex="0" aria-label="18 goal concessi">18</td>
+                        <td tabindex="0" aria-label="Differenza Reti -3">-3</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 11, Bologna FC 1909, 15 goal segnati, 10 concessi, differenza reti 5" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 11">11</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1025.png" alt="Logo Bologna FC 1909" tabindex="0" aria-label="Logo Bologna FC 1909" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Bologna FC 1909" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Bologna FC 1909</b></td>
+                        <td tabindex="0" aria-label="15 goal segnati"><b>15</b></td>
+                        <td tabindex="0" aria-label="10 goal concessi">10</td>
+                        <td tabindex="0" aria-label="Differenza Reti 5">5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 12, Genoa CFC, 14 goal segnati, 18 concessi, differenza reti -4" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 12">12</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/252.png" alt="Logo Genoa CFC" tabindex="0" aria-label="Logo Genoa CFC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Genoa CFC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Genoa CFC</b></td>
+                        <td tabindex="0" aria-label="14 goal segnati"><b>14</b></td>
+                        <td tabindex="0" aria-label="18 goal concessi">18</td>
+                        <td tabindex="0" aria-label="Differenza Reti -4">-4</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 13, SS Lazio, 14 goal segnati, 15 concessi, DR -1" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 13">13</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/398.png" alt="Logo SS Lazio" tabindex="0" aria-label="Logo SS Lazio" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="SS Lazio" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>SS Lazio</b></td>
+                        <td tabindex="0" aria-label="14 goal segnati"><b>14</b></td>
+                        <td tabindex="0" aria-label="15 goal concessi">15</td>
+                        <td tabindex="0" aria-label="Differenza Reti -1">-1</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 14, AC Monza, 14 goal segnati, 12 concessi, DR 2" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 14">14</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/2919.png" alt="Logo AC Monza" tabindex="0" aria-label="Logo AC Monza" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Monza" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Monza</b></td>
+                        <td tabindex="0" aria-label="14 goal segnati"><b>14</b></td>
+                        <td tabindex="0" aria-label="12 goal concessi">12</td>
+                        <td tabindex="0" aria-label="Differenza Reti 2">2</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 15, Cagliari, 13 goal segnati, 25 concessi, DR -12" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 15">15</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1390.png" alt="Logo Cagliari" tabindex="0" aria-label="Logo Cagliari" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Cagliari" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Cagliari</b></td>
+                        <td tabindex="0" aria-label="13 goal segnati"><b>13</b></td>
+                        <td tabindex="0" aria-label="25 goal concessi">25</td>
+                        <td tabindex="0" aria-label="Differenza Reti -12">-12</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 16, US Salernitana 1919, 10 goal segnati, 25 concessi, DR -15" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 16">16</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/380.png" alt="Logo US Salernitana 1919" tabindex="0" aria-label="Logo US Salernitana 1919" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Salernitana 1919" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Salernitana 1919</b></td>
+                        <td tabindex="0" aria-label="10 goal segnati"><b>10</b></td>
+                        <td tabindex="0" aria-label="25 goal concessi">25</td>
+                        <td tabindex="0" aria-label="Differenza Reti -15">-15</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 17, Torino, 10 goal segnati, 16 concessi, DR -6" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 17">17</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/416.png" alt="Logo Torino" tabindex="0" aria-label="Logo Torino" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Torino" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Torino</b></td>
+                        <td tabindex="0" aria-label="10 goal segnati"><b>10</b></td>
+                        <td tabindex="0" aria-label="16 goal concessi">16</td>
+                        <td tabindex="0" aria-label="Differenza Reti -6">-6</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 18, Verona Hellas FC, 9 goal segnati, 18 concessi, DR -9" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 18">18</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/276.png" alt="Logo Verona Hellas FC" tabindex="0" aria-label="Logo Verona Hellas FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Verona Hellas FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Verona Hellas FC</b></td>
+                        <td tabindex="0" aria-label="9 goal segnati"><b>9</b></td>
+                        <td tabindex="0" aria-label="18 goal concessi">18</td>
+                        <td tabindex="0" aria-label="Differenza Reti -9">-9</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 19, Udinese, 9 goal segnati, 18 concessi, DR -9" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 19">19</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/410.png" alt="Logo Udinese" tabindex="0" aria-label="Logo Udinese" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Udinese" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Udinese</b></td>
+                        <td tabindex="0" aria-label="9 goal segnati"><b>9</b></td>
+                        <td tabindex="0" aria-label="18 goal concessi">18</td>
+                        <td tabindex="0" aria-label="Differenza Reti -9">-9</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 20, Empoli FC, 8 goal segnati, 25 concessi, DR -17" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 20">20</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/749.png" alt="Logo Empoli FC" tabindex="0" aria-label="Logo Empoli FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Empoli FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Empoli FC</b></td>
+                        <td tabindex="0" aria-label="8 goal segnati"><b>8</b></td>
+                        <td tabindex="0" aria-label="25 goal concessi">25</td>
+                        <td tabindex="0" aria-label="Differenza Reti -17">-17</td>
+                    </tr>
+                    </tbody>
                 </table>
             </div>
 
             <!-- Goal Conceded Table -->
-            <div id="ranking-table-goalConceded" class="ranking-table" style="display: none; position: relative;">
+            <div id="ranking-table-goalConceded" class="ranking-table" style="display: none; position: relative; max-height:unset">
                 <table id="table_goalConceded">
                     <thead>
                     <tr>
                         <th class="col-2">Pos</th>
                         <th class="col-1"></th>
                         <th class="col-6 text-start">Club</th>
-                        <th class="col-1">Goal Conceded</th>
-                        <th class="col-1">Goal Scored</th>
-                        <th class="">DR</th>
+                        <th class="col-2"><b>concessi</b></th>
+                        <th class="col-2">segnati</th>
+                        <th class="col-2">DR</th>
                     </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                    <tr tabindex="0" aria-label="Classifica: 1, FC Internazionale Milano, 7 goal concessi, 30 segnati, DR 23" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 1">1</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Logo FC Internazionale Milano" tabindex="0" aria-label="Logo FC Internazionale Milano" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="FC Internazionale Milano" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>FC Internazionale Milano</b></td>
+                        <td tabindex="0" aria-label="7 goal concessi"><b>7</b></td>
+                        <td tabindex="0" aria-label="30 goal segnati">30</td>
+                        <td tabindex="0" aria-label="Differenza Reti 23">23</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 2, Juventus FC, 8 goal concessi, 20 segnati, DR 12" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 2">2</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/506.png" alt="Logo Juventus FC" tabindex="0" aria-label="Logo Juventus FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Juventus FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Juventus FC</b></td>
+                        <td tabindex="0" aria-label="8 goal concessi"><b>8</b></td>
+                        <td tabindex="0" aria-label="20 goal segnati">20</td>
+                        <td tabindex="0" aria-label="Differenza Reti 12">12</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 3, Bologna FC 1909, 10 goal concessi, 15 segnati, DR 5" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 3">3</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1025.png" alt="Logo Bologna FC 1909" tabindex="0" aria-label="Logo Bologna FC 1909" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Bologna FC 1909" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Bologna FC 1909</b></td>
+                        <td tabindex="0" aria-label="10 goal concessi"><b>10</b></td>
+                        <td tabindex="0" aria-label="15 goal segnati">15</td>
+                        <td tabindex="0" aria-label="Differenza Reti 5">5</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 4, AC Monza, 12 goal concessi, 14 segnati, DR 2" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 4">4</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/2919.png" alt="Logo AC Monza" tabindex="0" aria-label="Logo AC Monza" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Monza" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Monza</b></td>
+                        <td tabindex="0" aria-label="12 goal concessi"><b>12</b></td>
+                        <td tabindex="0" aria-label="14 goal segnati">14</td>
+                        <td tabindex="0" aria-label="Differenza Reti 2">2</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 5, Atalanta Bergamasca, 13 goal concessi, 21 segnati, DR 8" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 5">5</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo Atalanta Bergamasca" tabindex="0" aria-label="Logo Atalanta Bergamasca" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Atalanta Bergamasca" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Atalanta Bergamasca</b></td>
+                        <td tabindex="0" aria-label="13 goal concessi"><b>13</b></td>
+                        <td tabindex="0" aria-label="21 goal segnati">21</td>
+                        <td tabindex="0" aria-label="Differenza Reti 8">8</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 6, AC Milan, 14 goal concessi, 21 segnati, DR 7" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 6">6</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/5.png" alt="Logo AC Milan" tabindex="0" aria-label="Logo AC Milan" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Milan" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Milan</b></td>
+                        <td tabindex="0" aria-label="14 goal concessi"><b>14</b></td>
+                        <td tabindex="0" aria-label="21 goal segnati">21</td>
+                        <td tabindex="0" aria-label="Differenza Reti 7">7</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 7, SS Napoli, 14 goal concessi, 26 segnati, DR 12" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 7">7</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo SS Napoli" tabindex="0" aria-label="Logo SS Napoli" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="SS Napoli" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>SS Napoli</b></td>
+                        <td tabindex="0" aria-label="14 goal concessi"><b>14</b></td>
+                        <td tabindex="0" aria-label="26 goal segnati">26</td>
+                        <td tabindex="0" aria-label="Differenza Reti 12">12</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 8, AS Roma, 15 goal concessi, 25 segnati, DR 10" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 8">8</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/12.png" alt="Logo AS Roma" tabindex="0" aria-label="Logo AS Roma" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AS Roma" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AS Roma</b></td>
+                        <td tabindex="0" aria-label="15 goal concessi"><b>15</b></td>
+                        <td tabindex="0" aria-label="25 goal segnati">25</td>
+                        <td tabindex="0" aria-label="Differenza Reti 10">10</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 9, SS Lazio, 15 goal concessi, 14 segnati, DR -1" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 9">9</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/398.png" alt="Logo SS Lazio" tabindex="0" aria-label="Logo SS Lazio" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="SS Lazio" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>SS Lazio</b></td>
+                        <td tabindex="0" aria-label="15 goal concessi"><b>15</b></td>
+                        <td tabindex="0" aria-label="14 goal segnati">14</td>
+                        <td tabindex="0" aria-label="Differenza Reti -1">-1</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 10, Torino, 16 goal concessi, 10 segnati, DR -6" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 10">10</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/416.png" alt="Logo Torino" tabindex="0" aria-label="Logo Torino" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Torino" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Torino</b></td>
+                        <td tabindex="0" aria-label="16 goal concessi"><b>16</b></td>
+                        <td tabindex="0" aria-label="10 goal segnati">10</td>
+                        <td tabindex="0" aria-label="Differenza Reti -6">-6</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 11, AC Fiorentina, 17 goal concessi, 20 segnati, DR 3" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 11">11</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/430.png" alt="Logo AC Fiorentina" tabindex="0" aria-label="Logo AC Fiorentina" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="AC Fiorentina" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>AC Fiorentina</b></td>
+                        <td tabindex="0" aria-label="17 goal concessi"><b>17</b></td>
+                        <td tabindex="0" aria-label="20 goal segnati">20</td>
+                        <td tabindex="0" aria-label="Differenza Reti 3">3</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 12, Genoa CFC, 18 goal concessi, 14 segnati, DR -4" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 12">12</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/252.png" alt="Logo Genoa CFC" tabindex="0" aria-label="Logo Genoa CFC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Genoa CFC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Genoa CFC</b></td>
+                        <td tabindex="0" aria-label="18 goal concessi"><b>18</b></td>
+                        <td tabindex="0" aria-label="14 goal segnati">14</td>
+                        <td tabindex="0" aria-label="Differenza Reti -4">-4</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 13, Verona Hellas FC, 18 goal concessi, 9 segnati, DR -9" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 13">13</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/276.png" alt="Logo Verona Hellas FC" tabindex="0" aria-label="Logo Verona Hellas FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Verona Hellas FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Verona Hellas FC</b></td>
+                        <td tabindex="0" aria-label="18 goal concessi"><b>18</b></td>
+                        <td tabindex="0" aria-label="9 goal segnati">9</td>
+                        <td tabindex="0" aria-label="Differenza Reti -9">-9</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 14, Udinese, 18 goal concessi, 9 segnati, DR -9" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 14">14</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/410.png" alt="Logo Udinese" tabindex="0" aria-label="Logo Udinese" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Udinese" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Udinese</b></td>
+                        <td tabindex="0" aria-label="18 goal concessi"><b>18</b></td>
+                        <td tabindex="0" aria-label="9 goal segnati">9</td>
+                        <td tabindex="0" aria-label="Differenza Reti -9">-9</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 15, US Lecce, 18 goal concessi, 15 segnati, DR -3" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 15">15</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1005.png" alt="Logo US Lecce" tabindex="0" aria-label="Logo US Lecce" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Lecce" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Lecce</b></td>
+                        <td tabindex="0" aria-label="18 goal concessi"><b>18</b></td>
+                        <td tabindex="0" aria-label="15 goal segnati">15</td>
+                        <td tabindex="0" aria-label="Differenza Reti -3">-3</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 16, Frosinone, 21 goal concessi, 19 segnati, DR -2" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 16">16</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/8970.png" alt="Logo Frosinone" tabindex="0" aria-label="Logo Frosinone" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Frosinone" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Frosinone</b></td>
+                        <td tabindex="0" aria-label="21 goal concessi"><b>21</b></td>
+                        <td tabindex="0" aria-label="19 goal segnati">19</td>
+                        <td tabindex="0" aria-label="Differenza Reti -2">-2</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 17, US Sassuolo, 24 goal concessi, 20 segnati, DR -4" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 17">17</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/6574.png" alt="Logo US Sassuolo" tabindex="0" aria-label="Logo US Sassuolo" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Sassuolo" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Sassuolo</b></td>
+                        <td tabindex="0" aria-label="24 goal concessi"><b>24</b></td>
+                        <td tabindex="0" aria-label="20 goal segnati">20</td>
+                        <td tabindex="0" aria-label="Differenza Reti -4">-4</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 18, US Salernitana 1919, 25 goal concessi, 10 segnati, DR -15" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 18">18</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/380.png" alt="Logo US Salernitana 1919" tabindex="0" aria-label="Logo US Salernitana 1919" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="US Salernitana 1919" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>US Salernitana 1919</b></td>
+                        <td tabindex="0" aria-label="25 goal concessi"><b>25</b></td>
+                        <td tabindex="0" aria-label="10 goal segnati">10</td>
+                        <td tabindex="0" aria-label="Differenza Reti -15">-15</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 19, Empoli FC, 25 goal concessi, 8 segnati, DR -17" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 19">19</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/749.png" alt="Logo Empoli FC" tabindex="0" aria-label="Logo Empoli FC" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Empoli FC" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Empoli FC</b></td>
+                        <td tabindex="0" aria-label="25 goal concessi"><b>25</b></td>
+                        <td tabindex="0" aria-label="8 goal segnati">8</td>
+                        <td tabindex="0" aria-label="Differenza Reti -17">-17</td>
+                    </tr>
+                    <tr tabindex="0" aria-label="Classifica: 20, Cagliari, 25 goal concessi, 13 segnati, DR -12" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'">
+                        <td tabindex="0" aria-label="Posizione 20">20</td>
+                        <td><img src="https://tmssl.akamaized.net/images/wappen/big/1390.png" alt="Logo Cagliari" tabindex="0" aria-label="Logo Cagliari" onclick="event.stopPropagation(); window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"></td>
+                        <td tabindex="0" aria-label="Cagliari" onclick="window.location.href='club.html'" onkeydown="if(event.key === 'Enter') window.location.href='club.html'"><b>Cagliari</b></td>
+                        <td tabindex="0" aria-label="25 goal concessi"><b>25</b></td>
+                        <td tabindex="0" aria-label="13 goal segnati">13</td>
+                        <td tabindex="0" aria-label="Differenza Reti -12">-12</td>
+                    </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
