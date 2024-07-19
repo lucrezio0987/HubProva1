@@ -52,6 +52,7 @@
     <!-- Local Stylesheets -->
     <link rel='stylesheet' href='public/stylesheets/css-progress-wizard-master/css/progress-wizard.min.css'/>
     <link rel='stylesheet' href='public/stylesheets/layout.css'/>
+    <link rel='stylesheet' href='public/stylesheets/club.css'/>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
     <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
@@ -97,6 +98,293 @@
 </div>
 
 <main role="main">
+    <!-- PAGE -->
+    <div class="info-page">
+        <div class="row">
+            <div class="left-block info-block">
+                <div id="logo-club" class="big-image">
+                    <img class="logs" src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo SS Napoli" onclick="window.location='club.html'" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0" onkeydown="if(event.key === 'Enter') this.click();">
+                </div>
+                <hr>
+                <div id="clubData" class="info-data">
+                    <div class="stadium">
+                        <img src="public/images/varie/stadio.png">
+                        <div>
+                            <h5 id="stadium_name">Stadio Diego Armando Maradona</h5>
+                            <h5 id="stadium_seats">Seats 54.726</h5>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <div><i>Nazione</i></div>
+                            <div id="country">
+                                <h5>Italia</h5>
+                                <img class="flag-country" src="https://flagcdn.com/h120/it.png" alt = "Italia">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div><i>Competizione</i></div>
+                            <div id="competition">
+                                <h5>Serie A</h5>
+                                <img class="flag-competition" src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="logo Competizione">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div><i>Allenatore</i></div>
+                            <div><h5 id="coach">Antonio Conte</h5></div>
+                        </div>
+
+                        <div class="col">
+                            <div><i>Posizione attuale</i></div>
+                            <div><h5 id="rank">4°</h5></div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <div><i>Età media</i></div>
+                            <div><h5 id="average">26.5</h5></div>
+                        </div>
+
+                        <div class="col">
+                            <div><i>Rosa</i></div>
+                            <div><h5 id="squad_size">27</h5></div>
+                        </div>
+
+                        <div class="col">
+                            <div><i>Stranieri</i></div>
+                            <div id="foreign">
+                                <h5>17</h5>
+                                <p> (63.00 %)</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div><i>Nazionali</i></div>
+                            <div>
+                                <h5>16</h5>
+                                <p>(59.26 %)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <div><i>Valore squadra</i></div>
+                            <div><h5 id="squad_value">€ 587.25 m</h5></div>
+                        </div>
+                        <div class="col">
+                            <div><i>Budget</i></div>
+                            <div id="budget">
+                                <h5 class="neg">€ -26.50 m</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div class="right-block">
+
+                <div class="head-block">
+                    <p id="clubName">
+                        Società Sportiva Calcio Napoli
+                    </p>
+                </div>
+
+                <hr>
+                <div class="result-header">
+                    <h3>Ultimi risultati</h3>
+                </div>
+                <div class="row result-block">
+                    <div class="results-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="col-1"></th>
+                                <th class="col-1"></th>
+                                <th class="col-2"> Casa</th>
+                                <th class="col-1" colspan="2"> Risultato</th>
+                                <th class="col-2"> Ospite</th>
+                                <th class="col-1"></th>
+                                <th class="col-2"> Info</th>
+                            </tr>
+                            </thead>
+                            <tbody id="last_results">
+
+                            </tbody>
+                        </table>
+                        <div class="footer-table">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#result_modal">
+                                Scopri di più <i class="fas fa-arrow-circle-down ps-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ranking-table" id="ranking-table">
+                        <table id="table_ranking">
+                            <thead>
+                            <tr>
+                                <th class="col-2"> Pos</th>
+                                <th class="col-1"></th>
+                                <th class="col-6 text-start"> Team </th>
+                                <th class="col-1"> PT </th>
+                                <th class="col-1"> PG </th>
+                                <th class=""> DR </th>
+                            </tr>
+                            </thead>
+                            <tbody id="ranking">
+
+                            </tbody>
+                        </table>
+                        <div class="footer-table">
+                            <button class="button_2" type="button" data-bs-toggle="modal" data-bs-target="#ranking_modal">
+                                Scopri di più <i class="fas fa-arrow-circle-down ps-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="palmares-block" id="palmares-block">
+
+                    <div class="header">
+                        <h3>Palmares</h3>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#modal-palmares">Mostra tutto</button>
+                    </div>
+
+                    <div class="body">
+                        <div class="row data" id="palmares">
+
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="chart-block">
+                    <div class="header">
+                        <h3>Grafici</h3>
+                    </div>
+                    <div class="body">
+
+                        <div class="chart-container">
+                            <div class="chart-box sm" id="chart_Game_win"></div>
+                            <div class="chart-box sm" id="chart_Team"></div>
+                            <div class="chart-box sm" id="chart_Nations"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr>
+                <div class="table-block">
+                    <div class="header">
+                        <h3>Rosa</h3>
+                    </div>
+                    <div class="list-block">
+                        <h3>Portieri</h3>
+                        <div class="list" id="goalkeeper_div">
+                        </div>
+                    </div>
+
+                    <div class="list-block">
+                        <h3>Difensori</h3>
+                        <div class="list" id="defender_div"></div>
+                    </div>
+
+                    <div class="list-block">
+                        <h3>Centrocampisti</h3>
+                        <div class="list" id="midfield_div"></div>
+                    </div>
+
+                    <div class="list-block">
+                        <h3>Attaccanti</h3>
+                        <div class="list" id="attack_div"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal card-modal" id="result_modal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Risultati</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="results-table-modal">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="col-1"></th>
+                            <th class="col-1"></th>
+                            <th class="col-1"></th>
+                            <th class="col-2"> Casa</th>
+                            <th class="col-1"> Risultato</th>
+                            <th class="col-2"> Ospite</th>
+                            <th class="col-1"></th>
+                            <th class="col-2"> Info</th>
+                        </tr>
+                        </thead>
+                        <tbody id="match_played">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal card-modal" id="ranking_modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="exampleModalLabel">Classifica</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="ranking-table-modal">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="col-2"> Pos</th>
+                            <th class="col-1"></th>
+                            <th class="col-6 text-start"> Club </th>
+                            <th class="col-1"> PT</th>
+                            <th class="col-1"> PG</th>
+                            <th class=""> V</th>
+                            <th class=""> P</th>
+                            <th class=""> S</th>
+                            <th class=""> DR</th>
+                        </tr>
+                        </thead>
+                        <tbody id="rankings_modal">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-palmares" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="modal-title">Palmares</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row justify-content-center d-flex" id="palmares-modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <footer class="footer" role="contentinfo">

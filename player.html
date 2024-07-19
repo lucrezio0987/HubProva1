@@ -52,10 +52,10 @@
     <!-- Local Stylesheets -->
     <link rel='stylesheet' href='public/stylesheets/css-progress-wizard-master/css/progress-wizard.min.css'/>
     <link rel='stylesheet' href='public/stylesheets/layout.css'/>
+    <link rel='stylesheet' href='public/stylesheets/player.css'/>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
     <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
-    <link rel='stylesheet' href='public/stylesheets/home.css'/>
 </head>
 
 <body>
@@ -97,6 +97,664 @@
 </div>
 
 <main role="main">
+    <!-- PAGE -->
+    <div class="info-page">
+        <div class="row">
+            <div class="left-block info-block">
+                <div id="imageUrl" class="big-image"><img src="https://img.a.transfermarkt.technology/portrait/header/406625-1695024988.jpg?lm=1" alt="Image Player" class="player-big-image"></div>
+                <hr>
+                <div id="playerData" class="info-data">
+                    <div class="row">
+                        <div class="col">
+                            <div><i>Nazionalità</i></div>
+                            <div id="nationality">
+                                <h5>Argentina</h5>
+                                <img class="flag-country" src="https://flagcdn.com/h120/ar.png" alt="flagUrlOfCitizenship">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div><i>Paese di nascita</i></div>
+                            <div id="countryOfBirth">
+                                <h5>Argentina</h5>
+                                <img class="flag-country" src="https://flagcdn.com/h120/ar.png" alt="flagUrlOfCitizenship">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div><i>Altezza</i></div>
+                            <div id="height">
+                                <h5>174 cm</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div><i>Età</i></div>
+                            <div id="age">
+                                <h5>27</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <div><i>Piede</i></div>
+                            <div id="foot">
+                                <h5>Destro</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div><i>Ultima stagione</i></div>
+                            <div id="season">
+                                <h5>In attività</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div><i>Ruolo</i></div>
+                            <div id="position">
+                                <h5>Attaccante</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div><i>Posizione</i></div>
+                            <div id="subPosition">
+                                <h5>Att. centrale</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <div><i>Valore mercato</i></div>
+                            <div id="marketValue">
+                                <h5 class="pos">€ 100.00 m</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div><i>Miglior valore di mercato</i></div>
+                            <div id="highestMarketValue">
+                                <h5 class="pos">€ 100.00 m</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="right-block">
+                <div class="head-block">
+                    <p id="name" tabindex="0" aria-label="Nome Lautaro Martìnez" onkeydown="if(event.key === 'Enter') this.click();">
+                        <h1>Lautaro Martìnez</h1>
+                    </p>
+                    <div>
+                        <div class="club" id="currentClub" tabindex="0" aria-label="Club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html'">
+                            <h3>Inter Milan</h3>
+                            <img class="flag-club" src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html'">
+                        </div>
+                        <div class="competition" id="competition" tabindex="0" aria-label="Competizione Serie A" onkeydown="if(event.key === 'Enter') window.location = 'statistics.html'">
+                            <h3>Serie A</h3>
+                            <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="logo Competizione" tabindex="0" aria-label="Logo competizione Serie A" onkeydown="if(event.key === 'Enter') this.click();">
+                            <img src="https://flagcdn.com/h120/it.png" alt="logo nazione" tabindex="0" aria-label="Logo nazione Italia" onkeydown="if(event.key === 'Enter') this.click();">
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="palmares-block" id="palmares-block">
+                    <div class="header">
+                        <h3>Palmares</h3>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#modal-palmares">Mostra tutto</button>
+                    </div>
+
+                    <div class="body">
+                        <div class="row data" id="palmares">
+                            <div class="card-palmares">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <div class="icon-wrapper">
+                                            <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A" tabindex="0" aria-label="Competizione Serie A" onkeydown="if(event.key === 'Enter') window.location='statistics.html';">
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center">
+                                        <div class="row scrollable">
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2020</h5></div>
+                                                <div class="col-6">
+                                                    <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                </div>
+                                            </div>
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2023</h5></div>
+                                                <div class="col-6">
+                                                    <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-palmares">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <div class="icon-wrapper">
+                                            <img src="https://tmssl.akamaized.net/images/logo/header/sci.png" alt="Supercoppa italiana" tabindex="0" aria-label="Competizione Supercoppa italiana" onkeydown="if(event.key === 'Enter') window.location='statistics.html';">
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center">
+                                        <div class="row scrollable">
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2021</h5></div>
+                                                <div class="col-6">
+                                                    <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                </div>
+                                            </div>
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2022</h5></div>
+                                                <div class="col-6">
+                                                    <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-palmares">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <div class="icon-wrapper">
+                                            <img src="https://tmssl.akamaized.net/images/logo/header/cit.png" alt="Serie A" tabindex="0" aria-label="Competizione Coppa Italia" onkeydown="if(event.key === 'Enter') window.location='statistics.html';">
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center">
+                                        <div class="row scrollable">
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2021</h5></div>
+                                                <div class="col-6">
+                                                    <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                </div>
+                                            </div>
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2022</h5></div>
+                                                <div class="col-6">
+                                                    <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="chart-block">
+                    <div class="header">
+                        <h3>Grafici</h3>
+                        <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#modal-palmares">Stagione</button> -->
+                    </div>
+                    <div class="body">
+
+                        <div class="chart-container">
+                            <div class="chart-box lg" id="chart_Games_Stat"></div>
+                            <div class="chart-box md" id="chart_Market_Value"></div>
+                            <div class="chart-box sm" id="chart_Starting"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="career-block">
+                    <div class="row header"> <p>Carriera</p> </div>
+                    <div class="body">
+
+                        <div class="club-table">
+                            <div class="row">
+                                <table id="c-table">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th class="text-start"><i>Stagione</i></th>
+                                        <th><i>Presenze</i></th>
+                                        <th><i>Goals</i></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="career_club">
+                                    <!-- Row 1 -->
+                                    <tr class="table-row" id="row-1" data-bs-target="#collapse-2023-24" onclick="selectRow(this, 'collapse-2023-24')" tabindex="0" aria-label="Dettagli stagione 2023/24" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-2023-24')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-career_club-1"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" title="Nome club" alt="Logo club" tabindex="0" aria-label="Logo club" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                        <td class="col-4 text-start"><b>2023/24</b></td>
+                                        <td class="col-3"><b>18</b></td>
+                                        <td class="col-1"><b>15</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-2023-24" class="collapse" data-bs-parent="#career_club">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A" tabindex="0" aria-label="Logo Serie A" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Serie A</b></td>
+                                                    <td class="col-2">15</td>
+                                                    <td class="col-2">11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Champions League" tabindex="0" aria-label="Logo Champions League" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Champions League</b></td>
+                                                    <td class="col-2">3</td>
+                                                    <td class="col-2">4</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 2 -->
+                                    <tr class="table-row" id="row-2" data-bs-target="#collapse-2022-23" onclick="selectRow(this, 'collapse-2022-23')" tabindex="0" aria-label="Dettagli stagione 2022/23" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-2022-23')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-career_club-2"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" title="Nome club" alt="Logo club" tabindex="0" aria-label="Logo club" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                        <td class="col-4 text-start"><b>2022/23</b></td>
+                                        <td class="col-3"><b>35</b></td>
+                                        <td class="col-1"><b>28</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-2022-23" class="collapse" data-bs-parent="#career_club">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A" tabindex="0" aria-label="Logo Serie A" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Serie A</b></td>
+                                                    <td class="col-2">27</td>
+                                                    <td class="col-2">20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Champions League" tabindex="0" aria-label="Logo Champions League" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Champions League</b></td>
+                                                    <td class="col-2">6</td>
+                                                    <td class="col-2">5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/cit.png" alt="Coppa Italia" tabindex="0" aria-label="Logo Coppa Italia" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Coppa Italia</b></td>
+                                                    <td class="col-2">2</td>
+                                                    <td class="col-2">3</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 3 -->
+                                    <tr class="table-row" id="row-3" data-bs-target="#collapse-2021-22" onclick="selectRow(this, 'collapse-2021-22')" tabindex="0" aria-label="Dettagli stagione 2021/22" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-2021-22')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-career_club-3"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" title="Nome club" alt="Logo club" tabindex="0" aria-label="Logo club" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                        <td class="col-4 text-start"><b>2021/22</b></td>
+                                        <td class="col-3"><b>24</b></td>
+                                        <td class="col-1"><b>15</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-2021-22" class="collapse" data-bs-parent="#career_club">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A" tabindex="0" aria-label="Logo Serie A" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Serie A</b></td>
+                                                    <td class="col-2">19</td>
+                                                    <td class="col-2">11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Champions League" tabindex="0" aria-label="Logo Champions League" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Champions League</b></td>
+                                                    <td class="col-2">4</td>
+                                                    <td class="col-2">3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/sci.png" alt="Supercoppa Italiana" tabindex="0" aria-label="Logo Supercoppa Italiana" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Supercoppa Italiana</b></td>
+                                                    <td class="col-2">1</td>
+                                                    <td class="col-2">1</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 4 -->
+                                    <tr class="table-row" id="row-4" data-bs-target="#collapse-2020-21" onclick="selectRow(this, 'collapse-2020-21')" tabindex="0" aria-label="Dettagli stagione 2020/21" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-2020-21')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-career_club-4"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" title="Nome club" alt="Logo club" tabindex="0" aria-label="Logo club" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                        <td class="col-4 text-start"><b>2020/21</b></td>
+                                        <td class="col-3"><b>26</b></td>
+                                        <td class="col-1"><b>18</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-2020-21" class="collapse" data-bs-parent="#career_club">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A" tabindex="0" aria-label="Logo Serie A" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Serie A</b></td>
+                                                    <td class="col-2">23</td>
+                                                    <td class="col-2">16</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Champions League" tabindex="0" aria-label="Logo Champions League" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Champions League</b></td>
+                                                    <td class="col-2">3</td>
+                                                    <td class="col-2">2</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 5 -->
+                                    <tr class="table-row" id="row-5" data-bs-target="#collapse-2019-20" onclick="selectRow(this, 'collapse-2019-20')" tabindex="0" aria-label="Dettagli stagione 2019/20" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-2019-20')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-career_club-5"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" title="Nome club" alt="Logo club" tabindex="0" aria-label="Logo club" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                        <td class="col-4 text-start"><b>2019/20</b></td>
+                                        <td class="col-3"><b>24</b></td>
+                                        <td class="col-1"><b>18</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-2019-20" class="collapse" data-bs-parent="#career_club">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A" tabindex="0" aria-label="Logo Serie A" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Serie A</b></td>
+                                                    <td class="col-2">22</td>
+                                                    <td class="col-2">16</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Champions League" tabindex="0" aria-label="Logo Champions League" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                                    <td class="col-5 text-start"><b>Champions League</b></td>
+                                                    <td class="col-2">2</td>
+                                                    <td class="col-2">2</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="comp-table">
+                            <div class="row">
+                                <table id="d-table">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th class="text-start"><i>Competizione</i></th>
+                                        <th><i>Presenze</i></th>
+                                        <th><i>Goals</i></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="career_comp">
+                                    <!-- Row 1 -->
+                                    <tr class="table-row" id="row-1-competition" data-bs-target="#collapse-serie-A" onclick="selectRow(this, 'collapse-serie-A')" tabindex="0" aria-label="Dettagli competizione Serie A" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-serie-A')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-competition_club-1"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" title="Nome competizione" alt="Logo competizione" tabindex="0" aria-label="Logo competizione Serie A" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                        <td class="col-4 text-start"><b>Serie A</b></td>
+                                        <td class="col-3"><b>186</b></td>
+                                        <td class="col-1"><b>92</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-serie-A" class="collapse" data-bs-parent="#career_comp">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Club" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                                    <td class="col-5 text-start"><b>FC Internazionale Milano</b></td>
+                                                    <td class="col-2">186</td>
+                                                    <td class="col-2">92</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 2 -->
+                                    <tr class="table-row" id="row-2-competition" data-bs-target="#collapse-Champions" onclick="selectRow(this, 'collapse-Champions')" tabindex="0" aria-label="Dettagli competizione Champions League" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-Champions')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-competition_club-2"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" title="Nome competizione" alt="Logo competizione" tabindex="0" aria-label="Logo competizione Champions League" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                        <td class="col-4 text-start"><b>Champions League</b></td>
+                                        <td class="col-3"><b>41</b></td>
+                                        <td class="col-1"><b>12</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-Champions" class="collapse" data-bs-parent="#career_comp">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Club" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                                    <td class="col-5 text-start"><b>FC Internazionale Milano</b></td>
+                                                    <td class="col-2">41</td>
+                                                    <td class="col-2">12</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 3 -->
+                                    <tr class="table-row" id="row-3-competition" data-bs-target="#collapse-coppaItalia" onclick="selectRow(this, 'collapse-coppaItalia')" tabindex="0" aria-label="Dettagli competizione Coppa Italia" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-coppaItalia')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-competition_club-3"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/cit.png" title="Nome competizione" alt="Logo competizione" tabindex="0" aria-label="Logo competizione Coppa Italia" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                        <td class="col-4 text-start"><b>Coppa Italia</b></td>
+                                        <td class="col-3"><b>19</b></td>
+                                        <td class="col-1"><b>8</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-coppaItalia" class="collapse" data-bs-parent="#career_comp">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Club" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                                    <td class="col-5 text-start"><b>FC Internazionale Milano</b></td>
+                                                    <td class="col-2">19</td>
+                                                    <td class="col-2">8</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 4 -->
+                                    <tr class="table-row" id="row-4-competition" data-bs-target="#collapse-europaLeague" onclick="selectRow(this, 'collapse-europaLeague')" tabindex="0" aria-label="Dettagli competizione Europa League" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-europaLeague')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-competition_club-4"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/el.png" title="Nome competizione" alt="Logo competizione" tabindex="0" aria-label="Logo competizione Europa League" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                        <td class="col-4 text-start"><b>Europa League</b></td>
+                                        <td class="col-3"><b>8</b></td>
+                                        <td class="col-1"><b>3</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-europaLeague" class="collapse" data-bs-parent="#career_comp">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Club" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                                    <td class="col-5 text-start"><b>FC Internazionale Milano</b></td>
+                                                    <td class="col-2">8</td>
+                                                    <td class="col-2">3</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 5 -->
+                                    <tr class="table-row" id="row-5-competition" data-bs-target="#collapse-supercoppa" onclick="selectRow(this, 'collapse-supercoppa')" tabindex="0" aria-label="Dettagli competizione Supercoppa Italiana" onkeydown="if(event.key === 'Enter') selectRow(this, 'collapse-supercoppa')">
+                                        <td class="col-1"><i class="fas fa-caret-right" id="icon-competition_club-5"></i></td>
+                                        <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/logo/header/sci.png" title="Nome competizione" alt="Logo competizione" tabindex="0" aria-label="Logo competizione Supercoppa Italiana" onkeydown="if(event.key === 'Enter') window.location='statistics.html'"></td>
+                                        <td class="col-4 text-start"><b>Supercoppa Italiana</b></td>
+                                        <td class="col-3"><b>2</b></td>
+                                        <td class="col-1"><b>2</b></td>
+                                        <td class="col-1"></td>
+                                    </tr>
+                                    <tr id="collapse-supercoppa" class="collapse" data-bs-parent="#career_comp">
+                                        <td colspan="6">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="Club" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                                    <td class="col-5 text-start"><b>FC Internazionale Milano</b></td>
+                                                    <td class="col-2">2</td>
+                                                    <td class="col-2">2</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+
+    <div class="modal fade" id="modal-palmares" tabindex="-1" aria-labelledby="modal-palmares-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="modal-title" id="modal-palmares-label">Palmares</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row justify-content-center d-flex" id="palmares-modal-body">
+                    <div class="palmares-block">
+                        <div class="body">
+                            <div class="row data">
+                                <div class="card-palmares">
+                                    <div class="row">
+                                        <div class="col-6 text-center">
+                                            <div class="icon-wrapper">
+                                                <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A" tabindex="0" aria-label="Competizione Serie A" onkeydown="if(event.key === 'Enter') window.location='statistics.html';">
+                                                <span>1</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 d-flex align-items-center">
+                                            <div class="row scrollable">
+                                                <div class="row season">
+                                                    <div class="col-6"><h5>2020</h5></div>
+                                                    <div class="col-6">
+                                                        <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                    </div>
+                                                </div>
+                                                <div class="row season">
+                                                    <div class="col-6"><h5>2023</h5></div>
+                                                    <div class="col-6">
+                                                        <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-palmares">
+                                    <div class="row">
+                                        <div class="col-6 text-center">
+                                            <div class="icon-wrapper">
+                                                <img src="https://tmssl.akamaized.net/images/logo/header/sci.png" alt="Supercoppa italiana" tabindex="0" aria-label="Competizione Supercoppa italiana" onkeydown="if(event.key === 'Enter') window.location='statistics.html';">
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 d-flex align-items-center">
+                                            <div class="row scrollable">
+                                                <div class="row season">
+                                                    <div class="col-6"><h5>2021</h5></div>
+                                                    <div class="col-6">
+                                                        <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                    </div>
+                                                </div>
+                                                <div class="row season">
+                                                    <div class="col-6"><h5>2022</h5></div>
+                                                    <div class="col-6">
+                                                        <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-palmares">
+                                    <div class="row">
+                                        <div class="col-6 text-center">
+                                            <div class="icon-wrapper">
+                                                <img src="https://tmssl.akamaized.net/images/logo/header/cit.png" alt="Coppa Italia" tabindex="0" aria-label="Competizione Coppa Italia" onkeydown="if(event.key === 'Enter') window.location='statistics.html';">
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 d-flex align-items-center">
+                                            <div class="row scrollable">
+                                                <div class="row season">
+                                                    <div class="col-6"><h5>2021</h5></div>
+                                                    <div class="col-6">
+                                                        <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                    </div>
+                                                </div>
+                                                <div class="row season">
+                                                    <div class="col-6"><h5>2022</h5></div>
+                                                    <div class="col-6">
+                                                        <img src="https://tmssl.akamaized.net/images/wappen/big/46.png" onclick="window.location='club.html'" alt="flagClub" tabindex="0" aria-label="Logo club Inter Milan" onkeydown="if(event.key === 'Enter') window.location = 'club.html';">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </main>
 
 <footer class="footer" role="contentinfo">
@@ -105,3 +763,26 @@
 </footer>
 
 </body>
+
+<script>
+    function selectRow(row, collapseId) {
+        var isSelected = row.classList.contains('selected');
+
+        document.querySelectorAll('.table-row').forEach(function(otherRow) {
+            otherRow.classList.remove('selected');
+        });
+
+        document.querySelectorAll('.collapse').forEach(function(otherCollapse) {
+            otherCollapse.classList.remove('show');
+        });
+
+        if (!isSelected) {
+            row.classList.add('selected');
+
+            var collapseRow = document.getElementById(collapseId);
+            if (collapseRow) {
+                collapseRow.classList.add('show');
+            }
+        }
+    }
+</script>
