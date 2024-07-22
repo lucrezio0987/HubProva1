@@ -56,7 +56,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
     <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
-    <link rel='stylesheet' href='public/stylesheets/home.css'/>
+    <link rel='stylesheet' href='public/stylesheets/club.css'/>
 </head>
 
 <body>
@@ -116,52 +116,51 @@
                     </div>
                     <hr>
                     <div class="row">
-                        <div class="col">
+                        <div class="col" tabindex="0" aria-label="Nazione Italia">
                             <div><i>Nazione</i></div>
                             <div id="country">
                                 <h5>Italia</h5>
-                                <img class="flag-country" src="https://flagcdn.com/h120/it.png" alt = "Italia">
+                                <img class="flag-country" src="https://flagcdn.com/h120/it.png" alt="Italia">
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col" tabindex="0" aria-label="Competizione Serie A">
                             <div><i>Competizione</i></div>
                             <div id="competition">
                                 <h5>Serie A</h5>
                                 <img class="flag-competition" src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="logo Competizione">
                             </div>
                         </div>
-
-                        <div class="col">
+    
+                        <div class="col" tabindex="0" aria-label="Allenatore Antonio Conte">
                             <div><i>Allenatore</i></div>
                             <div><h5 id="coach">Antonio Conte</h5></div>
                         </div>
-
-                        <div class="col">
+    
+                        <div class="col" tabindex="0" aria-label="Posizione attuale 4°">
                             <div><i>Posizione attuale</i></div>
                             <div><h5 id="rank">4°</h5></div>
                         </div>
-
                     </div>
                     <hr>
                     <div class="row">
-                        <div class="col">
+                        <div class="col" tabindex="0" aria-label="Età media 26.5">
                             <div><i>Età media</i></div>
                             <div><h5 id="average">26.5</h5></div>
                         </div>
-
-                        <div class="col">
+    
+                        <div class="col" tabindex="0" aria-label="Rosa 27">
                             <div><i>Rosa</i></div>
                             <div><h5 id="squad_size">27</h5></div>
                         </div>
-
-                        <div class="col">
+    
+                        <div class="col" tabindex="0" aria-label="Stranieri 17 (63.00%)">
                             <div><i>Stranieri</i></div>
                             <div id="foreign">
                                 <h5>17</h5>
-                                <p> (63.00 %)</p>
+                                <p>(63.00 %)</p>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col" tabindex="0" aria-label="Nazionali 16 (59.26%)">
                             <div><i>Nazionali</i></div>
                             <div>
                                 <h5>16</h5>
@@ -171,11 +170,11 @@
                     </div>
                     <hr>
                     <div class="row">
-                        <div class="col">
+                        <div class="col" tabindex="0" aria-label="Valore squadra € 587.25 m">
                             <div><i>Valore squadra</i></div>
                             <div><h5 id="squad_value">€ 587.25 m</h5></div>
                         </div>
-                        <div class="col">
+                        <div class="col" tabindex="0" aria-label="Budget € -26.50 m">
                             <div><i>Budget</i></div>
                             <div id="budget">
                                 <h5 class="neg">€ -26.50 m</h5>
@@ -185,15 +184,15 @@
                 </div>
                 <hr>
             </div>
-
+    
             <div class="right-block">
-
+    
                 <div class="head-block">
                     <p id="clubName">
                         Società Sportiva Calcio Napoli
                     </p>
                 </div>
-
+    
                 <hr>
                 <div class="result-header">
                     <h3>Ultimi risultati</h3>
@@ -202,18 +201,82 @@
                     <div class="results-table">
                         <table>
                             <thead>
-                            <tr>
-                                <th class="col-1"></th>
-                                <th class="col-1"></th>
-                                <th class="col-2"> Casa</th>
-                                <th class="col-1" colspan="2"> Risultato</th>
-                                <th class="col-2"> Ospite</th>
-                                <th class="col-1"></th>
-                                <th class="col-2"> Info</th>
-                            </tr>
+                                <tr>
+                                    <th class="col-1"></th>
+                                    <th class="col-1"></th>
+                                    <th class="col-2">Casa</th>
+                                    <th class="col-1" colspan="2">Risultato</th>
+                                    <th class="col-2">Ospite</th>
+                                    <th class="col-1"></th>
+                                    <th class="col-2">Info</th>
+                                </tr>
                             </thead>
-                            <tbody id="last_results">
-
+                            <tbody id="last_results" style="position: relative;">
+                                <tr class="text-center lose" onclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra Real Madrid FC e SS Napoli" title="Partita tra Real Madrid FC e SS Napoli" onkeydown="if(event.key === 'Enter') this.click();">
+                                    <td><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Competizione" title="Competizione"></td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/418.png" alt="logo Real Madrid FC" title="Real Madrid FC" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td tabindex="0" aria-label="Real Madrid FC" title="Real Madrid FC" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">Real Madrid FC</td>
+                                    <td colspan="2" tabindex="0" aria-label="Risultato: 4 - 2" title="Risultato: 4 - 2" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this.click();"><h5><b>4</b> - <b>2</b></h5></td>
+                                    <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">SS Napoli</td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td class="text-center">
+                                        <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center win" onclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra Atalanta Bergamasca e SS Napoli" title="Partita tra Atalanta Bergamasca e SS Napoli" onkeydown="if(event.key === 'Enter') this click();">
+                                    <td><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Competizione" title="Competizione"></td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="logo Atalanta Bergamasca" title="Atalanta Bergamasca" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td tabindex="0" aria-label="Atalanta Bergamasca" title="Atalanta Bergamasca" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">Atalanta Bergamasca</td>
+                                    <td colspan="2" tabindex="0" aria-label="Risultato: 1 - 2" title="Risultato: 1 - 2" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this click();"><h5><b>1</b> - <b>2</b></h5></td>
+                                    <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">SS Napoli</td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td class="text-center">
+                                        <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center lose" onclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra SS Napoli e Empoli FC" title="Partita tra SS Napoli e Empoli FC" onkeydown="if(event.key === 'Enter') this click();">
+                                    <td><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Competizione" title="Competizione"></td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">SS Napoli</td>
+                                    <td colspan="2" tabindex="0" aria-label="Risultato: 0 - 1" title="Risultato: 0 - 1" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this click();"><h5><b>0</b> - <b>1</b></h5></td>
+                                    <td tabindex="0" aria-label="Empoli FC" title="Empoli FC" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">Empoli FC</td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/749.png" alt="logo Empoli FC" title="Empoli FC" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td class="text-center">
+                                        <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center draw" onclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra SS Napoli e FC Union Berlin" title="Partita tra SS Napoli e FC Union Berlin" onkeydown="if(event.key === 'Enter') this click();">
+                                    <td><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Competizione" title="Competizione"></td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">SS Napoli</td>
+                                    <td colspan="2" tabindex="0" aria-label="Risultato: 1 - 1" title="Risultato: 1 - 1" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this click();"><h5><b>1</b> - <b>1</b></h5></td>
+                                    <td tabindex="0" aria-label="FC Union Berlin" title="FC Union Berlin" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">FC Union Berlin</td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/89.png" alt="logo FC Union Berlin" title="FC Union Berlin" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td class="text-center">
+                                        <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center win" onclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra US Salernitana 1919 e SS Napoli" title="Partita tra US Salernitana 1919 e SS Napoli" onkeydown="if(event.key === 'Enter') this click();">
+                                    <td><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Competizione" title="Competizione"></td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/380.png" alt="logo US Salernitana 1919" title="US Salernitana 1919" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td tabindex="0" aria-label="US Salernitana 1919" title="US Salernitana 1919" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">US Salernitana 1919</td>
+                                    <td colspan="2" tabindex="0" aria-label="Risultato: 0 - 2" title="Risultato: 0 - 2" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this click();"><h5><b>0</b> - <b>2</b></h5></td>
+                                    <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">SS Napoli</td>
+                                    <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                    <td class="text-center">
+                                        <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                         <div class="footer-table">
@@ -222,22 +285,67 @@
                             </button>
                         </div>
                     </div>
-
+                
                     <div class="ranking-table" id="ranking-table">
                         <table id="table_ranking">
                             <thead>
-                            <tr>
-                                <th class="col-2"> Pos</th>
-                                <th class="col-1"></th>
-                                <th class="col-6 text-start"> Team </th>
-                                <th class="col-1"> PT </th>
-                                <th class="col-1"> PG </th>
-                                <th class=""> DR </th>
-                            </tr>
+                                <tr>
+                                    <th class="col-2">Pos</th>
+                                    <th class="col-1"></th>
+                                    <th class="col-6 text-start">Team</th>
+                                    <th class="col-1">PT</th>
+                                    <th class="col-1">PG</th>
+                                    <th class="">DR</th>
+                                </tr>
                             </thead>
-                            <tbody id="ranking">
-
+                            <tbody id="ranking" style="position: relative;">
+                                <tr class="" tabindex="0" aria-label="Posizione 2, Juventus FC, PT 30, PG 13, DR 12" 
+                                    onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                    <td>2</td>
+                                    <td><img src="https://tmssl.akamaized.net/images/wappen/big/506.png" alt="logo Juventus FC" class="img-30"></td>
+                                    <td><b>Juventus FC</b></td>
+                                    <td><b>30</b></td>
+                                    <td>13</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr class="" tabindex="0" aria-label="Posizione 3, AC Milan, PT 26, PG 13, DR 7" 
+                                    onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                    <td>3</td>
+                                    <td><img src="https://tmssl.akamaized.net/images/wappen/big/5.png" alt="logo AC Milan" class="img-30"></td>
+                                    <td><b>AC Milan</b></td>
+                                    <td><b>26</b></td>
+                                    <td>13</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr class="this" tabindex="0" aria-label="Posizione 4, SS Napoli, PT 24, PG 13, DR 12" 
+                                    onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                    <td>4</td>
+                                    <td><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" class="img-30"></td>
+                                    <td><b>SS Napoli</b></td>
+                                    <td><b>24</b></td>
+                                    <td>13</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr class="" tabindex="0" aria-label="Posizione 5, AS Roma, PT 21, PG 13, DR 10" 
+                                    onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                    <td>5</td>
+                                    <td><img src="https://tmssl.akamaized.net/images/wappen/big/12.png" alt="logo AS Roma" class="img-30"></td>
+                                    <td><b>AS Roma</b></td>
+                                    <td><b>21</b></td>
+                                    <td>13</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr class="" tabindex="0" aria-label="Posizione 6, Bologna FC 1909, PT 21, PG 13, DR 5" 
+                                    onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                    <td>6</td>
+                                    <td><img src="https://tmssl.akamaized.net/images/wappen/big/1025.png" alt="logo Bologna FC 1909" class="img-30"></td>
+                                    <td><b>Bologna FC 1909</b></td>
+                                    <td><b>21</b></td>
+                                    <td>13</td>
+                                    <td>5</td>
+                                </tr>
                             </tbody>
+                            
                         </table>
                         <div class="footer-table">
                             <button class="button_2" type="button" data-bs-toggle="modal" data-bs-target="#ranking_modal">
@@ -246,68 +354,758 @@
                         </div>
                     </div>
                 </div>
-
+    
                 <hr>
                 <div class="palmares-block" id="palmares-block">
-
+    
                     <div class="header">
                         <h3>Palmares</h3>
                         <button type="button" data-bs-toggle="modal" data-bs-target="#modal-palmares">Mostra tutto</button>
                     </div>
-
+    
                     <div class="body">
-                        <div class="row data" id="palmares">
-
-                        </div>
+                        <div class="row data" id="palmares" style="position: relative;">
+                            <div class="card-palmares" tabindex="0" aria-label="Serie A, 1 trofeo, stagioni: 2022" onclick="window.location='statistics.html'" onkeydown="if(event.key === 'Enter') window.location='statistics.html'">
+                                <div class="row hover-class">
+                                    <div class="col-6 text-center">
+                                        <div class="icon-wrapper">
+                                            <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A">
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center">
+                                        <div class="row scrollable">
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2022</h5></div>
+                                                <div class="col-6">
+                                                    <img src="public/images/varie/trofeo.png" alt="trophy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-palmares" tabindex="0" aria-label="Italy Cup, 2 trofei, stagioni: 2019, 2013" onclick="window.location='statistics.html'" onkeydown="if(event.key === 'Enter') window.location='statistics.html'">
+                                <div class="row hover-class">
+                                    <div class="col-6 text-center">
+                                        <div class="icon-wrapper">
+                                            <img src="https://tmssl.akamaized.net/images/logo/header/cit.png" alt="Italy Cup">
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center">
+                                        <div class="row scrollable">
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2019</h5></div>
+                                                <div class="col-6">
+                                                    <img src="public/images/varie/trofeo.png" alt="trophy">
+                                                </div>
+                                            </div>
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2013</h5></div>
+                                                <div class="col-6">
+                                                    <img src="public/images/varie/trofeo.png" alt="trophy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-palmares" tabindex="0" aria-label="Supercoppa Italiana, 1 trofeo, stagione: 2014" onclick="window.location='statistics.html'" onkeydown="if(event.key === 'Enter') window.location='statistics.html'">
+                                <div class="row hover-class">
+                                    <div class="col-6 text-center">
+                                        <div class="icon-wrapper">
+                                            <img src="https://tmssl.akamaized.net/images/logo/header/sci.png" alt="Supercoppa Italiana">
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center">
+                                        <div class="row scrollable">
+                                            <div class="row season">
+                                                <div class="col-6"><h5>2014</h5></div>
+                                                <div class="col-6">
+                                                    <img src="public/images/varie/trofeo.png" alt="trophy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
-
+    
                 <hr>
                 <div class="chart-block">
                     <div class="header">
                         <h3>Grafici</h3>
                     </div>
                     <div class="body">
-
+    
                         <div class="chart-container">
                             <div class="chart-box sm" id="chart_Game_win"></div>
                             <div class="chart-box sm" id="chart_Team"></div>
                             <div class="chart-box sm" id="chart_Nations"></div>
                         </div>
-
+    
                     </div>
                 </div>
-
+    
                 <hr>
                 <div class="table-block">
                     <div class="header">
                         <h3>Rosa</h3>
                     </div>
+                
                     <div class="list-block">
                         <h3>Portieri</h3>
                         <div class="list" id="goalkeeper_div">
+                            <div class="player-row" tabindex="0" aria-label="A. Meret, Goalkeeper, 27 years old, € 18,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/240414-1695025886.jpg?lm=1" alt="img-240414">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>A. Meret</h5>
+                                        <img src="https://flagcdn.com/h120/it.png" alt="Meret">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Goalkeeper</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>27 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 18,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>left</b></p>
+                                        <p><i>Altezza</i>: <b>190 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="H. Idasiak, Goalkeeper, 22 years old, € 150,00 k value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/555557-1617716885.jpg?lm=1" alt="img-555557">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>H. Idasiak</h5>
+                                        <img src="https://flagcdn.com/h120/pl.png" alt="Idasiak">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Goalkeeper</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>22 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 150,00 k</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>188 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="N. Contini, Goalkeeper, 28 years old, € 500,00 k value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/250683-1663679972.jpg?lm=1" alt="img-250683">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>N. Contini</h5>
+                                        <img src="https://flagcdn.com/h120/ua.png" alt="Contini">
+                                        <p>(citizen: <img src="https://flagcdn.com/h120/it.png" alt="Contini">)</p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Goalkeeper</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>28 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 500,00 k</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>190 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="P. Gollini, Goalkeeper, 29 years old, € 4,50 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/244192-1695026486.jpg?lm=1" alt="img-244192">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>P. Gollini</h5>
+                                        <img src="https://flagcdn.com/h120/it.png" alt="Gollini">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Goalkeeper</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>29 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 4,50 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>194 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
+                
                     <div class="list-block">
                         <h3>Difensori</h3>
-                        <div class="list" id="defender_div"></div>
+                        <div class="list" id="defender_div">
+                            <div class="player-row" tabindex="0" aria-label="L. Østigård, Centre-Back, 25 years old, € 10,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/367284-1641459550.jpg?lm=1" alt="img-367284">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>L. Østigård</h5>
+                                        <img src="https://flagcdn.com/h120/no.png" alt="Østigård">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Centre-Back</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>25 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 10,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>182 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="A. Zanoli, Right-Back, 24 years old, € 6,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/397225-1673603620.jpg?lm=1" alt="img-397225">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>A. Zanoli</h5>
+                                        <img src="https://flagcdn.com/h120/it.png" alt="Zanoli">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Right-Back</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>24 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 6,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>188 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="M. Olivera, Left-Back, 27 years old, € 18,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/376514-1681910576.jpg?lm=1" alt="img-376514">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>M. Olivera</h5>
+                                        <img src="https://flagcdn.com/h120/uy.png" alt="Olivera">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Left-Back</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>27 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 18,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>left</b></p>
+                                        <p><i>Altezza</i>: <b>185 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="Juan Jesus, Centre-Back, 33 years old, € 3,50 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/121985-1630496408.jpg?lm=1" alt="img-121985">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>Juan Jesus</h5>
+                                        <img src="https://flagcdn.com/h120/br.png" alt="Juan Jesus">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Centre-Back</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>33 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 3,50 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>left</b></p>
+                                        <p><i>Altezza</i>: <b>185 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="Natan, Centre-Back, 23 years old, € 10,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/735568-1692881497.jpg?lm=1" alt="img-735568">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>Natan</h5>
+                                        <img src="https://flagcdn.com/h120/br.png" alt="Natan">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Centre-Back</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>23 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 10,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>left</b></p>
+                                        <p><i>Altezza</i>: <b>188 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="A. Rrahmani, Centre-Back, 30 years old, € 25,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/257732-1663579350.jpg?lm=1" alt="img-257732">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>A. Rrahmani</h5>
+                                        <img src="https://flagcdn.com/h120/yu.png" alt="Rrahmani">
+                                        <p>(citizen: <img src="https://flagcdn.com/h120/xk.png" alt="Rrahmani">)</p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Centre-Back</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>30 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 25,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>both</b></p>
+                                        <p><i>Altezza</i>: <b>192 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="G. Di Lorenzo, Right-Back, 31 years old, € 25,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/169880-1661509008.jpg?lm=1" alt="img-169880">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>G. Di Lorenzo</h5>
+                                        <img src="https://flagcdn.com/h120/it.png" alt="Di Lorenzo">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Right-Back</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>31 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 25,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>183 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="M. Rui, Left-Back, 33 years old, € 8,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/87884-1661351255.jpg?lm=1" alt="img-87884">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>M. Rui</h5>
+                                        <img src="https://flagcdn.com/h120/pt.png" alt="Rui">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Left-Back</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>33 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 8,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>left</b></p>
+                                        <p><i>Altezza</i>: <b>168 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
+                
                     <div class="list-block">
                         <h3>Centrocampisti</h3>
-                        <div class="list" id="midfield_div"></div>
+                        <div class="list" id="midfield_div">
+                            <div class="player-row" tabindex="0" aria-label="J. Lindstrøm, Attacking Midfield, 24 years old, € 28,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/513245-1663065433.jpg?lm=1" alt="img-513245">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>J. Lindstrøm</h5>
+                                        <img src="https://flagcdn.com/h120/dk.png" alt="Lindstrøm">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Attacking Midfield</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>24 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 28,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>182 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="P. Zielinski, Central Midfield, 30 years old, € 35,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/181136-1692962961.jpg?lm=1" alt="img-181136">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>P. Zielinski</h5>
+                                        <img src="https://flagcdn.com/h120/pl.png" alt="Zielinski">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Central Midfield</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>30 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 35,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>both</b></p>
+                                        <p><i>Altezza</i>: <b>180 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="S. Lobotka, Defensive Midfield, 30 years old, € 40,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/192735-1661509021.jpg?lm=1" alt="img-192735">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>S. Lobotka</h5>
+                                        <img src="https://flagcdn.com/h120/sk.png" alt="Lobotka">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Defensive Midfield</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>30 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 40,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>both</b></p>
+                                        <p><i>Altezza</i>: <b>170 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="E. Elmas, Central Midfield, 25 years old, € 26,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/400489-1692878934.jpg?lm=1" alt="img-400489">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>E. Elmas</h5>
+                                        <img src="https://flagcdn.com/h120/mk.png" alt="Elmas">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Central Midfield</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>25 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 26,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>182 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="J. Cajuste, Central Midfield, 25 years old, € 10,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/468066-1691568301.jpg?lm=1" alt="img-468066">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>J. Cajuste</h5>
+                                        <img src="https://flagcdn.com/h120/se.png" alt="Cajuste">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Central Midfield</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>25 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 10,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>188 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="G. Gaetano, Attacking Midfield, 24 years old, € 4,50 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/358008-1656581154.jpg?lm=1" alt="img-358008">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>G. Gaetano</h5>
+                                        <img src="https://flagcdn.com/h120/it.png" alt="Gaetano">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Attacking Midfield</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>24 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 4,50 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>183 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="L. Russo, Attacking Midfield, 19 years old, € 100,00 k value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/885236-1695023851.jpg?lm=1" alt="img-885236">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>L. Russo</h5>
+                                        <img src="https://flagcdn.com/h120/it.png" alt="Russo">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Attacking Midfield</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>19 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 100,00 k</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>left</b></p>
+                                        <p><i>Altezza</i>: <b>0 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="F. Anguissa, Central Midfield, 29 years old, € 40,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/354361-1695026237.jpg?lm=1" alt="img-354361">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>F. Anguissa</h5>
+                                        <img src="https://flagcdn.com/h120/cm.png" alt="Anguissa">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Central Midfield</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>29 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 40,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>184 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="D. Demme, Defensive Midfield, 33 years old, € 1,50 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/82070-1661511485.jpg?lm=1" alt="img-82070">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>D. Demme</h5>
+                                        <img src="https://flagcdn.com/h120/de.png" alt="Demme">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Defensive Midfield</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>33 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 1,50 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>170 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
+                
                     <div class="list-block">
                         <h3>Attaccanti</h3>
-                        <div class="list" id="attack_div"></div>
+                        <div class="list" id="attack_div">
+                            <div class="player-row" tabindex="0" aria-label="K. Kvaratskhelia, Left Winger, 23 years old, € 85,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/502670-1663578995.jpg?lm=1" alt="img-502670">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>K. Kvaratskhelia</h5>
+                                        <img src="https://flagcdn.com/h120/ge.png" alt="Kvaratskhelia">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Left Winger</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>23 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 85,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>both</b></p>
+                                        <p><i>Altezza</i>: <b>183 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="G. Simeone, Centre-Forward, 29 years old, € 15,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/282388-1690294694.jpg?lm=1" alt="img-282388">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>G. Simeone</h5>
+                                        <img src="https://flagcdn.com/h120/ar.png" alt="Simeone">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Centre-Forward</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>29 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 15,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>180 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="G. Raspadori, Second Striker, 24 years old, € 35,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/405885-1661508804.jpg?lm=1" alt="img-405885">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>G. Raspadori</h5>
+                                        <img src="https://flagcdn.com/h120/it.png" alt="Raspadori">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Second Striker</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>24 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 35,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>both</b></p>
+                                        <p><i>Altezza</i>: <b>172 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="M. Politano, Right Winger, 31 years old, € 15,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/165895-1692963030.jpg?lm=1" alt="img-165895">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>M. Politano</h5>
+                                        <img src="https://flagcdn.com/h120/it.png" alt="Politano">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Right Winger</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>31 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 15,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>left</b></p>
+                                        <p><i>Altezza</i>: <b>171 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="V. Osimhen, Centre-Forward, 26 years old, € 120,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/401923-1661352899.jpg?lm=1" alt="img-401923">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>V. Osimhen</h5>
+                                        <img src="https://flagcdn.com/h120/ng.png" alt="Osimhen">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Centre-Forward</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>26 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 120,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>186 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="player-row" tabindex="0" aria-label="A. Zerbin, Left Winger, 25 years old, € 4,00 m value" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                <div>
+                                    <img src="https://img.a.transfermarkt.technology/portrait/header/433584-1641998849.jpg?lm=1" alt="img-433584">
+                                </div>
+                                <div>
+                                    <div class="data">
+                                        <h5>A. Zerbin</h5>
+                                        <img src="https://flagcdn.com/h120/it.png" alt="Zerbin">
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Ruolo</i>: <b>Left Winger</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Età</i>: <b>25 y</b></p>
+                                        <p><i>Valore</i>: <b>€ 4,00 m</b></p>
+                                    </div>
+                                    <div class="data">
+                                        <p><i>Piede</i>: <b>right</b></p>
+                                        <p><i>Altezza</i>: <b>182 cm</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+                
+    
             </div>
         </div>
     </div>
+        
 
     <!-- MODAL -->
     <div class="modal card-modal" id="result_modal" tabindex="-1">
@@ -321,22 +1119,1022 @@
                 <div class="results-table-modal">
                     <table>
                         <thead>
-                        <tr>
-                            <th class="col-1"></th>
-                            <th class="col-1"></th>
-                            <th class="col-1"></th>
-                            <th class="col-2"> Casa</th>
-                            <th class="col-1"> Risultato</th>
-                            <th class="col-2"> Ospite</th>
-                            <th class="col-1"></th>
-                            <th class="col-2"> Info</th>
-                        </tr>
+                            <tr>
+                                <th class="col-1"></th>
+                                <th class="col-1"></th>
+                                <th class="col-1"></th>
+                                <th class="col-2">Casa</th>
+                                <th class="col-1">Risultato</th>
+                                <th class="col-2">Ospite</th>
+                                <th class="col-1"></th>
+                                <th class="col-2">Info</th>
+                            </tr>
                         </thead>
                         <tbody id="match_played">
-
+                            <tr class="table-row lose" id="row-r-1" data-bs-toggle="collapse" data-bs-target="#collapse-r-1" aria-expanded="true" onclick="toggleIcon(1, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra Real Madrid FC e SS Napoli" title="Partita tra Real Madrid FC e SS Napoli" onkeydown="if(event.key === 'Enter') this.click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-1"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/418.png" alt="logo Real Madrid FC" title="Real Madrid FC" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="Real Madrid FC" title="Real Madrid FC" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">Real Madrid FC</td>
+                                <td tabindex="0" aria-label="Risultato: 4 - 2" title="Risultato: 4 - 2" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this.click();"><h5><b>4</b> - <b>2</b></h5></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">SS Napoli</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-1" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-1" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist"></td>
+                                                    <td class="col-1 text-start">9'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giovanni Simeone</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Rodrygo</b></td>
+                                                    <td class="col-1 text-end">11'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Right-footed shot, 3. Tournament Goal Assist: , Pass, 1. Tournament Assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Jude Bellingham</b></td>
+                                                    <td class="col-1 text-end">22'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Header, 4. Tournament Goal Assist: , Cross, 1. Tournament Assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Right-footed shot, 1. Tournament Goal"></td>
+                                                    <td class="col-1 text-start">47'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Frank Anguissa</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">49'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Piotr Zielinski</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Nico Paz</b></td>
+                                                    <td class="col-1 text-end">84'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Joselu</b></td>
+                                                    <td class="col-1 text-end">90'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Counter attack goal, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Diving"></td>
+                                                    <td class="col-1 text-start">90'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Jens Cajuste</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Nico Paz</b></td>
+                                                    <td class="col-1 text-end">84'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Joselu</b></td>
+                                                    <td class="col-1 text-end">90'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Counter attack goal, 1. Tournament Goal Assist: , Pass, 2. Tournament Assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Diving"></td>
+                                                    <td class="col-1 text-start">90'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Jens Cajuste</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row win" id="row-r-2" data-bs-toggle="collapse" data-bs-target="#collapse-r-2" aria-expanded="true" onclick="toggleIcon(2, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra Atalanta Bergamasca e SS Napoli" title="Partita tra Atalanta Bergamasca e SS Napoli" onkeydown="if(event.key === 'Enter') this.click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-2"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="logo Atalanta Bergamasca" title="Atalanta Bergamasca" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="Atalanta Bergamasca" title="Atalanta Bergamasca" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">Atalanta Bergamasca</td>
+                                <td tabindex="0" aria-label="Risultato: 1 - 2" title="Risultato: 1 - 2" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this.click();"><h5><b>1</b> - <b>2</b></h5></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">SS Napoli</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-2" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-2" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">21'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Natan</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Berat Djimsiti</b></td>
+                                                    <td class="col-1 text-end">27'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="3. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Header, 4. Goal of the Season Assist: , Cross, 4. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">44'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Khvicha Kvaratskhelia</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Ademola Lookman</b></td>
+                                                    <td class="col-1 text-end">53'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Header, 4. Goal of the Season Assist: , Cross, 1. Assist of the Season"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="3. Yellow card , Handball"></td>
+                                                    <td class="col-1 text-start">60'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giovanni Di Lorenzo</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Sead Kolasinac</b></td>
+                                                    <td class="col-1 text-end">64'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Right-footed shot, 2. Goal of the Season Assist: , Pass, 1. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">79'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Eljif Elmas</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row lose" id="row-r-3" data-bs-toggle="collapse" data-bs-target="#collapse-r-3" aria-expanded="true" onclick="toggleIcon(3, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra SS Napoli e Empoli FC" title="Partita tra SS Napoli e Empoli FC" onkeydown="if(event.key === 'Enter') this.click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-3"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">SS Napoli</td>
+                                <td tabindex="0" aria-label="Risultato: 0 - 1" title="Risultato: 0 - 1" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this.click();"><h5><b>0</b> - <b>1</b></h5></td>
+                                <td tabindex="0" aria-label="Empoli FC" title="Empoli FC" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">Empoli FC</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/749.png" alt="logo Empoli FC" title="Empoli FC" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-3" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-3" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="4. Yellow card , Time wasting"></td>
+                                                    <td class="col-1 text-start">78'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Matteo Cancellieri</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Right-footed shot, 1. Goal of the Season Assist: , Pass, 1. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">90'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Viktor Kovalenko</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Jens Cajuste</b></td>
+                                                    <td class="col-1 text-end">90'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="4. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row draw" id="row-r-4" data-bs-toggle="collapse" data-bs-target="#collapse-r-4" aria-expanded="true" onclick="toggleIcon(4, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra SS Napoli e FC Union Berlin" title="Partita tra SS Napoli e FC Union Berlin" onkeydown="if(event.key === 'Enter') this.click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-4"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">SS Napoli</td>
+                                <td tabindex="0" aria-label="Risultato: 1 - 1" title="Risultato: 1 - 1" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this.click();"><h5><b>1</b> - <b>1</b></h5></td>
+                                <td tabindex="0" aria-label="FC Union Berlin" title="FC Union Berlin" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">FC Union Berlin</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/89.png" alt="logo FC Union Berlin" title="FC Union Berlin" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-4" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-4" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Matteo Politano</b></td>
+                                                    <td class="col-1 text-end">39'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Chest, 1. Tournament Goal Assist: Without assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">41'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Leonardo Bonucci</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Counter attack goal, 1. Tournament Goal Assist: Without assist"></td>
+                                                    <td class="col-1 text-start">52'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>David Datro Fofana</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">66'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Paul Jaeckel</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">75'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Lucas Tousart</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giovanni Simeone</b></td>
+                                                    <td class="col-1 text-end">89'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row win" id="row-r-5" data-bs-toggle="collapse" data-bs-target="#collapse-r-5" aria-expanded="true" onclick="toggleIcon(5, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra US Salernitana 1919 e SS Napoli" title="Partita tra US Salernitana 1919 e SS Napoli" onkeydown="if(event.key === 'Enter') this.click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-5"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/380.png" alt="logo US Salernitana 1919" title="US Salernitana 1919" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="US Salernitana 1919" title="US Salernitana 1919" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">US Salernitana 1919</td>
+                                <td tabindex="0" aria-label="Risultato: 0 - 2" title="Risultato: 0 - 2" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this.click();"><h5><b>0</b> - <b>2</b></h5></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">SS Napoli</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-5" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-5" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Right-footed shot, 3. Goal of the Season Assist: , Pass, 1. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">13'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giacomo Raspadori</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Pasquale Mazzocchi</b></td>
+                                                    <td class="col-1 text-end">68'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Counter attack goal, 1. Goal of the Season Assist: , 1. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">82'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Eljif Elmas</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">88'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giovanni Di Lorenzo</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row draw" id="row-r-6" data-bs-toggle="collapse" data-bs-target="#collapse-r-6" aria-expanded="true" onclick="toggleIcon(6, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra SS Napoli e AC Milan" title="Partita tra SS Napoli e AC Milan" onkeydown="if(event.key === 'Enter') this.click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-6"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">SS Napoli</td>
+                                <td tabindex="0" aria-label="Risultato: 2 - 2" title="Risultato: 2 - 2" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this.click();"><h5><b>2</b> - <b>2</b></h5></td>
+                                <td tabindex="0" aria-label="AC Milan" title="AC Milan" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">AC Milan</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/5.png" alt="logo AC Milan" title="AC Milan" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-6" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-6" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Header, 5. Goal of the Season Assist: , Cross, 2. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">22'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Olivier Giroud</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Header, 6. Goal of the Season Assist: , Cross, 2. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">31'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Olivier Giroud</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Matteo Politano</b></td>
+                                                    <td class="col-1 text-end">50'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Left-footed shot, 5. Goal of the Season Assist: , Pass, 3. Assist of the Season"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Natan</b></td>
+                                                    <td class="col-1 text-end">53'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">55'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Tijjani Reijnders</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">62'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Luka Romero</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giacomo Raspadori</b></td>
+                                                    <td class="col-1 text-end">63'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Direct free kick, 2. Goal of the Season Assist: Without assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giovanni Di Lorenzo</b></td>
+                                                    <td class="col-1 text-end">65'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="3. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">78'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Yunus Musah</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Alessandro Zanoli</b></td>
+                                                    <td class="col-1 text-end">86'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Natan</b></td>
+                                                    <td class="col-1 text-end">89'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/red_card.svg.png" alt="Second yellow , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row win" id="row-r-7" data-bs-toggle="collapse" data-bs-target="#collapse-r-7" aria-expanded="true" onclick="toggleIcon(7, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra FC Union Berlin e SS Napoli" title="Partita tra FC Union Berlin e SS Napoli" onkeydown="if(event.key === 'Enter') this.click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-7"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/89.png" alt="logo FC Union Berlin" title="FC Union Berlin" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="FC Union Berlin" title="FC Union Berlin" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">FC Union Berlin</td>
+                                <td tabindex="0" aria-label="Risultato: 0 - 1" title="Risultato: 0 - 1" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this.click();"><h5><b>0</b> - <b>1</b></h5></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this.click();">SS Napoli</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-7" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-7" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Christopher Trimmel</b></td>
+                                                    <td class="col-1 text-end">10'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">17'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Amir Rrahmani</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Robin Gosens</b></td>
+                                                    <td class="col-1 text-end">51'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Janik Haberer</b></td>
+                                                    <td class="col-1 text-end">53'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Left-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist"></td>
+                                                    <td class="col-1 text-start">65'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giacomo Raspadori</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row win" id="row-r-8" data-bs-toggle="collapse" data-bs-target="#collapse-r-8" aria-expanded="true" onclick="toggleIcon(8, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra Verona Hellas FC e SS Napoli" title="Partita tra Verona Hellas FC e SS Napoli" onkeydown="if(event.key === 'Enter') this click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-8"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/276.png" alt="logo Verona Hellas FC" title="Verona Hellas FC" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="Verona Hellas FC" title="Verona Hellas FC" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">Verona Hellas FC</td>
+                                <td tabindex="0" aria-label="Risultato: 1 - 3" title="Risultato: 1 - 3" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this click();"><h5><b>1</b> - <b>3</b></h5></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">SS Napoli</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-8" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-8" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Left-footed shot, 4. Goal of the Season Assist: , Cross, 2. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">27'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Matteo Politano</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giangiacomo Magnani</b></td>
+                                                    <td class="col-1 text-end">37'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="4. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Counter attack goal, 2. Goal of the Season Assist: , Pass, 3. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">43'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Khvicha Kvaratskhelia</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Davide Faraoni</b></td>
+                                                    <td class="col-1 text-end">45'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="3. Yellow card"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card"></td>
+                                                    <td class="col-1 text-start">45'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Mário Rui</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Counter attack goal, 3. Goal of the Season Assist: , Pass, 4. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">55'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Khvicha Kvaratskhelia</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Darko Lazović</b></td>
+                                                    <td class="col-1 text-end">60'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Left-footed shot, 1. Goal of the Season Assist: Without assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Federico Bonazzoli</b></td>
+                                                    <td class="col-1 text-end">65'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">80'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Jesper Lindstrøm</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row lose" id="row-r-9" data-bs-toggle="collapse" data-bs-target="#collapse-r-9" aria-expanded="true" onclick="toggleIcon(9, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra SS Napoli e AC Fiorentina" title="Partita tra SS Napoli e AC Fiorentina" onkeydown="if(event.key === 'Enter') this click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-9"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">SS Napoli</td>
+                                <td tabindex="0" aria-label="Risultato: 1 - 3" title="Risultato: 1 - 3" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this click();"><h5><b>1</b> - <b>3</b></h5></td>
+                                <td tabindex="0" aria-label="AC Fiorentina" title="AC Fiorentina" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">AC Fiorentina</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/430.png" alt="logo AC Fiorentina" title="AC Fiorentina" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-9" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-9" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Josip Brekalo</b></td>
+                                                    <td class="col-1 text-end">7'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Left-footed shot, 1. Goal of the Season Assist: Without assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">45'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Pietro Terracciano</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Victor Osimhen</b></td>
+                                                    <td class="col-1 text-end">45'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Penalty, 6. Goal of the Season Assist: , Fouled player"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Right-footed shot, 4. Goal of the Season Assist: Without assist"></td>
+                                                    <td class="col-1 text-start">63'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giacomo Bonaventura</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">69'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Lucas Martínez Quarta</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="2. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">70'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giacomo Bonaventura</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="3. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">89'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Luca Ranieri</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Giovanni Simeone</b></td>
+                                                    <td class="col-1 text-end">90'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="3. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Jens Cajuste</b></td>
+                                                    <td class="col-1 text-end">90'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="3. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Right-footed shot, 5. Goal of the Season Assist: , Cross, 1. Assist of the Season"></td>
+                                                    <td class="col-1 text-start">90'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Nicolás González</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row lose" id="row-r-10" data-bs-toggle="collapse" data-bs-target="#collapse-r-10" aria-expanded="true" onclick="toggleIcon(10, 'r')" ondblclick="event.stopPropagation(); window.location='game.html'" tabindex="0" aria-label="Partita tra SS Napoli e Real Madrid FC" title="Partita tra SS Napoli e Real Madrid FC" onkeydown="if(event.key === 'Enter') this click();">
+                                <td><i class="fas fa-caret-right" id="icon-r-10"></i></td>
+                                <td><img src="https://tmssl.akamaized.net/images/logo/header/cl.png" alt="Competizione" title="Competizione"></td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli" title="SS Napoli" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td tabindex="0" aria-label="SS Napoli" title="SS Napoli" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">SS Napoli</td>
+                                <td tabindex="0" aria-label="Risultato: 2 - 3" title="Risultato: 2 - 3" onclick="window.location='game.html'" onkeydown="if(event.key === 'Enter') this click();"><h5><b>2</b> - <b>3</b></h5></td>
+                                <td tabindex="0" aria-label="Real Madrid FC" title="Real Madrid FC" onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') this click();">Real Madrid FC</td>
+                                <td class="text-center"><img src="https://tmssl.akamaized.net/images/wappen/big/418.png" alt="logo Real Madrid FC" title="Real Madrid FC" tabindex="0" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'"></td>
+                                <td class="text-center">
+                                    <button type="button" onclick="event.stopPropagation(); window.location='game.html'" aria-label="Visualizza partita" tabindex="0">
+                                        <i class="fas fa-external-link-alt px-1"></i> Match
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="collapse-r-10" class="collapse" aria-hidden="true">
+                                <td colspan="9">
+                                    <div id="details-r-10" style="position: relative;">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Leo Østigård</b></td>
+                                                    <td class="col-1 text-end">19'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Header, 1. Tournament Goal Assist: Without assist"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist"></td>
+                                                    <td class="col-1 text-start">27'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Vinicius Junior</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1 text-start">29'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Eduardo Camavinga</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist"></td>
+                                                    <td class="col-1 text-start">34'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Jude Bellingham</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Natan</b></td>
+                                                    <td class="col-1 text-end">45'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Foul"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3 text-end hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Piotr Zielinski</b></td>
+                                                    <td class="col-1 text-end">54'</td>
+                                                    <td class="col-1 text-end"><img src="public/images/varie/goals.png" alt=", Penalty, 1. Tournament Goal Assist: Handball by"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Dissent"></td>
+                                                    <td class="col-1 text-start">70'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Jude Bellingham</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/goals.png" alt=", Own-goal Assist: , Shot on goal, 1. Tournament Assist"></td>
+                                                    <td class="col-1 text-start">78'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Alex Meret</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-3"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1"></td>
+                                                    <td class="col-1 text-start"><img src="public/images/varie/yellow_card.svg.png" alt="1. Yellow card , Time wasting"></td>
+                                                    <td class="col-1 text-start">89'</td>
+                                                    <td class="col-3 text-start hand-cursor" onclick="event.stopPropagation(); window.location='player.html'"><b>Kepa Arrizabalaga</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="table-row" tabindex="0">
+                                <td><i class="fas fa-caret-right" id="icon-r-10"></i></td>
+                                <td>...</td>
+                                <td class="text-center">...</td>
+                                <td tabindex="0">...</td>
+                                <td tabindex="0">...</td>
+                                <td tabindex="0">...</td>
+                                <td class="text-center">...</td>
+                                <td class="text-center">...</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -348,30 +2146,271 @@
                     <h3 id="exampleModalLabel">Classifica</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
+    
                 <div class="ranking-table-modal">
                     <table>
                         <thead>
-                        <tr>
-                            <th class="col-2"> Pos</th>
-                            <th class="col-1"></th>
-                            <th class="col-6 text-start"> Club </th>
-                            <th class="col-1"> PT</th>
-                            <th class="col-1"> PG</th>
-                            <th class=""> V</th>
-                            <th class=""> P</th>
-                            <th class=""> S</th>
-                            <th class=""> DR</th>
-                        </tr>
+                            <tr>
+                                <th class="col-2">Pos</th>
+                                <th class="col-1"></th>
+                                <th class="col-6 text-start">Club</th>
+                                <th class="col-1">PT</th>
+                                <th class="col-1">PG</th>
+                                <th class="">V</th>
+                                <th class="">P</th>
+                                <th class="">S</th>
+                                <th class="">DR</th>
+                            </tr>
                         </thead>
-                        <tbody id="rankings_modal">
-
+                        <tbody id="rankings_modal" style="position: relative;">
+                            <tr class="" tabindex="0" aria-label="Posizione 1, FC Internazionale Milano, PT 32, PG 13, V 10, P 2, S 1, DR 23"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>1</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/46.png" alt="logo FC Internazionale Milano"></td>
+                                <td><b>FC Internazionale Milano</b></td>
+                                <td><b>32</b></td>
+                                <td>13</td>
+                                <td>10</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>23</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 2, Juventus FC, PT 30, PG 13, V 9, P 3, S 1, DR 12"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>2</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/506.png" alt="logo Juventus FC"></td>
+                                <td><b>Juventus FC</b></td>
+                                <td><b>30</b></td>
+                                <td>13</td>
+                                <td>9</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>12</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 3, AC Milan, PT 26, PG 13, V 8, P 2, S 3, DR 7"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>3</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/5.png" alt="logo AC Milan"></td>
+                                <td><b>AC Milan</b></td>
+                                <td><b>26</b></td>
+                                <td>13</td>
+                                <td>8</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>7</td>
+                            </tr>
+                            <tr class="this" tabindex="0" aria-label="Posizione 4, SS Napoli, PT 24, PG 13, V 7, P 3, S 3, DR 12"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>4</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="logo SS Napoli"></td>
+                                <td><b>SS Napoli</b></td>
+                                <td><b>24</b></td>
+                                <td>13</td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>12</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 5, AS Roma, PT 21, PG 13, V 6, P 3, S 4, DR 10"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>5</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/12.png" alt="logo AS Roma"></td>
+                                <td><b>AS Roma</b></td>
+                                <td><b>21</b></td>
+                                <td>13</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 6, Bologna FC 1909, PT 21, PG 13, V 5, P 6, S 2, DR 5"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>6</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/1025.png" alt="logo Bologna FC 1909"></td>
+                                <td><b>Bologna FC 1909</b></td>
+                                <td><b>21</b></td>
+                                <td>13</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>5</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 7, Atalanta Bergamasca, PT 20, PG 13, V 6, P 2, S 5, DR 8"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>7</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="logo Atalanta Bergamasca"></td>
+                                <td><b>Atalanta Bergamasca</b></td>
+                                <td><b>20</b></td>
+                                <td>13</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>8</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 8, AC Fiorentina, PT 20, PG 13, V 6, P 2, S 5, DR 3"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>8</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/430.png" alt="logo AC Fiorentina"></td>
+                                <td><b>AC Fiorentina</b></td>
+                                <td><b>20</b></td>
+                                <td>13</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 9, AC Monza, PT 18, PG 13, V 4, P 6, S 3, DR 2"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>9</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/2919.png" alt="logo AC Monza"></td>
+                                <td><b>AC Monza</b></td>
+                                <td><b>18</b></td>
+                                <td>13</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 10, Frosinone, PT 18, PG 13, V 5, P 3, S 5, DR -2"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>10</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/8970.png" alt="logo Frosinone"></td>
+                                <td><b>Frosinone</b></td>
+                                <td><b>18</b></td>
+                                <td>13</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>-2</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 11, SS Lazio, PT 17, PG 13, V 5, P 2, S 6, DR -1"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>11</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/398.png" alt="logo SS Lazio"></td>
+                                <td><b>SS Lazio</b></td>
+                                <td><b>17</b></td>
+                                <td>13</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>-1</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 12, Torino, PT 16, PG 13, V 4, P 4, S 5, DR -6"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>12</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/416.png" alt="logo Torino"></td>
+                                <td><b>Torino</b></td>
+                                <td><b>16</b></td>
+                                <td>13</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>-6</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 13, US Lecce, PT 15, PG 13, V 3, P 6, S 4, DR -3"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>13</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/1005.png" alt="logo US Lecce"></td>
+                                <td><b>US Lecce</b></td>
+                                <td><b>15</b></td>
+                                <td>13</td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>4</td>
+                                <td>-3</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 14, US Sassuolo, PT 15, PG 13, V 4, P 3, S 6, DR -4"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>14</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/6574.png" alt="logo US Sassuolo"></td>
+                                <td><b>US Sassuolo</b></td>
+                                <td><b>15</b></td>
+                                <td>13</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>-4</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 15, Genoa CFC, PT 14, PG 13, V 4, P 2, S 7, DR -4"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>15</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/252.png" alt="logo Genoa CFC"></td>
+                                <td><b>Genoa CFC</b></td>
+                                <td><b>14</b></td>
+                                <td>13</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>7</td>
+                                <td>-4</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 16, Udinese, PT 11, PG 13, V 1, P 8, S 4, DR -9"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>16</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/410.png" alt="logo Udinese"></td>
+                                <td><b>Udinese</b></td>
+                                <td><b>11</b></td>
+                                <td>13</td>
+                                <td>1</td>
+                                <td>8</td>
+                                <td>4</td>
+                                <td>-9</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 17, Cagliari, PT 10, PG 13, V 2, P 4, S 7, DR -12"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>17</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/1390.png" alt="logo Cagliari"></td>
+                                <td><b>Cagliari</b></td>
+                                <td><b>10</b></td>
+                                <td>13</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>7</td>
+                                <td>-12</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 18, Empoli FC, PT 10, PG 13, V 3, P 1, S 9, DR -17"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>18</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/749.png" alt="logo Empoli FC"></td>
+                                <td><b>Empoli FC</b></td>
+                                <td><b>10</b></td>
+                                <td>13</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>9</td>
+                                <td>-17</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 19, Verona Hellas FC, PT 9, PG 13, V 2, P 3, S 8, DR -9"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>19</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/276.png" alt="logo Verona Hellas FC"></td>
+                                <td><b>Verona Hellas FC</b></td>
+                                <td><b>9</b></td>
+                                <td>13</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>8</td>
+                                <td>-9</td>
+                            </tr>
+                            <tr class="" tabindex="0" aria-label="Posizione 20, US Salernitana 1919, PT 8, PG 13, V 1, P 5, S 7, DR -15"
+                                onclick="window.location='club.html'" onkeydown="if(event.key === 'Enter') window.location='club.html'">
+                                <td>20</td>
+                                <td><img src="https://tmssl.akamaized.net/images/wappen/big/380.png" alt="logo US Salernitana 1919"></td>
+                                <td><b>US Salernitana 1919</b></td>
+                                <td><b>8</b></td>
+                                <td>13</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>-15</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
+    
             </div>
         </div>
     </div>
+    
 
     <div class="modal fade" id="modal-palmares" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
@@ -381,6 +2420,73 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body row justify-content-center d-flex" id="palmares-modal-body">
+                    <div class="card-palmares" tabindex="0" aria-label="Serie A, 1 trofeo, stagioni: 2022" onclick="window.location='statistics.html'" onkeydown="if(event.key === 'Enter') window.location='statistics.html'">
+                        <div class="row hover-class">
+                            <div class="col-6 text-center">
+                                <div class="icon-wrapper">
+                                    <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt="Serie A">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="row scrollable">
+                                    <div class="row season">
+                                        <div class="col-6"><h5>2022</h5></div>
+                                        <div class="col-6">
+                                            <img src="public/images/varie/trofeo.png" alt="trophy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-palmares" tabindex="0" aria-label="Italy Cup, 2 trofei, stagioni: 2019, 2013" onclick="window.location='statistics.html'" onkeydown="if(event.key === 'Enter') window.location='statistics.html'">
+                        <div class="row hover-class">
+                            <div class="col-6 text-center">
+                                <div class="icon-wrapper">
+                                    <img src="https://tmssl.akamaized.net/images/logo/header/cit.png" alt="Italy Cup">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="row scrollable">
+                                    <div class="row season">
+                                        <div class="col-6"><h5>2019</h5></div>
+                                        <div class="col-6">
+                                            <img src="public/images/varie/trofeo.png" alt="trophy">
+                                        </div>
+                                    </div>
+                                    <div class="row season">
+                                        <div class="col-6"><h5>2013</h5></div>
+                                        <div class="col-6">
+                                            <img src="public/images/varie/trofeo.png" alt="trophy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-palmares" tabindex="0" aria-label="Supercoppa Italiana, 1 trofeo, stagione: 2014" onclick="window.location='statistics.html'" onkeydown="if(event.key === 'Enter') window.location='statistics.html'">
+                        <div class="row hover-class">
+                            <div class="col-6 text-center">
+                                <div class="icon-wrapper">
+                                    <img src="https://tmssl.akamaized.net/images/logo/header/sci.png" alt="Supercoppa Italiana">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="row scrollable">
+                                    <div class="row season">
+                                        <div class="col-6"><h5>2014</h5></div>
+                                        <div class="col-6">
+                                            <img src="public/images/varie/trofeo.png" alt="trophy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
