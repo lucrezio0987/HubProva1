@@ -856,34 +856,10 @@
 
 </body>
 
+<script type="text/javascript" src="public/javascripts/playerData.js"></script>
+<script type="text/javascript" src="public/javascripts/libGeneralScripts.js"></script>
 <script>
- function toggleRow(n, tableId) {
-    let currentRow = document.getElementById(`row-${tableId}-${n}`);
-    let icon = document.getElementById(`icon-${tableId}-${n}`);
-    let collapseElement = document.getElementById(`collapse-${tableId}-${n}`);
-    let isSelected = currentRow.classList.contains('selected');
-    let allRows = document.querySelectorAll(`#${tableId} .table-row`);
-
-    allRows.forEach(row => {
-        let otherCollapseElement = document.getElementById(row.dataset.bsTarget.substring(1));
-        if (row !== currentRow) {
-            row.classList.remove('selected');
-            otherCollapseElement.classList.remove('show');
-            row.querySelector('i').classList.add("fa-caret-right");
-            row.querySelector('i').classList.remove("fa-caret-down");
-        }
-    });
-
-    if (!isSelected) {
-        currentRow.classList.add('selected');
-        icon.classList.remove("fa-caret-right");
-        icon.classList.add("fa-caret-down");
-        collapseElement.classList.add("show");
-    } else {
-        currentRow.classList.remove('selected');
-        icon.classList.add("fa-caret-right");
-        icon.classList.remove("fa-caret-down");
-        collapseElement.classList.remove("show");
-    }
-}
+    buildChartBlock('chart_Starting', `Titolarità (Serie A - 2023)`, chartStartingData, types_5);
+    buildChartBlock('chart_Games_Stat', `Games Statistics (Serie A - 2023)`, chartGamesStatData, types_player_game);
+    buildChartBlock('chart_Market_Value', 'Valutazione', chartChartValuationData, types_4);
 </script>

@@ -2499,3 +2499,11 @@
 </footer>
 
 </body>
+
+<script type="text/javascript" src="public/javascripts/clubData.js"></script>
+<script type="text/javascript" src="public/javascripts/libGeneralScripts.js"></script>
+<script>
+    buildChartBlock('chart_Team', 'Ruoli', n_players, types_2);
+    buildChartBlock('chart_Nations', `Nazionalità giocatori`, countryCount, types_3);
+    buildChartBlock('chart_Game_win', `Rendimento (Serie A - 2023)`, game_results_data, types_1);
+</script>
