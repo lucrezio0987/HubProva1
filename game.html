@@ -143,6 +143,1035 @@
             </div>
         </nav>
     </div>
+
+    <div class="game-body">
+        <div class="header info-block">
+            <div id="playerData" class="info-data">
+                <div class="row">
+                    <div class="col">
+                        <div class="stadium" data-bs-toggle="tooltip" title="Data">
+                            <img src="public/images/varie/calendar.png">
+                            <h5 id="i_data">25 Novembre 2023</h5>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="stadium" data-bs-toggle="tooltip" title="Arbitro">
+                            <img src="public/images/varie/fischietto.png">
+                            <h5 id="i_referee">Maurizio Mariani</h5>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="stadium" data-bs-toggle="tooltip" title="Stadio">
+                            <img src="public/images/varie/stadio.png">
+                            <div>
+                                <h5 id="i_stadium">Gewiss Stadium</h5>
+                                <h5 id="i_attendance">14743</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="body" id="game-body">
+            <hr>
+            <div class="formation-block">
+                <div class="header">
+                    <h1>FORMAZIONI</h1>
+                </div>
+
+                <div class="body" id="lineUps_body">
+                    <div class="row">
+                        <div class="col-md-6 home-block">
+                            <div class="info-block">
+                                <div class="info-data">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="stadium" data-bs-toggle="tooltip" title="Coach">
+                                                <img src="public/images/varie/coach.png">
+                                                <h5 id="home_coach">Gian Piero Gasperini</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="stadium" data-bs-toggle="tooltip" title="Formazione">
+                                                <img src="public/images/varie/formation.png">
+                                                <h5 id="home_module">3-4-1-2</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="substitutes" id="home_lineUps_substitutes">
+                                        <div class="title">
+                                            <h3> Riserve</h3>
+                                        </div>
+
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute F. Rossi, number 31" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F9E4</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">31</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip" title="${event.playerName}">
+                                                <h5 class="item">F. Rossi</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute J. Musso, number 1" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F9E4</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">1</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">J. Musso</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute G. Bonfanti, number 43" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">43</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">G. Bonfanti</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute A. Miranchuk, number 59" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">59</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">A. Miranchuk</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute E. Holm, number 3" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">3</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">E. Holm</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute H. Hateboer, number 33" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">33</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">H. Hateboer</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute M. Ruggeri, number 22" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">22</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">M. Ruggeri</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute M. Adopo, number 25" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">25</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">M. Adopo</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute N. Zortea, number 21" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">21</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">N. Zortea</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute G. Scamacca, number 90" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F3AF</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">90</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">G. Scamacca</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute L. Muriel, number 9" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F3AF</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">9</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">L. Muriel</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="starting" id="home_lineUps_starting">
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player M. Carnesecchi, number 29" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F9E4</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">29</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">M. Carnesecchi</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player B. Djimsiti, number 19" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">19</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">B. Djimsiti</h5>
+                                                <img class="event-icon item" src="public/images/varie/yellow_card.svg.png" alt="cartellino giallo">
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player G. Scalvini, number 42" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">42</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">G. Scalvini</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player S. Kolasinac, number 23" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">23</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">S. Kolasinac</h5>
+                                                <img class="event-icon item" src="public/images/varie/yellow_card.svg.png" alt="cartellino giallo">
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player D. Zappacosta, number 77" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">77</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">D. Zappacosta</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player E. Palmieri, number 13" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">13</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">E. Palmieri</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player M. Pasalic, number 8" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">8</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">M. Pasalic</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player M. Bakker, number 20" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">20</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">M. Bakker</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player T. Koopmeiners, number 7" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">7</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">T. Koopmeiners</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player A. Lookman, number 11" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F9E4</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">11</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">A. Lookman</h5>
+                                                <img class="event-icon item" src="public/images/varie/goals.png" alt="goal">
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player C. De Ketelaere, number 17" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-2" data-bs-toggle="tooltip">
+                                                <span>&#x1F9E4</span>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">17</i>
+                                            </div>
+                                            <div class="col-md-8 items" data-bs-toggle="tooltip">
+                                                <h5 class="item">C. De Ketelaere</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 away-block">
+                            <div class="info-block">
+                                <div class="info-data">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="stadium" data-bs-toggle="tooltip" title="Formazione">
+                                                <h5 id="away_module">4-3-3 Attacking</h5>
+                                                <img src="public/images/varie/formation.png">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="stadium" data-bs-toggle="tooltip" title="Coach">
+                                                <h5 id="away_coach">Walter Mazzarri</h5>
+                                                <img src="public/images/varie/coach.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="starting" id="away_lineUps_starting">
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player P. Gollini, number 95" onkeydown="if(event.key === 'Enter')  window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">P. Gollini</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">95</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F9E4</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player A. Rhamani, number 13" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">A. Rhamani</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">13</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player G. Di Lorenzo, number 22" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">G. Di Lorenzo</h5>
+                                                <img class="event-icon item" src="public/images/varie/yellow_card.svg.png" alt="cartellino giallo">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">22</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player M. Olivera, number 17" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">M. Olivera</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">17</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player Natan, number 3" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">Natan</h5>
+                                                <img class="event-icon item" src="public/images/varie/yellow_card.svg.png" alt="cartellino giallo">
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">3</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player F. Anguissa, number 99" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">F. Anguissa</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">99</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player P. Zielinski, number 20" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">P. Zielinski</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">20</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player S. Lobotka, number 68" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">S. Lobotka</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">68</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player G. Raspadori, number 81" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">G. Raspadori</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">81</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F3AF</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player K. Kvaratskhelia, number 77" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">K. Kvaratskhelia</h5>
+                                                <img class="event-icon item" src="public/images/varie/goals.png" alt="goal">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">77</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F3AF</span>
+                                            </div>
+                                        </div>
+                                        <div class="row palyer-row lineup-row" tabindex="0" aria-label="Player M. Politano, number 21" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick=" window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">M. Politano</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">21</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F3AF</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="substitutes" id="away_lineUps_substitutes">
+                                        <div class="title">
+                                            <h3> Riserve</h3>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute A. Meret, number 1" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">A. Meret</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">1</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F9E4</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute N. Contini, number 14" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">N. Contini</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">14</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F9E4</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute A. Zanoli, number 59" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">A. Zanoli</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">59</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute J. Jesus, number 5" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">J. Jesus</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">5</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute L. Ostigard, number 55" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">L. Ostigard</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">55</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F6E1</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute D. Demme, number 4" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">D. Demme</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">4</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute G. Gaetano, number 70" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">G. Gaetano</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">70</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute J. Cajuste, number 24" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">J. Cajuste</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">24</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F501</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute A. Zerbin, number 23" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">A. Zerbin</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">23</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F3AF</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute E. Elmas, number 7" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">E. Elmas</h5>
+                                                <img class="event-icon item" src="public/images/varie/goals.png" alt="goal">
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">7</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F3AF</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute G. Simeone, number 18" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">G. Simeone</h5>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">18</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F3AF</span>
+                                            </div>
+                                        </div>
+                                        <div class="row substitution-row lineup-row" tabindex="0" aria-label="Substitute V. Oshimen, number 9" onkeydown="if(event.key === 'Enter') window.location='player.html'" onclick="window.location='player.html'">
+                                            <div class="col-md-8 items">
+                                                <h5 class="item">V. Oshimen</h5>
+                                                <img class="event-icon item" src="public/images/varie/substitutions.jpg" alt="sostituzione">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <i class="item">9</i>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span>&#x1F3AF</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="text-white">
+
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="vs-box">
+                        <div class="info-progress-block">
+                            <div class="row">
+                                <div class="col-2 home-club-img">
+                                    <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined" class="m-2 px-2"
+                                         style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                         aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                </div>
+                                <div class="col-2 rank-val" id="i_act_rank_home"><p>7°</p></div>
+                                <div class="col-4" id="comp_logo_vs_box"><img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt = "logo Serie A"
+                                                                              onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                                                              tabindex="0" aria-label="Visualizza statistiche serie A" title="Serie A">
+                                </div>
+                                <div class="col-2 rank-val" id="i_act_rank_away"><p>4°</p></div>
+                                <div class="col-2 away-club-img">
+                                    <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined" class="m-2 px-2"
+                                         style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                         aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-progress-block">
+                            <h3> Probabilità di vittoria
+                                <button type="button" class="btn btn-link" data-bs-toggle="popover" data-bs-trigger="hover"
+                                        title="Probabilità di Vittoria" data-bs-html="true"
+                                        data-bs-content="
+                                            <p>La probabilità di vittoria è calcolata prendendo in considerazione i seguenti fattori:</p>
+                                            <ul>
+                                                <li><strong>Statistiche dei precedenti incontri</strong> tra le due squadre (~30%)</li>
+                                                <li><strong>Posizione in classifica</strong> delle squadre (~25%)</li>
+                                                <li><strong>Forma attuale</strong> della squadra (risultati recenti) (~20%)</li>
+                                                <li><strong>Infortuni e squalifiche</strong> dei giocatori chiave (~10%)</li>
+                                                <li><strong>Fattore campo</strong> (giocare in casa o in trasferta) (~10%)</li>
+                                                <li><strong>Numero di spettatori</strong> (~5%)</li>
+                                            </ul>">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                            </h3>
+                            <div class="row">
+                                <div class="col-1" id="i_prob_win_home" aria-label="45.15% probabilità di vittoria in casa" tabindex="0">45.15%</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div id="pb_prob_win_home" class="progress-bar" role="progressbar" style="width: 45.15%;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-1" id="i_prob_win_away" aria-label="54.9% probabilità di vittoria in trasferta" tabindex="0">54.9%</div>
+                            </div>
+                        </div>
+                        <div class="info-progress-block">
+                            <h3> Testa a testa </h3>
+                            <div class="row">
+                                <div class="col-1" id="i_h_to_h_home" aria-label="10 Testa a testa in casa" tabindex="0">10</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div id="pb_h_to_h" class="progress-bar" role="progressbar" style="width: 45.45%;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-1" id="i_h_to_h_away" aria-label="10 Testa a testa in trasferta" tabindex="0">12</div>
+                            </div>
+                        </div>
+                        <div class="info-progress-block">
+                            <h3> Sostituzioni </h3>
+                            <div class="row">
+                                <div class="col-1" id="i_sub_home" aria-label="5 Sostituzioni in casa" tabindex="0">5</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div id="pb_sub_home" class="progress-bar" role="progressbar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-1" id="i_sub_away" aria-label="5 Sostituzioni in trasferta" tabindex="0">5</div>
+                            </div>
+                        </div>
+                        <div class="info-progress-block">
+                            <h3> Cartellini gialli </h3>
+                            <div class="row">
+                                <div class="col-1" id="i_yellow_home" aria-label="2 Cartellini gialli in casa" tabindex="0">2</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div id="pb_yellow_home" class="progress-bar" role="progressbar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-1" id="i_yellow_away" aria-label="2 Cartellini gialli in trasferta" tabindex="0">2</div>
+                            </div>
+                        </div>
+                        <div class="info-progress-block">
+                            <h3> Cartellini rossi </h3>
+                            <div class="row">
+                                <div class="col-1" id="i_red_home" aria-label="0 Cartellini rossi in casa" tabindex="0">0</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div id="pb_red_home" class="progress-bar" role="progressbar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-1" id="i_red_away" aria-label="0 Cartellini rossi in trasferta" tabindex="0">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h1>Testa a testa</h1>
+                    <hr>
+                    <div class="headToHead-table">
+                        <table id="headToHead_table_body">
+                            <thead>
+                            <th class="col-1"></th>
+                            <th class="col-2"> Casa</th>
+                            <th class="col-1" colspan="2"> Risultato</th>
+                            <th class="col-2"> Ospite</th>
+                            <th class="col-2"> Info</th>
+                            </thead>
+                            <tbody id="match_headToHead">
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt = "logo Serie A"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche serie A" title="Serie A">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0">
+                                    </td>
+                                    <td colspan="2"><h5><b>2</b> - <b>0</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt = "logo Serie A"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche serie A" title="Serie A">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    </td>
+                                    <td colspan="2"><h5><b>1</b> - <b>2</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0"></td>
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt = "logo Serie A"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche serie A" title="Serie A">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    </td>
+                                    <td colspan="2"><h5><b>1</b> - <b>3</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0"></td>
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt = "logo Serie A"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche serie A" title="Serie A">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0"></td>
+                                    </td>
+                                    <td colspan="2"><h5><b>2</b> - <b>3</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt = "logo Serie A"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche serie A" title="Serie A">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    </td>
+                                    <td colspan="2"><h5><b>4</b> - <b>2</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0"></td>
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/cit.png" alt = "coppa Italia"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche coppa Italia" title="coppa Italia">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    </td>
+                                    <td colspan="2"><h5><b>3</b> - <b>1</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0"></td>
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/cit.png" alt = "coppa Italia"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche coppa Italia" title="coppa Italia">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0"></td>
+                                    </td>
+                                    <td colspan="2"><h5><b>0</b> - <b>0</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt = "logo Serie A"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche serie A" title="Serie A">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0">
+                                    </td>
+                                    <td colspan="2"><h5><b>4</b> - <b>1</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt = "logo Serie A"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche serie A" title="Serie A">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    </td>
+                                    <td colspan="2"><h5><b>2</b> - <b>0</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0"></td>
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        <img src="https://tmssl.akamaized.net/images/logo/header/it1.png" alt = "logo Serie A"
+                                             onclick="event.stopPropagation(); window.location='statistics.html'" onkeydown="if(event.key === 'Enter') location.href='statistics.html'"
+                                             tabindex="0" aria-label="Visualizza statistiche serie A" title="Serie A">
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0">
+                                    </td>
+                                    <td colspan="2"><h5><b>2</b> - <b>2</b></h5></td>
+                                    <td class="text-center">
+                                        <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined"
+                                             style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
+                                             aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="text-center" onclick="event.stopPropagation(); window.location='game.html'">
+                                    <td>
+                                        ...
+                                    </td>
+                                    <td class="text-center">
+                                        ...
+                                    </td>
+                                    <td colspan="2"><h5><b>1</b> - <b>2</b></h5></td>
+                                    <td class="text-center">
+                                        ...
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button"
+                                                onClick="event.stopPropagation(); window.location='game.html'">
+                                            <i class="fas fa-external-link-alt px-1"></i> Match
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <div class="chart-block">
+                        <div class="body">
+                            <h1>Grafici</h1>
+                            <div class="chart-container">
+                                <div class="chart-box sm" id="chart_home_wins"></div>
+                                <div class="chart-box sm" id="chart_home_goals"></div>
+                                <div class="chart-box sm" id="chart_position_wins"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+    </div>
 </main>
 
 <footer class="footer" role="contentinfo">
@@ -151,3 +1180,12 @@
 </footer>
 
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    });
+</script>
