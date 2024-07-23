@@ -57,6 +57,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic">
     <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.6.1/dist/autocomplete.min.js"></script>
     <link rel='stylesheet' href='public/stylesheets/club.css'/>
+
+    <!-- Key Event  -->
+  <script type="text/javascript" src="public/javascripts/layout.js"></script>
 </head>
 
 <body>
@@ -2499,3 +2502,11 @@
 </footer>
 
 </body>
+
+<script type="text/javascript" src="public/javascripts/clubData.js"></script>
+<script type="text/javascript" src="public/javascripts/libGeneralScripts.js"></script>
+<script>
+    buildChartBlock('chart_Team', 'Ruoli', n_players, types_2);
+    buildChartBlock('chart_Nations', `Nazionalità giocatori`, countryCount, types_3);
+    buildChartBlock('chart_Game_win', `Rendimento (Serie A - 2023)`, game_results_data, types_1);
+</script>
