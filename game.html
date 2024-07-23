@@ -56,6 +56,9 @@
     <link rel='stylesheet' href='public/stylesheets/css-progress-wizard-master/css/progress-wizard.min.css'/>
     <link rel='stylesheet' href='public/stylesheets/layout.css'/>
     <link rel='stylesheet' href='public/stylesheets/game.css'/>
+    <script type="text/javascript" src="public/javascripts/layout.js"></script>
+    <script type="text/javascript" src="public/javascripts/gameData.js"></script>
+    <script type="text/javascript" src="public/javascripts/libGeneralScripts.js"></script>
 </head>
 
 <body>
@@ -99,16 +102,12 @@
 <main role="main">
     <div id='game-header' class="game-info">
         <nav class="navbar-game navbar">
-            <div class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                 data-bs-target="#navbar-game" aria-controls="navbarToggleExternalContent" aria-expanded="false"
-                 aria-label="Toggle navigation">
+            <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-game" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="body row">
                     <div class="col-md-5">
                         <div class="row d-flex align-items-center">
                             <div id="home_club_img" class="col-md-2 d-flex align-items-center justify-content-xl-start justify-content-center">
-                                <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined" class="m-2 px-2"
-                                     style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
-                                     aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
+                                <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" alt="Logo del club undefined" class="m-2 px-2" style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'" aria-label="Visualizza informazioni su Atalanta Bergamasca" data-bs-toggle="tooltip" title="Atalanta Bergamasca" tabindex="0">
                             </div>
                             <div id="home_club_name" class="py-2 col-md-10 d-flex align-items-center justify-content-xl-start justify-content-center">
                                 <h2 class="mb-0" style="flex-shrink: 0;"><b>Atalanta Bergamasca</b></h2>
@@ -125,18 +124,472 @@
                                 <h2 class="mb-0" style="flex-shrink: 0;"><b>SS Napoli</b></h2>
                             </div>
                             <div id="away_club_img" class="col-md-2 d-flex align-items-center justify-content-xl-start justify-content-center">
-                                <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined" class="m-2 px-2"
-                                     style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'"
-                                     aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0">
+                                <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" alt="Logo del club undefined" class="m-2 px-2" style="height: auto; max-height: 60px;" onclick="event.stopPropagation(); window.location='club.html'" onkeydown="if(event.key === 'Enter') location.href='club.html'" aria-label="Visualizza informazioni su SS Napoli" data-bs-toggle="tooltip" title="SS Napoli" tabindex="0">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row w-100 text-center"><i class="fas fa-caret-down"></i></div>
+                <div class="row w-100 text-center" tabindex="0" aria-label="Apri timeline" onkeydown="if(event.key === 'Enter') document.getElementById('navbar-game').classList.toggle('show')">
+                    <i class="fas fa-caret-down"></i>
+                </div>
                 <div class="collapse" id="navbar-game">
                     <div class="row main-timeline">
                         <div class="col-md-8">
-                            <div class="game-data" id="events"></div>
+                            <div class="game-data" id="events">
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 0, INIZIO MATCH" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer justify-content-center d-flex flex-column">
+                                            <div class="text-center">minuto</div>
+                                            <div class="w-100 text-center"><h2>0'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5 class="title text-dark">INIZIO MATCH</h5>
+                                        <p class="description img-player">
+                                            <img src="https://tmssl.akamaized.net/images/wappen/big/800.png" class="mini_logs_teams"> VS <img src="https://tmssl.akamaized.net/images/wappen/big/6195.png" class="mini_logs_teams">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline" tabindex="0" aria-label="minuto 21, Natan cartellino giallo" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>21'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/735568-1692881497.jpg?lm=1" alt="Natan">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Natan</h4>
+                                                    <img src="public/images/varie/yellow_card.svg.png" alt="Cartellino Giallo">
+                                                </div>
+                                                <p class="description">
+                                                    Cartellino Giallo, fallo di gioco
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 27, Berat Djimsiti cartellino giallo" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>27'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/165513-1663582842.jpg?lm=1" alt="Djimsiti">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Berat Djimsiti</h4>
+                                                    <img src="public/images/varie/yellow_card.svg.png" alt="Cartellino Giallo">
+                                                </div>
+                                                <p class="description">
+                                                    Cartellino Giallo, fallo di gioco
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 33, Davide Zappacosta sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>33'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/173859-1661268432.jpg?lm=1" alt="Zappacosta">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Davide Zappacosta</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Infortunio
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline" tabindex="0" aria-label="minuto 39, Mathias Olivera sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>39'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/376514-1681910576.jpg?lm=1" alt="Olivera">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Mathias Olivera</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Infortunio
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline" tabindex="0" aria-label="minuto 44, Kvicha Kvaratskhelia goal" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>44'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/502670-1663578995.jpg?lm=1" alt="Kvaratskhelia">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Kvicha Kvaratskhelia</h4>
+                                                    <img src="public/images/varie/goals.png" alt="Goals">
+                                                </div>
+                                                <p class="description">
+                                                    Quarto goal della stagione - goal di testa
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 46, Mitchel Bakker sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>46'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/361065-1658913284.jpg?lm=1" alt="Bakker">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Mitchel Bakker</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Cambio tattico
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 53, Ademola Lookman goal" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>53'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/406040-1682076571.jpg?lm=1" alt="Lookman">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Ademola Lookman</h4>
+                                                    <img src="public/images/varie/goals.png" alt="Goals">
+                                                </div>
+                                                <p class="description">
+                                                    Quarto goal della stagione - goal di testa
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline" tabindex="0" aria-label="minuto 60, Giovanni Di Lorenzo cartellino giallo" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>60'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/169880-1661509008.jpg?lm=1" alt="Di Lorenzo">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Giovanni Di Lorenzo</h4>
+                                                    <img src="public/images/varie/yellow_card.svg.png" alt="Cartellino Giallo">
+                                                </div>
+                                                <p class="description">
+                                                    Cartellino giallo - tocco di mano
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline" tabindex="0" aria-label="minuto 63, Matteo Politano sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>63'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/165895-1692963030.jpg?lm=1" alt="Politano">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Matteo Politano</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Cambio tattico
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 64, Sead Kolasinac cartellino giallo" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>64'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/94005-1666815100.jpg?lm=1" alt="Kolasinac">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Sead Kolasinac</h4>
+                                                    <img src="public/images/varie/yellow_card.svg.png" alt="Cartellino Giallo">
+                                                </div>
+                                                <p class="description">
+                                                    Fallo di gioco
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline" tabindex="0" aria-label="minuto 64, Giacomo Raspadori sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>64'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/405885-1661508804.jpg?lm=1" alt="Raspadori">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Giacomo Raspadori</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Cambio tattico
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 76, Sead Kolasinac sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>76'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/94005-1666815100.jpg?lm=1" alt="Kolasinac">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Sead Kolasinac</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Cambio tattico
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline" tabindex="0" aria-label="minuto 78, Piotr Zielinski sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>78'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/181136-1692962961.jpg?lm=1" alt="Zielinski">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Piotr Zielinski</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Cambio tattico
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline" tabindex="0" aria-label="minuto 78, Natan sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>78'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/735568-1692881497.jpg?lm=1" alt="Natan">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Natan</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Cambio tattico
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline" tabindex="0" aria-label="minuto 79, Eljif Elmas goal" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>79'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/400489-1692878934.jpg?lm=1" alt="Elmas">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Eljif Elmas</h4>
+                                                    <img src="public/images/varie/goals.png" alt="Goals">
+                                                </div>
+                                                <p class="description">
+                                                    Secondo gol della stagione - piede destro
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 83, Ademola Lookman sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>83'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/406040-1682076571.jpg?lm=1" alt="Lookman">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Ademola Lookman</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Cambio tattico
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 83, Charles De Ketelaere sostituzione" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <div>minuto</div>
+                                            <div class="w-100"><h2>83'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="row">
+                                            <div class="col-md-2 img-player">
+                                                <img src="https://img.a.transfermarkt.technology/portrait/header/435772-1659601388.jpg?lm=1" alt="De Ketelaere">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div>
+                                                    <h4>Charles De Ketelaere</h4>
+                                                    <img src="public/images/varie/substitutions.jpg" alt="Sostituzione">
+                                                </div>
+                                                <p class="description">
+                                                    Cambio tattico
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline reverse" tabindex="0" aria-label="minuto 90, FINE MATCH" onclick="window.location='player.html'" onkeydown="if(event.key === 'Enter') window.location='player.html'">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer justify-content-center d-flex flex-column">
+                                            <div class="text-center">minuto</div>
+                                            <div class="w-100 text-center"><h2>90+'</h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5 class="title pt-5 text-dark">FINE MATCH</h5>
+                                        <p class="description"></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -150,22 +603,22 @@
                 <div class="row">
                     <div class="col">
                         <div class="stadium" data-bs-toggle="tooltip" title="Data">
-                            <img src="public/images/varie/calendar.png">
-                            <h5 id="i_data">25 Novembre 2023</h5>
+                            <img src="public/images/varie/calendar.png" tabindex="0" aria-label="Icona calendario">
+                            <h5 id="i_data" tabindex="0" aria-label="Data: 25 Novembre 2023">25 Novembre 2023</h5>
                         </div>
                     </div>
                     <div class="col">
                         <div class="stadium" data-bs-toggle="tooltip" title="Arbitro">
-                            <img src="public/images/varie/fischietto.png">
-                            <h5 id="i_referee">Maurizio Mariani</h5>
+                            <img src="public/images/varie/fischietto.png" tabindex="0" aria-label="Icona fischietto">
+                            <h5 id="i_referee" tabindex="0" aria-label="Arbitro: Maurizio Mariani">Maurizio Mariani</h5>
                         </div>
                     </div>
                     <div class="col">
                         <div class="stadium" data-bs-toggle="tooltip" title="Stadio">
-                            <img src="public/images/varie/stadio.png">
+                            <img src="public/images/varie/stadio.png" tabindex="0" aria-label="Icona stadio">
                             <div>
-                                <h5 id="i_stadium">Gewiss Stadium</h5>
-                                <h5 id="i_attendance">14743</h5>
+                                <h5 id="i_stadium" tabindex="0" aria-label="Stadio: Gewiss Stadium">Gewiss Stadium</h5>
+                                <h5 id="i_attendance" tabindex="0" aria-label="Presenze: 14743">14743</h5>
                             </div>
                         </div>
                     </div>
@@ -173,6 +626,7 @@
                 <hr>
             </div>
         </div>
+
 
         <div class="body" id="game-body">
             <hr>
@@ -812,74 +1266,74 @@
                                 <button type="button" class="btn btn-link" data-bs-toggle="popover" data-bs-trigger="hover"
                                         title="Probabilità di Vittoria" data-bs-html="true"
                                         data-bs-content="
-                                            <p>La probabilità di vittoria è calcolata prendendo in considerazione i seguenti fattori:</p>
-                                            <ul>
-                                                <li><strong>Statistiche dei precedenti incontri</strong> tra le due squadre (~30%)</li>
-                                                <li><strong>Posizione in classifica</strong> delle squadre (~25%)</li>
-                                                <li><strong>Forma attuale</strong> della squadra (risultati recenti) (~20%)</li>
-                                                <li><strong>Infortuni e squalifiche</strong> dei giocatori chiave (~10%)</li>
-                                                <li><strong>Fattore campo</strong> (giocare in casa o in trasferta) (~10%)</li>
-                                                <li><strong>Numero di spettatori</strong> (~5%)</li>
-                                            </ul>">
+                    <p>La probabilità di vittoria è calcolata prendendo in considerazione i seguenti fattori:</p>
+                    <ul>
+                        <li><strong>Statistiche dei precedenti incontri</strong> tra le due squadre (~30%)</li>
+                        <li><strong>Posizione in classifica</strong> delle squadre (~25%)</li>
+                        <li><strong>Forma attuale</strong> della squadra (risultati recenti) (~20%)</li>
+                        <li><strong>Infortuni e squalifiche</strong> dei giocatori chiave (~10%)</li>
+                        <li><strong>Fattore campo</strong> (giocare in casa o in trasferta) (~10%)</li>
+                        <li><strong>Numero di spettatori</strong> (~5%)</li>
+                    </ul>">
                                     <i class="fas fa-info-circle"></i>
                                 </button>
                             </h3>
-                            <div class="row">
-                                <div class="col-1" id="i_prob_win_home" aria-label="45.15% probabilità di vittoria in casa" tabindex="0">45.15%</div>
+                            <div class="row" tabindex="0" aria-label="Probabilità di vittoria: 45.15% contro 54.9%">
+                                <div class="col-1" id="i_prob_win_home">45.15%</div>
                                 <div class="col-10">
                                     <div class="progress">
                                         <div id="pb_prob_win_home" class="progress-bar" role="progressbar" style="width: 45.15%;"></div>
                                     </div>
                                 </div>
-                                <div class="col-1" id="i_prob_win_away" aria-label="54.9% probabilità di vittoria in trasferta" tabindex="0">54.9%</div>
+                                <div class="col-1" id="i_prob_win_away">54.9%</div>
                             </div>
                         </div>
                         <div class="info-progress-block">
                             <h3> Testa a testa </h3>
-                            <div class="row">
-                                <div class="col-1" id="i_h_to_h_home" aria-label="10 Testa a testa in casa" tabindex="0">10</div>
+                            <div class="row" tabindex="0" aria-label="Testa a testa: 10 contro 10">
+                                <div class="col-1" id="i_h_to_h_home">10</div>
                                 <div class="col-10">
                                     <div class="progress">
-                                        <div id="pb_h_to_h" class="progress-bar" role="progressbar" style="width: 45.45%;"></div>
+                                        <div id="pb_h_to_h" class="progress-bar" role="progressbar" style="width: 50%;"></div>
                                     </div>
                                 </div>
-                                <div class="col-1" id="i_h_to_h_away" aria-label="10 Testa a testa in trasferta" tabindex="0">12</div>
+                                <div class="col-1" id="i_h_to_h_away">10</div>
                             </div>
                         </div>
                         <div class="info-progress-block">
                             <h3> Sostituzioni </h3>
-                            <div class="row">
-                                <div class="col-1" id="i_sub_home" aria-label="5 Sostituzioni in casa" tabindex="0">5</div>
+                            <div class="row" tabindex="0" aria-label="Sostituzioni: 5 contro 5">
+                                <div class="col-1" id="i_sub_home">5</div>
                                 <div class="col-10">
                                     <div class="progress">
                                         <div id="pb_sub_home" class="progress-bar" role="progressbar" style="width: 50%;"></div>
                                     </div>
                                 </div>
-                                <div class="col-1" id="i_sub_away" aria-label="5 Sostituzioni in trasferta" tabindex="0">5</div>
+                                <div class="col-1" id="i_sub_away">5</div>
                             </div>
                         </div>
                         <div class="info-progress-block">
                             <h3> Cartellini gialli </h3>
-                            <div class="row">
-                                <div class="col-1" id="i_yellow_home" aria-label="2 Cartellini gialli in casa" tabindex="0">2</div>
+                            <div class="row" tabindex="0" aria-label="Cartellini gialli: 2 contro 2">
+                                <div class="col-1" id="i_yellow_home">2</div>
                                 <div class="col-10">
                                     <div class="progress">
                                         <div id="pb_yellow_home" class="progress-bar" role="progressbar" style="width: 50%;"></div>
                                     </div>
                                 </div>
-                                <div class="col-1" id="i_yellow_away" aria-label="2 Cartellini gialli in trasferta" tabindex="0">2</div>
+                                <div class="col-1" id="i_yellow_away">2</div>
                             </div>
                         </div>
                         <div class="info-progress-block">
                             <h3> Cartellini rossi </h3>
-                            <div class="row">
-                                <div class="col-1" id="i_red_home" aria-label="0 Cartellini rossi in casa" tabindex="0">0</div>
+                            <div class="row" tabindex="0" aria-label="Cartellini rossi: 0 contro 0">
+                                <div class="col-1" id="i_red_home">0</div>
                                 <div class="col-10">
                                     <div class="progress">
                                         <div id="pb_red_home" class="progress-bar" role="progressbar" style="width: 50%;"></div>
                                     </div>
                                 </div>
-                                <div class="col-1" id="i_red_away" aria-label="0 Cartellini rossi in trasferta" tabindex="0">0</div>
+                                <div class="col-1" id="i_red_away">0</div>
                             </div>
                         </div>
                     </div>
@@ -1135,7 +1589,7 @@
                                     <td class="text-center">
                                         ...
                                     </td>
-                                    <td colspan="2"><h5><b>1</b> - <b>2</b></h5></td>
+                                    <td colspan="2"><h5><b></b> ... <b></b></h5></td>
                                     <td class="text-center">
                                         ...
                                     </td>
@@ -1182,10 +1636,21 @@
 </body>
 
 <script>
+    buildChartBlock('chart_home_wins', `Vittorie squadra di casa`, home_wins, types_5);
+    buildChartBlock('chart_home_goals', `Goals`, home_goals, types_5);
+    buildChartBlock('chart_position_wins', `Vittorie squadra avanti in classifica`, position_wins, types_5);
+
     document.addEventListener('DOMContentLoaded', function () {
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+        // Initialize popovers
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
-        })
+        });
     });
 </script>
